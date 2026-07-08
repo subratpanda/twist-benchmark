@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use TWIST, please cite it as below."
+title: "TWIST: A Benchmark for Tensions, Alignment, and Safe Recall in Conversational Memory"
+authors:
+  - family-names: Panda
+    given-names: Subrat
+year: 2026
+url: "https://github.com/subratpanda/twist-benchmark"
