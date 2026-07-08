@@ -1,3 +1,5 @@
+![TWIST — a benchmark for what memory benchmarks can't see](assets/social-preview.png)
+
 # TWIST — a benchmark for what memory benchmarks can't see
 
 **T**racking **W**ithin-speaker **I**nconsistencies, **S**tance-reversals, and
