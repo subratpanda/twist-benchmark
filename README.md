@@ -38,6 +38,24 @@ v0 items are LLM-generated and LLM-verified but **not yet human-annotated**
 Treat all numbers as preliminary — they are published for methodology
 transparency, not leaderboard claims.
 
+### v1 in progress (July 2026)
+
+A regenerated Track B set — **200 items: 74 contradicting / 62 aligned /
+64 hard-negative** (hard negatives >3× v0) — has been built under the
+self-containment item-quality rules that v0's failures taught us
+(`SCENARIOS.md`), with structural gates on evidence quality
+(recipient-spoken, verbatim-quote-bearing, dated verification-as-seen).
+
+Status: **human double-annotation with adjudication is underway** (§6.1).
+An LLM-council pre-screen over all 200 items (GPT-4o / Claude / Gemini)
+was run as *disclosed triage* to focus adjudication — it is not a
+substitute for human annotation; independent-pair agreement (κ ≈ 0.55)
+confirms models alone are insufficient.
+
+The v1 items are deliberately **not published until annotation completes**,
+to protect held-set integrity. v1.0 ships with the annotated key, per-item
+outputs for the reference systems, and the multi-provider harness results.
+
 ### First results (Track B, 153 items)
 
 | Metric (paired) | MindTwin | flat-RAG baseline |
