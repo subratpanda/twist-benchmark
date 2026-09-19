@@ -7,8 +7,12 @@
 extending [LoCoMo](https://github.com/snap-research/locomo).
 
 Recall benchmarks measure whether a memory system can *retrieve what was
-said*. Nothing measures whether it *notices when what was said stops being
-true* — the failure modes that actually cost money in deployed systems:
+said*. No benchmark exercises the **memory system itself** — through its
+ingest/recall/vet surface — on whether it *notices when what was said stops
+being true* (belief-dynamics evaluation exists for bare LLMs:
+[BeliefShift](https://arxiv.org/abs/2603.23848) tracks user-opinion drift at
+the model layer; TWIST tests the architecture layer beneath it). These are
+the failure modes that actually cost money in deployed systems:
 
 | Track | Capability | Paired failure it also scores |
 |---|---|---|
