@@ -1,7 +1,7 @@
 # TWIST — Benchmark Scenario Catalog
 
-*Companion to [`TWIST_BENCHMARK_WHITEPAPER.md`](TWIST_BENCHMARK_WHITEPAPER.md)
-(task definitions, metrics) and [`TWIST_TRACK_B_RESULTS.md`](TWIST_TRACK_B_RESULTS.md)
+*Companion to [`WHITEPAPER.md`](WHITEPAPER.md)
+(task definitions, metrics) and [`TRACK_B_RESULTS.md`](TRACK_B_RESULTS.md)
 (first results). This document catalogs the concrete **scenario families** each
 track tests — what the situation is, what gold looks like, what passing means,
 and how systems typically fail. Track B examples are real items from the v0
@@ -146,6 +146,30 @@ These bind every scenario family and exist because v0 violated some of them:
 | Track | Families specified | Items live | Next step |
 |---|---|---|---|
 | A — Tension detection | 3 + 4 HN | — | v1 injection pipeline |
-| B — Draft alignment | 4 + 1 AL + 3 HN | **153 (v0)** | regenerate under rules 1–2; grow HN from 19 to ≥60 |
+| B — Draft alignment | 4 + 1 AL + 3 HN | **161 (v1.0 frozen, 2026-09-20)** + 153 (v0, frozen) | Tracks A/C/D pipelines (v2) |
 | C — Supersession | 4 + 1 HN | — | v1 injection pipeline |
 | D — Safe recall | 4 + 1 HN | — | plant/probe generator (safety corpus opt-in) |
+
+**Track B v1 set** (`benchmarks/twist/track_b_items_v1.jsonl`): 74
+contradicting (B1 15 / B2 34 / B3 25) · 62 aligned · 64 hard-negative
+(HN-B1 25 / HN-B2 21 / HN-B3 18), all 10 LoCoMo conversations,
+`history_turns` 369–689 recorded per item for rule-5 stratification.
+Generated under rules 1–2: evidence turns must be recipient-spoken
+(structural gate), contradicting items must carry a verbatim
+`contradicted_quote` from a cited turn (structural gate — bans B4 and
+absence-based B1 by construction), and the verification gate grades from
+dated standalone excerpts exactly as retrieved
+(`{contradicts, claim_stated}` JSON verdict; both required for
+contradicting items). Attrition: ~490 generated → 200 kept; rejects with
+verdicts in `track_b_items_v1.jsonl.dropped.jsonl` for gate audits.
+
+**v1.0 (frozen 2026-09-20):** the 200 candidates went through the full
+§6.1 protocol — two blind human annotators (raw verdict κ=0.565), an
+LLM-council pre-screen as disclosed triage, and adjudication that dropped
+39 items (36 contradicting, concentrated in the two top-up generation
+passes both annotators independently flagged as not-self-contained).
+The frozen key `track_b_items_v1.0.jsonl` holds **161 items
+(38 contradicting / 61 aligned / 62 hard-negative), inter-annotator
+κ=0.851** — above the pre-registered 0.8 bar. Scores must cite the key
+version; the full annotation trail (answer files, adjudication queue and
+decisions, per-item stats) is published alongside it.

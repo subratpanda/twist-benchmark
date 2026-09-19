@@ -1,7 +1,3 @@
-# NOTE (public reference copy): this script runs inside the MindTwin
-# codebase (imports below). Published as a reference implementation of the
-# TWIST generation/verification gate and scoring — see WHITEPAPER.md §7 for
-# the system-agnostic API a fresh runner needs.
 """TWIST Track B harness — draft-alignment vetting (whitepaper §3B, §5).
 
 Runs two systems over the Track B item set:
@@ -88,9 +84,19 @@ def ingest_conversations(data: list[dict]) -> dict[str, uuid.UUID]:
     return teams
 
 
-def run_mindtwin(engine: CognitiveEngine, item: dict) -> tuple[bool, list[str], bool]:
+VALID_ABLATIONS = {"no-probes", "no-fact-channel", "single-call-vet"}
+
+
+def run_mindtwin(engine: CognitiveEngine, item: dict,
+                 ablations: set[str] | None = None) -> tuple[bool, list[str], bool]:
     """Returns (pred_aligned, cited_turn_ids, cited_fact_only)."""
-    res = inner_voice.check_draft_alignment(engine, item["draft"])
+    ab = ablations or set()
+    res = inner_voice.check_draft_alignment(
+        engine, item["draft"],
+        use_probes="no-probes" not in ab,
+        fact_channel="no-fact-channel" not in ab,
+        chunked="single-call-vet" not in ab,
+    )
     cited_ids = [c.get("memory_id") for c in res.get("conflicts", []) if c.get("memory_id")]
     turn_ids: list[str] = []
     fact_only = False
@@ -147,11 +153,32 @@ def main() -> None:  # noqa: PLR0915
     ap = argparse.ArgumentParser(description="Run TWIST Track B.")
     ap.add_argument("--data", required=True)
     ap.add_argument("--items", required=True)
-    ap.add_argument("--systems", default="mindtwin,flatrag")
+    ap.add_argument("--systems", default="mindtwin,flatrag",
+                    help="comma-separated; flatrag accepts per-system "
+                         "backend specs 'flatrag[:provider[:model]]' so one "
+                         "ingest serves several backends, e.g. "
+                         "mindtwin,flatrag:openai,flatrag:gemini")
     ap.add_argument("--conversations", type=int, default=None)
     ap.add_argument("--concurrency", type=int, default=6)
     ap.add_argument("--out", default=None)
+    ap.add_argument("--provider", default=None,
+                    help="LLM provider for the flatrag baseline judgment: "
+                         "openai|anthropic|gemini (default: config "
+                         "default_llm_provider). The mindtwin system path "
+                         "uses the engine's configured LLM regardless.")
+    ap.add_argument("--model", default=None,
+                    help="model override (default: provider default)")
+    ap.add_argument("--ablate", default="",
+                    help="comma-separated vetting mechanisms to disable "
+                         f"({', '.join(sorted(VALID_ABLATIONS))}); applies to "
+                         "the mindtwin system only (docs/ABLATION_SPEC.md §4b)")
     args = ap.parse_args()
+
+    ablations = {a.strip() for a in args.ablate.split(",") if a.strip()}
+    unknown = ablations - VALID_ABLATIONS
+    if unknown:
+        raise SystemExit(f"unknown ablation(s): {sorted(unknown)}; "
+                         f"valid: {sorted(VALID_ABLATIONS)}")
 
     with open(args.data) as f:
         data = json.load(f)
@@ -165,18 +192,25 @@ def main() -> None:  # noqa: PLR0915
 
     teams = ingest_conversations(data)
     engines = {c: CognitiveEngine(t) for c, t in teams.items()}
-    llm = build_llm_client()
     t0 = time.time()
     all_scores: dict[str, dict] = {}
     all_results: dict[str, list[dict]] = {}
 
     for system in args.systems.split(","):
-        def run_item(item: dict, *, _system=system) -> ItemResult:
+        kind, _, backend = system.partition(":")
+        llm = None
+        if kind != "mindtwin":
+            prov, _, mod = backend.partition(":")
+            llm = build_llm_client(prov or args.provider,
+                                   model=mod or args.model)
+            print(f"{system}: baseline LLM {llm.provider.value}/{llm.model}")  # noqa: T201
+
+        def run_item(item: dict, *, _kind=kind, _llm=llm) -> ItemResult:
             eng = engines[item["conv"]]
-            if _system == "mindtwin":
-                aligned, turn_ids, fact_only = run_mindtwin(eng, item)
+            if _kind == "mindtwin":
+                aligned, turn_ids, fact_only = run_mindtwin(eng, item, ablations)
             else:
-                aligned, turn_ids, fact_only = run_flatrag(eng, llm, item)
+                aligned, turn_ids, fact_only = run_flatrag(eng, _llm, item)
             gold_aligned = item["type"] != "contradicting"
             correct = aligned == gold_aligned
             attributed = None

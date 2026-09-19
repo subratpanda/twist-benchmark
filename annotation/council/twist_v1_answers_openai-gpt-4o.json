@@ -1,0 +1,916 @@
+{
+ "annotator": "openai-gpt-4o",
+ "answers": {
+  "conv-26:v1b1": {
+   "q1": "contradicts",
+   "q2": "no",
+   "q2quote": "no"
+  },
+  "conv-26:v1b4": {
+   "q1": "contradicts",
+   "q2": "yes",
+   "q2quote": "yes"
+  },
+  "conv-26:v1b5": {
+   "q1": "contradicts",
+   "q2": "no",
+   "q2quote": "yes"
+  },
+  "conv-26:v1b7": {
+   "q1": "consistent",
+   "q2": "yes",
+   "q2quote": "yes"
+  },
+  "conv-26:v1b11": {
+   "q1": "contradicts",
+   "q2": "yes",
+   "q2quote": "yes"
+  },
+  "conv-26:v1b13": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-26:v1b14": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-26:v1b15": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-26:v1b16": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-26:v1b17": {
+   "q1": "consistent",
+   "q3": "conflict",
+   "q3turn": ""
+  },
+  "conv-26:v1b18": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-26:v1b19": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-26:v1b21": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-26:v1b22": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-26:v1b23": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-26:v1b24": {
+   "q1": "contradicts",
+   "q3": "conflict",
+   "q3turn": "D17:8"
+  },
+  "conv-26:v1b25": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-26:v1b26": {
+   "q1": "consistent",
+   "q3": "conflict",
+   "q3turn": "D17:8"
+  },
+  "conv-26:v1b27": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-30:v1b2": {
+   "q1": "contradicts",
+   "q2": "yes",
+   "q2quote": "yes"
+  },
+  "conv-30:v1b3": {
+   "q1": "contradicts",
+   "q2": "yes",
+   "q2quote": "yes"
+  },
+  "conv-30:v1b4": {
+   "q1": "contradicts",
+   "q2": "yes",
+   "q2quote": "yes"
+  },
+  "conv-30:v1b10": {
+   "q1": "contradicts",
+   "q2": "no",
+   "q2quote": "yes"
+  },
+  "conv-30:v1b13": {
+   "q1": "cannot-tell",
+   "q3": "conflict",
+   "q3turn": "D18:2"
+  },
+  "conv-30:v1b15": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-30:v1b16": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-30:v1b17": {
+   "q1": "cannot-tell",
+   "q3": "clean"
+  },
+  "conv-30:v1b19": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-30:v1b20": {
+   "q1": "consistent",
+   "q3": "conflict",
+   "q3turn": "D1:3"
+  },
+  "conv-30:v1b21": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-30:v1b22": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-30:v1b24": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-30:v1b25": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-30:v1b26": {
+   "q1": "cannot-tell",
+   "q3": "conflict",
+   "q3turn": "D1:3"
+  },
+  "conv-30:v1b28": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-41:v1b1": {
+   "q1": "contradicts",
+   "q2": "yes",
+   "q2quote": "yes"
+  },
+  "conv-41:v1b4": {
+   "q1": "consistent",
+   "q2": "yes",
+   "q2quote": "yes"
+  },
+  "conv-41:v1b8": {
+   "q1": "contradicts",
+   "q2": "no",
+   "q2quote": "yes"
+  },
+  "conv-41:v1b9": {
+   "q1": "contradicts",
+   "q2": "yes",
+   "q2quote": "yes"
+  },
+  "conv-41:v1b11": {
+   "q1": "cannot-tell",
+   "q2": "no",
+   "q2quote": "yes"
+  },
+  "conv-41:v1b13": {
+   "q1": "consistent",
+   "q3": "conflict",
+   "q3turn": "D30:1"
+  },
+  "conv-41:v1b14": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-41:v1b15": {
+   "q1": "cannot-tell",
+   "q3": "clean"
+  },
+  "conv-41:v1b17": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-41:v1b18": {
+   "q1": "cannot-tell",
+   "q3": "clean"
+  },
+  "conv-41:v1b19": {
+   "q1": "cannot-tell",
+   "q3": "conflict",
+   "q3turn": ""
+  },
+  "conv-41:v1b21": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-41:v1b22": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-41:v1b24": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-41:v1b27": {
+   "q1": "consistent",
+   "q3": "conflict",
+   "q3turn": "D18:15"
+  },
+  "conv-41:v1b28": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-41:v1b29": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-41:v1b31": {
+   "q1": "cannot-tell",
+   "q3": "conflict",
+   "q3turn": "D1:3"
+  },
+  "conv-42:v1b0": {
+   "q1": "contradicts",
+   "q2": "no",
+   "q2quote": "yes"
+  },
+  "conv-42:v1b13": {
+   "q1": "cannot-tell",
+   "q3": "conflict",
+   "q3turn": "D17:14"
+  },
+  "conv-42:v1b14": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-42:v1b15": {
+   "q1": "contradicts",
+   "q3": "conflict",
+   "q3turn": ""
+  },
+  "conv-42:v1b17": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-42:v1b18": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-42:v1b19": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-42:v1b22": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-42:v1b24": {
+   "q1": "cannot-tell",
+   "q3": "conflict",
+   "q3turn": "D5:3"
+  },
+  "conv-42:v1b25": {
+   "q1": "cannot-tell",
+   "q3": "clean"
+  },
+  "conv-42:v1b26": {
+   "q1": "cannot-tell",
+   "q3": "conflict",
+   "q3turn": "D9:1"
+  },
+  "conv-42:v1b27": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-42:v1b28": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-42:v1b29": {
+   "q1": "cannot-tell",
+   "q3": "clean"
+  },
+  "conv-43:v1b0": {
+   "q1": "contradicts",
+   "q2": "yes",
+   "q2quote": "yes"
+  },
+  "conv-43:v1b1": {
+   "q1": "contradicts",
+   "q2": "no",
+   "q2quote": "no"
+  },
+  "conv-43:v1b13": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-43:v1b14": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-43:v1b15": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-43:v1b16": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-43:v1b17": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-43:v1b19": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-43:v1b20": {
+   "q1": "consistent",
+   "q3": "conflict",
+   "q3turn": "D27:5"
+  },
+  "conv-43:v1b21": {
+   "q1": "cannot-tell",
+   "q3": "conflict",
+   "q3turn": "D18:2"
+  },
+  "conv-43:v1b22": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-43:v1b23": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-43:v1b24": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-43:v1b26": {
+   "q1": "cannot-tell",
+   "q3": "clean"
+  },
+  "conv-43:v1b27": {
+   "q1": "contradicts",
+   "q3": "clean"
+  },
+  "conv-43:v1b28": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-44:v1b14": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-44:v1b16": {
+   "q1": "consistent",
+   "q3": "conflict",
+   "q3turn": "D26:1"
+  },
+  "conv-44:v1b17": {
+   "q1": "consistent",
+   "q3": "conflict",
+   "q3turn": "D12:1"
+  },
+  "conv-44:v1b18": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-44:v1b19": {
+   "q1": "consistent",
+   "q3": "conflict",
+   "q3turn": "D12:1"
+  },
+  "conv-44:v1b20": {
+   "q1": "consistent",
+   "q3": "conflict",
+   "q3turn": ""
+  },
+  "conv-44:v1b21": {
+   "q1": "cannot-tell",
+   "q3": "conflict",
+   "q3turn": "D3:7"
+  },
+  "conv-44:v1b23": {
+   "q1": "consistent",
+   "q3": "conflict",
+   "q3turn": "D1:12"
+  },
+  "conv-44:v1b24": {
+   "q1": "consistent",
+   "q3": "conflict",
+   "q3turn": "D26:1"
+  },
+  "conv-44:v1b25": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-44:v1b26": {
+   "q1": "cannot-tell",
+   "q3": "conflict",
+   "q3turn": "D22:1"
+  },
+  "conv-44:v1b27": {
+   "q1": "contradicts",
+   "q3": "clean"
+  },
+  "conv-44:v1b28": {
+   "q1": "consistent",
+   "q3": "conflict",
+   "q3turn": "D22:5"
+  },
+  "conv-47:v1b1": {
+   "q1": "consistent",
+   "q2": "yes",
+   "q2quote": "yes"
+  },
+  "conv-47:v1b6": {
+   "q1": "contradicts",
+   "q2": "yes",
+   "q2quote": "yes"
+  },
+  "conv-47:v1b13": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-47:v1b14": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-47:v1b15": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-47:v1b17": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-47:v1b18": {
+   "q1": "cannot-tell",
+   "q3": "conflict",
+   "q3turn": "D7:13"
+  },
+  "conv-47:v1b19": {
+   "q1": "cannot-tell",
+   "q3": "clean"
+  },
+  "conv-47:v1b20": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-47:v1b21": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-47:v1b22": {
+   "q1": "cannot-tell",
+   "q3": "clean"
+  },
+  "conv-47:v1b23": {
+   "q1": "consistent",
+   "q3": "conflict",
+   "q3turn": "D18:1"
+  },
+  "conv-47:v1b24": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-47:v1b25": {
+   "q1": "cannot-tell",
+   "q3": "clean"
+  },
+  "conv-47:v1b26": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-48:v1b10": {
+   "q1": "consistent",
+   "q2": "no",
+   "q2quote": "no"
+  },
+  "conv-48:v1b11": {
+   "q1": "contradicts",
+   "q2": "no",
+   "q2quote": "yes"
+  },
+  "conv-48:v1b13": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-48:v1b15": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-48:v1b16": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-48:v1b17": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-48:v1b18": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-48:v1b19": {
+   "q1": "cannot-tell",
+   "q3": "clean"
+  },
+  "conv-48:v1b22": {
+   "q1": "cannot-tell",
+   "q3": "clean"
+  },
+  "conv-48:v1b24": {
+   "q1": "cannot-tell",
+   "q3": "clean"
+  },
+  "conv-48:v1b26": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-48:v1b28": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-49:v1b1": {
+   "q1": "contradicts",
+   "q2": "yes",
+   "q2quote": "yes"
+  },
+  "conv-49:v1b2": {
+   "q1": "contradicts",
+   "q2": "no",
+   "q2quote": "no"
+  },
+  "conv-49:v1b3": {
+   "q1": "contradicts",
+   "q2": "yes",
+   "q2quote": "yes"
+  },
+  "conv-49:v1b8": {
+   "q1": "contradicts",
+   "q2": "yes",
+   "q2quote": "yes"
+  },
+  "conv-49:v1b12": {
+   "q1": "contradicts",
+   "q2": "no",
+   "q2quote": "yes"
+  },
+  "conv-49:v1b13": {
+   "q1": "consistent",
+   "q3": "conflict",
+   "q3turn": "D25:10"
+  },
+  "conv-49:v1b15": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-49:v1b16": {
+   "q1": "cannot-tell",
+   "q3": "clean"
+  },
+  "conv-49:v1b18": {
+   "q1": "consistent",
+   "q3": "conflict",
+   "q3turn": "D8:28"
+  },
+  "conv-49:v1b19": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-49:v1b21": {
+   "q1": "contradicts",
+   "q3": "clean"
+  },
+  "conv-49:v1b22": {
+   "q1": "consistent",
+   "q3": "conflict",
+   "q3turn": "D3:4"
+  },
+  "conv-49:v1b23": {
+   "q1": "cannot-tell",
+   "q3": "clean"
+  },
+  "conv-49:v1b25": {
+   "q1": "contradicts",
+   "q3": "conflict",
+   "q3turn": "D9:2"
+  },
+  "conv-49:v1b26": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-49:v1b27": {
+   "q1": "contradicts",
+   "q3": "clean"
+  },
+  "conv-49:v1b28": {
+   "q1": "consistent",
+   "q3": "conflict",
+   "q3turn": "D9:2"
+  },
+  "conv-50:v1b4": {
+   "q1": "cannot-tell",
+   "q2": "no",
+   "q2quote": "yes"
+  },
+  "conv-50:v1b8": {
+   "q1": "contradicts",
+   "q2": "yes",
+   "q2quote": "yes"
+  },
+  "conv-50:v1b13": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-50:v1b14": {
+   "q1": "consistent",
+   "q3": "conflict",
+   "q3turn": "D18:1"
+  },
+  "conv-50:v1b16": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-50:v1b17": {
+   "q1": "consistent",
+   "q3": "conflict",
+   "q3turn": "D1:13"
+  },
+  "conv-50:v1b19": {
+   "q1": "consistent",
+   "q3": "conflict",
+   "q3turn": "D7:1"
+  },
+  "conv-50:v1b21": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-50:v1b22": {
+   "q1": "consistent",
+   "q3": "conflict",
+   "q3turn": "D5:10"
+  },
+  "conv-50:v1b23": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-50:v1b24": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-50:v1b25": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-50:v1b26": {
+   "q1": "consistent",
+   "q3": "conflict",
+   "q3turn": "D5:10"
+  },
+  "conv-50:v1b28": {
+   "q1": "consistent",
+   "q3": "clean"
+  },
+  "conv-26:v1c0": {
+   "q1": "contradicts",
+   "q2": "no",
+   "q2quote": "no"
+  },
+  "conv-26:v1c8": {
+   "q1": "contradicts",
+   "q2": "yes",
+   "q2quote": "yes"
+  },
+  "conv-26:v1c12": {
+   "q1": "cannot-tell",
+   "q2": "yes",
+   "q2quote": "yes"
+  },
+  "conv-30:v1c0": {
+   "q1": "cannot-tell",
+   "q2": "yes",
+   "q2quote": "yes"
+  },
+  "conv-30:v1c1": {
+   "q1": "contradicts",
+   "q2": "no",
+   "q2quote": "no"
+  },
+  "conv-30:v1c2": {
+   "q1": "cannot-tell",
+   "q2": "yes",
+   "q2quote": "yes"
+  },
+  "conv-30:v1c3": {
+   "q1": "contradicts",
+   "q2": "no",
+   "q2quote": "no"
+  },
+  "conv-30:v1c5": {
+   "q1": "cannot-tell",
+   "q2": "yes",
+   "q2quote": "yes"
+  },
+  "conv-30:v1c7": {
+   "q1": "contradicts",
+   "q2": "no",
+   "q2quote": "no"
+  },
+  "conv-30:v1c10": {
+   "q1": "contradicts",
+   "q2": "yes",
+   "q2quote": "yes"
+  },
+  "conv-30:v1c12": {
+   "q1": "contradicts",
+   "q2": "no",
+   "q2quote": "no"
+  },
+  "conv-42:v1c0": {
+   "q1": "contradicts",
+   "q2": "no",
+   "q2quote": "yes"
+  },
+  "conv-42:v1c12": {
+   "q1": "contradicts",
+   "q2": "yes",
+   "q2quote": "yes"
+  },
+  "conv-43:v1c1": {
+   "q1": "contradicts",
+   "q2": "no",
+   "q2quote": "no"
+  },
+  "conv-44:v1c0": {
+   "q1": "contradicts",
+   "q2": "yes",
+   "q2quote": "yes"
+  },
+  "conv-44:v1c1": {
+   "q1": "contradicts",
+   "q2": "yes",
+   "q2quote": "yes"
+  },
+  "conv-44:v1c9": {
+   "q1": "contradicts",
+   "q2": "yes",
+   "q2quote": "yes"
+  },
+  "conv-47:v1c1": {
+   "q1": "contradicts",
+   "q2": "no",
+   "q2quote": "yes"
+  },
+  "conv-47:v1c5": {
+   "q1": "cannot-tell",
+   "q2": "no",
+   "q2quote": "no"
+  },
+  "conv-47:v1c10": {
+   "q1": "contradicts",
+   "q2": "no",
+   "q2quote": "yes"
+  },
+  "conv-48:v1c0": {
+   "q1": "contradicts",
+   "q2": "yes",
+   "q2quote": "yes"
+  },
+  "conv-49:v1c5": {
+   "q1": "contradicts",
+   "q2": "no",
+   "q2quote": "no"
+  },
+  "conv-49:v1c8": {
+   "q1": "contradicts",
+   "q2": "yes",
+   "q2quote": "yes"
+  },
+  "conv-50:v1c5": {
+   "q1": "contradicts",
+   "q2": "yes",
+   "q2quote": "yes"
+  },
+  "conv-50:v1c10": {
+   "q1": "contradicts",
+   "q2": "yes",
+   "q2quote": "yes"
+  },
+  "conv-30:v1d4": {
+   "q1": "contradicts",
+   "q2": "yes",
+   "q2quote": "yes"
+  },
+  "conv-30:v1d5": {
+   "q1": "contradicts",
+   "q2": "no",
+   "q2quote": "no"
+  },
+  "conv-41:v1d6": {
+   "q1": "contradicts",
+   "q2": "yes",
+   "q2quote": "yes"
+  },
+  "conv-41:v1d9": {
+   "q1": "contradicts",
+   "q2": "yes",
+   "q2quote": "yes"
+  },
+  "conv-41:v1d12": {
+   "q1": "contradicts",
+   "q2": "yes",
+   "q2quote": "yes"
+  },
+  "conv-42:v1d3": {
+   "q1": "contradicts",
+   "q2": "yes",
+   "q2quote": "yes"
+  },
+  "conv-43:v1d4": {
+   "q1": "cannot-tell",
+   "q2": "no",
+   "q2quote": "no"
+  },
+  "conv-44:v1d0": {
+   "q1": "contradicts",
+   "q2": "yes",
+   "q2quote": "yes"
+  },
+  "conv-44:v1d3": {
+   "q1": "contradicts",
+   "q2": "no",
+   "q2quote": "yes"
+  },
+  "conv-44:v1d4": {
+   "q1": "contradicts",
+   "q2": "no",
+   "q2quote": "no"
+  },
+  "conv-44:v1d7": {
+   "q1": "consistent",
+   "q2": "no",
+   "q2quote": "no"
+  },
+  "conv-44:v1d9": {
+   "q1": "contradicts",
+   "q2": "yes",
+   "q2quote": "yes"
+  },
+  "conv-47:v1d3": {
+   "q1": "contradicts",
+   "q2": "no",
+   "q2quote": "yes"
+  },
+  "conv-47:v1d6": {
+   "q1": "cannot-tell",
+   "q2": "no",
+   "q2quote": "no"
+  },
+  "conv-48:v1d1": {
+   "q1": "contradicts",
+   "q2": "yes",
+   "q2quote": "yes"
+  },
+  "conv-49:v1d1": {
+   "q1": "contradicts",
+   "q2": "yes",
+   "q2quote": "yes"
+  },
+  "conv-49:v1d5": {
+   "q1": "contradicts",
+   "q2": "yes",
+   "q2quote": "yes"
+  },
+  "conv-49:v1d9": {
+   "q1": "contradicts",
+   "q2": "yes",
+   "q2quote": "yes"
+  },
+  "conv-50:v1d0": {
+   "q1": "contradicts",
+   "q2": "yes",
+   "q2quote": "yes"
+  },
+  "conv-50:v1d5": {
+   "q1": "contradicts",
+   "q2": "yes",
+   "q2quote": "yes"
+  },
+  "conv-50:v1d9": {
+   "q1": "contradicts",
+   "q2": "yes",
+   "q2quote": "yes"
+  }
+ }
+}

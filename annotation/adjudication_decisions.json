@@ -1,0 +1,189 @@
+{
+ "exported": "2026-09-19T19:10:35.224Z",
+ "decisions": {
+  "conv-26:v1b7": {
+   "action": "drop",
+   "note": "Thi is a pure and clear contradiction "
+  },
+  "conv-30:v1b13": {
+   "action": "drop"
+  },
+  "conv-41:v1b4": {
+   "action": "drop"
+  },
+  "conv-43:v1b0": {
+   "action": "drop"
+  },
+  "conv-43:v1b1": {
+   "action": "drop"
+  },
+  "conv-47:v1b1": {
+   "action": "drop"
+  },
+  "conv-48:v1b10": {
+   "action": "drop"
+  },
+  "conv-48:v1b22": {
+   "action": "drop"
+  },
+  "conv-26:v1c0": {
+   "action": "drop"
+  },
+  "conv-26:v1c8": {
+   "action": "drop"
+  },
+  "conv-30:v1c1": {
+   "action": "drop"
+  },
+  "conv-30:v1c2": {
+   "action": "drop"
+  },
+  "conv-30:v1c3": {
+   "action": "drop"
+  },
+  "conv-30:v1c5": {
+   "action": "drop"
+  },
+  "conv-30:v1c7": {
+   "action": "drop"
+  },
+  "conv-44:v1c9": {
+   "action": "drop"
+  },
+  "conv-47:v1c1": {
+   "action": "drop"
+  },
+  "conv-47:v1c5": {
+   "action": "drop"
+  },
+  "conv-47:v1c10": {
+   "action": "drop"
+  },
+  "conv-49:v1c5": {
+   "action": "drop"
+  },
+  "conv-50:v1c5": {
+   "action": "drop"
+  },
+  "conv-50:v1c10": {
+   "action": "drop"
+  },
+  "conv-41:v1d6": {
+   "action": "drop"
+  },
+  "conv-42:v1d3": {
+   "action": "drop"
+  },
+  "conv-43:v1d4": {
+   "action": "drop"
+  },
+  "conv-44:v1d0": {
+   "action": "drop"
+  },
+  "conv-44:v1d3": {
+   "action": "drop"
+  },
+  "conv-44:v1d4": {
+   "action": "drop"
+  },
+  "conv-44:v1d7": {
+   "action": "drop"
+  },
+  "conv-44:v1d9": {
+   "action": "drop"
+  },
+  "conv-47:v1d3": {
+   "action": "drop"
+  },
+  "conv-47:v1d6": {
+   "action": "drop"
+  },
+  "conv-48:v1d1": {
+   "action": "drop"
+  },
+  "conv-49:v1d5": {
+   "action": "drop"
+  },
+  "conv-49:v1d9": {
+   "action": "drop"
+  },
+  "conv-50:v1d0": {
+   "action": "drop"
+  },
+  "conv-26:v1b4": {
+   "action": "keep"
+  },
+  "conv-26:v1b22": {
+   "action": "keep"
+  },
+  "conv-30:v1b3": {
+   "action": "keep"
+  },
+  "conv-30:v1b10": {
+   "action": "keep"
+  },
+  "conv-41:v1b8": {
+   "action": "drop"
+  },
+  "conv-41:v1b11": {
+   "action": "keep"
+  },
+  "conv-41:v1b28": {
+   "action": "keep"
+  },
+  "conv-42:v1b0": {
+   "action": "keep"
+  },
+  "conv-42:v1b15": {
+   "action": "keep"
+  },
+  "conv-42:v1b19": {
+   "action": "keep"
+  },
+  "conv-43:v1b21": {
+   "action": "drop"
+  },
+  "conv-44:v1b21": {
+   "action": "keep"
+  },
+  "conv-49:v1b1": {
+   "action": "keep"
+  },
+  "conv-49:v1b12": {
+   "action": "keep"
+  },
+  "conv-50:v1b4": {
+   "action": "keep"
+  },
+  "conv-50:v1b22": {
+   "action": "keep"
+  },
+  "conv-50:v1b28": {
+   "action": "keep"
+  },
+  "conv-26:v1c12": {
+   "action": "keep"
+  },
+  "conv-30:v1c12": {
+   "action": "keep"
+  },
+  "conv-42:v1c0": {
+   "action": "drop"
+  },
+  "conv-42:v1c12": {
+   "action": "keep"
+  },
+  "conv-43:v1c1": {
+   "action": "keep"
+  },
+  "conv-44:v1c1": {
+   "action": "keep"
+  },
+  "conv-49:v1c8": {
+   "action": "keep"
+  },
+  "conv-30:v1d5": {
+   "action": "keep"
+  }
+ }
+}

@@ -4,5 +4,7 @@ title: "TWIST: A Benchmark for Tensions, Alignment, and Safe Recall in Conversat
 authors:
   - family-names: Panda
     given-names: Subrat
+version: "1.0"
+date-released: "2026-09-20"
 year: 2026
 url: "https://github.com/subratpanda/twist-benchmark"

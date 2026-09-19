@@ -1,0 +1,1406 @@
+{
+ "annotator": "A",
+ "exported": "2026-09-19T18:16:54.290Z",
+ "answers": {
+  "conv-26:v1c0": {
+   "q1": "consistent",
+   "q1note": "The frightening road trip does not rule out a separate hiking trip or peaceful trails; hiking is simply unmentioned.",
+   "q2": "no",
+   "q2quote": "yes",
+   "p2note": "The quote faithfully describes a frightening road trip, but no excerpt explicitly excludes a separate pleasant hike. The invented-activity gold label fails the never-mentioned convention."
+  },
+  "conv-26:v1b1": {
+   "q1": "contradicts",
+   "q1note": "D19:1 reports passing adoption interviews and active progress toward a family, not a break.",
+   "q2": "yes",
+   "q2quote": "yes",
+   "p2note": "D19:1 explicitly states passing adoption interviews and progress toward a family; the quote accurately selects that progress."
+  },
+  "conv-48:v1b15": {
+   "q1": "consistent",
+   "q1note": "Studying and seeking internships support ongoing goals; engineering is unmentioned but not contradicted.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned all Jolene turns for engineering, studies, internships, and cessation. D4:9, D21:6-8, and D22:6-8 confirm continuing engineering goals."
+  },
+  "conv-48:v1b24": {
+   "q1": "consistent",
+   "q1note": "Asks whether an interest changed; the unrelated excerpt supplies no contradiction.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned electrical/engineering and changes of study or work. Engineering remains a goal; the draft merely asks whether interests changed."
+  },
+  "conv-50:v1c5": {
+   "q1": "cannot-tell",
+   "q1note": "The excerpts omit what 'there', 'them', and 'it' refer to; neither Japan nor skiing is identifiable from these excerpts alone.",
+   "q2": "no",
+   "q2quote": "yes",
+   "p2note": "The quoted words occur in D9:15, allowing capitalization and sentence-boundary punctuation. Identifying 'there' as Japan or 'it' as skiing requires omitted antecedents."
+  },
+  "conv-26:v1c8": {
+   "q1": "consistent",
+   "q1note": "Asks about a possible change in volunteering rather than asserting a break.",
+   "q2": "yes",
+   "q2quote": "yes",
+   "p2note": "Continued youth-center volunteering is explicit and accurately quoted. Nevertheless the draft asks whether the situation changed, so its contradicting gold label violates the question convention."
+  },
+  "conv-47:v1b15": {
+   "q1": "consistent",
+   "q1note": "D23:3 explicitly says James and Samantha have much in common and were at the bar together.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned Samantha, relationship changes, shared interests, and pub references. D23:1-3 and D29:8-12 support the happy relationship; ups and downs do not negate shared interests."
+  },
+  "conv-48:v1b16": {
+   "q1": "consistent",
+   "q1note": "Cherishing memories is supported; the identity of 'her' as her mother is unestablished but not contradicted.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned mother/mom, memorials, memories, and loss. D19:19-21 identifies the remembered woman as her mother; D22:23 and D28:1-5 reinforce this. No conflict found."
+  },
+  "conv-41:v1b29": {
+   "q1": "consistent",
+   "q1note": "Asks for an update; the employment excerpt does not contradict hiking.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned hiking, trips, and activity interruptions across John turns. D16:1 and D31:19 support hiking; the draft asks for further-trip updates."
+  },
+  "conv-43:v1b26": {
+   "q1": "consistent",
+   "q1note": "Asks whether trip plans continue or changed.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned Universal Studios, Harry Potter travel, and cancellations. D10:9 explicitly gives the next-month plan; the draft asks whether it changed."
+  },
+  "conv-44:v1b27": {
+   "q1": "consistent",
+   "q1note": "Difficulty accessing nature does not negate continued love of hiking; the draft acknowledges work challenges.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned hiking, city/work obstacles, and loss of interest. D10:12 and D21:5-7 restrict activity, but D14:11 and D23:23 preserve his love of hiking, which is all this draft asserts."
+  },
+  "conv-30:v1b3": {
+   "q1": "contradicts",
+   "q1note": "D15:5 says opening night is tomorrow and preparations continue, conflicting with deciding not to open.",
+   "q2": "no",
+   "q2quote": "yes",
+   "p2note": "The opening date is accurately quoted, but this excerpt never identifies what is opening as Jon's dance studio; the strict explicit-claim check requires inferring the event's identity."
+  },
+  "conv-49:v1c5": {
+   "q1": "consistent",
+   "q1note": "Health and weight concerns do not establish what Sam currently eats or exclude an unhealthy diet; the asserted candy/soda decision is unsupported.",
+   "q2": "no",
+   "q2quote": "no",
+   "p2note": "Neither excerpt explicitly states a dietary decision contrary to candy/soda-only eating. 'Trying to stay positive' is genuine wording but the wrong evidence for a diet commitment."
+  },
+  "conv-30:v1b21": {
+   "q1": "consistent",
+   "q1note": "Acknowledges financial roadblocks and accurately describes continued effort and investor-seeking.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned the studio, finances, investors, closure, and quitting. D18:2-20 and D19:1-11 explicitly support persistence through financial difficulty."
+  },
+  "conv-47:v1c10": {
+   "q1": "consistent",
+   "q1note": "Signing up for cooking does not exclude also taking sculpting; sculpting is merely unmentioned.",
+   "q2": "no",
+   "q2quote": "no",
+   "p2note": "Cooking classes do not exclude sculpting classes. The selected quote is about liking cooking and wanting to learn, not a statement denying sculpting or identifying the alleged class exclusively."
+  },
+  "conv-44:v1b18": {
+   "q1": "consistent",
+   "q1note": "D22:5 explicitly describes making jewelry from recycled materials.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned jewelry, recycling, sales, and cessation. D22:5-7 explicitly support recycled jewelry-making and sales."
+  },
+  "conv-41:v1b27": {
+   "q1": "consistent",
+   "q1note": "Asks whether the fitness routine changed rather than asserting it did.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned aerial/kundalini yoga, gym, routine changes, and stopping. D18:15-19 supports aerial yoga and D19:3 adds kundalini; the draft asks whether a change occurred."
+  },
+  "conv-41:v1d9": {
+   "q1": "contradicts",
+   "q1note": "D19:1 says she recently joined, is sticking with the routine, and likes the gym; leaving conflicts with that latest record.",
+   "q2": "yes",
+   "q2quote": "yes",
+   "p2note": "D19:1 explicitly states joining a gym and sticking with its routine. The quote preserves the source words, with sentence-boundary punctuation normalized."
+  },
+  "conv-42:v1c12": {
+   "q1": "cannot-tell",
+   "q1note": "Allergies and reluctance to get 'any' suggest a pet issue, but the antecedent and whether this excludes a puppy plan are omitted.",
+   "q2": "no",
+   "q2quote": "yes",
+   "p2note": "The words are faithfully excerpted, but 'any' has no explicit animal-type antecedent; a puppy prohibition or ownership status is not directly stated."
+  },
+  "conv-50:v1d0": {
+   "q1": "cannot-tell",
+   "q1note": "The activity in 'haven't tried it' is unspecified; the excerpts do not establish that it means skiing.",
+   "q2": "no",
+   "q2quote": "yes",
+   "p2note": "The quote is accurate, but identifying 'it' as skiing requires resolving an omitted antecedent."
+  },
+  "conv-49:v1b16": {
+   "q1": "consistent",
+   "q1note": "Sam explicitly finds nature tranquil and refreshing, while acknowledging activity limitations.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned nature, hiking, outdoor experiences, and dislike. Limited activity does not negate enjoying nature; D9:11 and D25:7-13 explicitly support its restorative value."
+  },
+  "conv-49:v1b1": {
+   "q1": "contradicts",
+   "q1note": "Ongoing reduction of soda and candy intake is not the complete elimination asserted by the draft.",
+   "q2": "yes",
+   "q2quote": "yes",
+   "p2note": "Ongoing reduction of soda and candy is directly stated and accurately quoted, rather than complete elimination."
+  },
+  "conv-42:v1b27": {
+   "q1": "consistent",
+   "q1note": "An open question about changes in writing style makes no conflicting assertion.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned writing genres, scripts, books, and style changes. D17:10 describes new work differing from earlier work; asking about transformations is compatible with the record."
+  },
+  "conv-42:v1b13": {
+   "q1": "consistent",
+   "q1note": "The excerpt describes the story but does not deny readership or favorable reception; those details are unsupported, not contradicted.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned book development, publication, and reception. D19:6-8 gives favorable reader/writers-group feedback. Unpublished or still-edited work can have readers; no negative reception found."
+  },
+  "conv-42:v1b29": {
+   "q1": "consistent",
+   "q1note": "General encouragement about persistence is compatible with working hard toward dreams.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned rejection, lost work, writing breaks, and abandonment. Later scripts and producer pitches show continued creativity after setbacks."
+  },
+  "conv-49:v1b23": {
+   "q1": "consistent",
+   "q1note": "Asks whether watercolor classes continue; the excerpt confirms prior participation.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned watercolor, painting classes, and stopping. D8:18 and D11:6 support ongoing watercolor work; the draft asks whether classes continue."
+  },
+  "conv-44:v1c0": {
+   "q1": "contradicts",
+   "q1note": "Four dogs being enough for now and wanting to give them adequate attention conflict with the asserted near-term fifth-dog plan.",
+   "q2": "yes",
+   "q2quote": "yes",
+   "p2note": "D15:3 explicitly identifies four dogs and says four is enough for now; the quote correctly captures the limit."
+  },
+  "conv-41:v1d6": {
+   "q1": "consistent",
+   "q1note": "Being employed and promoted does not preclude looking for another job; the draft does not explicitly say unemployed.",
+   "q2": "no",
+   "q2quote": "yes",
+   "p2note": "Promotion is accurately quoted but does not explicitly rule out looking for another job. The draft does not assert unemployment."
+  },
+  "conv-41:v1b28": {
+   "q1": "consistent",
+   "q1note": "Continuing despite doubts is supported; the excerpt does not contradict the activism description.",
+   "q3": "conflict",
+   "q3turn": "D28:11",
+   "p2note": "The full-history scan finds 'I haven't been able to volunteer much lately.' This later reduction in community activity undercuts the unqualified claim that his activism has not slowed. Political interest itself continues."
+  },
+  "conv-42:v1b25": {
+   "q1": "consistent",
+   "q1note": "Asks about influences; watching a film does not rule out also working in films, although that work is unsupported.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned film work and books. D15:1, D17:14, D22:9, and D25:2 establish both media; the influence question is compatible with them."
+  },
+  "conv-50:v1b26": {
+   "q1": "consistent",
+   "q1note": "Acknowledges the flood setback and subsequent creative motivation.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned flooding, pauses, albums, and creativity. D6:7 establishes the interruption, D8:1-3 renewed album work, and D18:1-5 success; the draft acknowledges the pause."
+  },
+  "conv-41:v1b18": {
+   "q1": "consistent",
+   "q1note": "The cousin and help are unspecified, but the safe-home statement contains no conflicting fact.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned cousin, housing assistance, and family support. D21:5 explicitly says she is helping her cousin find a new place; no conflict found."
+  },
+  "conv-49:v1b28": {
+   "q1": "consistent",
+   "q1note": "The draft explicitly acknowledges the knee injury and its effects.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned knee setbacks, restrictions, and recovery. D9:6 and D11:4 explicitly describe swimming/easy exercises despite injury; general encouragement is compatible."
+  },
+  "conv-44:v1d0": {
+   "q1": "contradicts",
+   "q1note": "The excerpts describe a difficult pet-friendly housing search and say it is still being worked on, not successfully completed.",
+   "q2": "no",
+   "q2quote": "yes",
+   "p2note": "The quote is accurate, but the latest 'that' needs a referent to establish the housing search remains unfinished. The earlier excerpt explicitly describes searching but not the latest outcome."
+  },
+  "conv-30:v1c5": {
+   "q1": "consistent",
+   "q1note": "A part-time fashion position does not exclude an internship or New York; neither detail is contradicted.",
+   "q2": "no",
+   "q2quote": "yes",
+   "p2note": "The position is faithfully quoted; part-time fashion work does not rule out an internship or New York. No contradicted location or employment category is explicit."
+  },
+  "conv-30:v1b17": {
+   "q1": "consistent",
+   "q1note": "The excerpt about organization does not conflict with teaching dance, though it does not establish teaching.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned teaching, mentoring, students, and dance classes. D5:4, D7:7, and D13:5-9 establish guiding dancers; no teaching cessation found."
+  },
+  "conv-50:v1c10": {
+   "q1": "cannot-tell",
+   "q1note": "'There' and 'them' lack antecedents; no Japanese location or owned space is established, so the suggested location conflict cannot be resolved.",
+   "q2": "no",
+   "q2quote": "no",
+   "p2note": "Japan and a Japanese living space are absent. The selected 'see them' quote cannot establish residence or decoration status and requires an unresolved referent."
+  },
+  "conv-30:v1b26": {
+   "q1": "consistent",
+   "q1note": "The excerpt concerns encouragement of Jon; it does not contradict Gina's general resolve in fashion.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned fashion work, business hardship, job changes, and cessation. D17:1 and D18:1 show continuing effort despite pressure; no abandonment found."
+  },
+  "conv-30:v1c10": {
+   "q1": "contradicts",
+   "q1note": "The position is explicitly part-time, conflicting with describing the current position as full-time.",
+   "q2": "yes",
+   "q2quote": "yes",
+   "p2note": "The position is explicitly part-time and the quoted span accurately captures that attribute."
+  },
+  "conv-41:v1b13": {
+   "q1": "consistent",
+   "q1note": "D17:12 confirms she has started volunteering at a dog shelter.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned dog shelter, volunteering, joy, and cessation. D17:12 confirms volunteering at a dog shelter; extensive homeless-shelter work does not exclude the separate animal-shelter role."
+  },
+  "conv-26:v1b17": {
+   "q1": "consistent",
+   "q1note": "Passing agency interviews supports advancement toward a family, and the second excerpt supports offering love and care.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned adoption applications, interviews, delays, and withdrawal. D13:1 and D19:1 confirm progress, with continuing family goals in D19:3."
+  },
+  "conv-43:v1b23": {
+   "q1": "consistent",
+   "q1note": "Asks about current endorsement versus basketball priorities without asserting a change.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned endorsement brands, contracts, basketball priorities, and withdrawal. D11:17 and D29:4 show continued endorsements; the draft asks about priorities rather than asserting cessation."
+  },
+  "conv-26:v1b19": {
+   "q1": "consistent",
+   "q1note": "The excerpts explicitly link painting and drawing to exploring and accepting gender identity.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned painting, drawing, gender identity, and art's effects. D11:10-14, D13:13, and D16:9-13 explicitly support self-exploration through art."
+  },
+  "conv-26:v1b4": {
+   "q1": "contradicts",
+   "q1note": "The casual question presupposes ongoing enjoyable pottery classes despite the latest report of an injury-related break; it does not ask whether she resumed.",
+   "q2": "yes",
+   "q2quote": "yes",
+   "p2note": "The injury-related break from pottery is explicit and accurately quoted; the draft presupposes continuing classes."
+  },
+  "conv-47:v1b22": {
+   "q1": "consistent",
+   "q1note": "Teaching programming and conducting a successful seminar are compatible with encouragement to continue workshops.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned coding workshops, teaching, mentoring, seminars, and cancellation. D26:1-3 and D28:6-8 confirm the activity and a successful seminar; regularity is unverified but not contradicted."
+  },
+  "conv-49:v1b2": {
+   "q1": "contradicts",
+   "q1note": "D8:18 describes current watercolor learning and enjoyment, conflicting with having left it behind.",
+   "q2": "yes",
+   "q2quote": "yes",
+   "p2note": "Current watercolor classes are explicitly stated and accurately quoted."
+  },
+  "conv-49:v1b3": {
+   "q1": "contradicts",
+   "q1note": "D9:11 explicitly says no road trip in ages and frames one as a future possibility.",
+   "q2": "yes",
+   "q2quote": "yes",
+   "p2note": "Not having gone on a road trip in ages is explicit and accurately quoted."
+  },
+  "conv-30:v1c2": {
+   "q1": "cannot-tell",
+   "q1note": "'Used to compete' suggests past participation, but does not unambiguously establish current nonparticipation or exclude a return; no current dance-status statement is supplied.",
+   "q2": "no",
+   "q2quote": "yes",
+   "p2note": "Past competition participation is accurately quoted, but a present prohibition, cessation, or lack of return is not explicitly stated; current status depends on implication."
+  },
+  "conv-48:v1b17": {
+   "q1": "consistent",
+   "q1note": "D16:10 includes meditation among current self-care priorities.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned meditation, mindfulness, self-care, and interruptions. D16:10, D17:2, D25:1, and D28:18 support continued meditation; no cessation found."
+  },
+  "conv-48:v1b13": {
+   "q1": "consistent",
+   "q1note": "The excerpt explicitly describes shared gaming as enjoyable and bonding.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned gaming, consoles, partner, and relationship references. D2:26, D15:8-10, and D19:10 support shared enjoyment; difficulty finding time does not negate it."
+  },
+  "conv-47:v1b14": {
+   "q1": "consistent",
+   "q1note": "D22:10 explicitly confirms teaching siblings coding and finding it fulfilling.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned siblings, programming instruction, fulfillment, and cessation. D21:2-8 and D22:10-14 explicitly support the message."
+  },
+  "conv-30:v1c0": {
+   "q1": "contradicts",
+   "q1note": "The latest record says Gina lost the Door Dash job; the draft invents a return to that job.",
+   "q2": "yes",
+   "q2quote": "yes",
+   "p2note": "Losing the Door Dash job is explicit and accurately quoted; no return is recorded."
+  },
+  "conv-41:v1b22": {
+   "q1": "consistent",
+   "q1note": "Volunteering and taking aerial yoga support involvement in local activities.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned community, volunteering, local groups, and withdrawal. Numerous shelter, church, and fitness activities support involvement through D32:14."
+  },
+  "conv-30:v1d5": {
+   "q1": "consistent",
+   "q1note": "'Is this true?' explicitly asks whether the reported change occurred; it is a change-verification question.",
+   "q2": "yes",
+   "q2quote": "yes",
+   "p2note": "Jon explicitly describes creating a dance business, studio activity, and opening preparations. The quote is accurate, but 'Is this true?' makes the draft a permitted change question."
+  },
+  "conv-43:v1b19": {
+   "q1": "consistent",
+   "q1note": "D26:21 explicitly describes supporting youth sports and underserved communities.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned youth programs, charities, sports support, and withdrawal. D6:17 and D26:21 explicitly establish sustained support for disadvantaged young athletes."
+  },
+  "conv-30:v1c12": {
+   "q1": "cannot-tell",
+   "q1note": "The online store is already open; 'boutique opening soon' conflicts if it is that store, but may refer to a separate physical boutique. The excerpts do not resolve the identity.",
+   "q2": "yes",
+   "q2quote": "yes",
+   "p2note": "The online store being already open is explicit and accurately quoted. Whether the draft's boutique is the same venture remains ambiguous."
+  },
+  "conv-42:v1b24": {
+   "q1": "consistent",
+   "q1note": "The draft acknowledges breaks, which the excerpt endorses, and asks how she feels.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned breaks, writing, rest, and refusal to pause. D19:10-12 describes a restorative break; later writing activity does not contradict having taken time off."
+  },
+  "conv-47:v1b21": {
+   "q1": "consistent",
+   "q1note": "Asks whether adventure plans or interests changed.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned extreme sports, surfing, activity changes, and cessation; D16:5-7 report participation. The draft asks whether interests shifted."
+  },
+  "conv-41:v1b17": {
+   "q1": "consistent",
+   "q1note": "Encouragement about education is compatible with John's stated community interests.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned education, infrastructure, advocacy, and withdrawal. D1:8-10, D12:1-5, and D31:1 support continuing educational/community efforts."
+  },
+  "conv-30:v1b15": {
+   "q1": "consistent",
+   "q1note": "His investment in the coming event supports the encouragement; nothing conflicts with the studio description.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned dance/studio effort and abandonment. Repeated determination through D19:11 supports commitment despite unstable opening chronology."
+  },
+  "conv-50:v1b22": {
+   "q1": "consistent",
+   "q1note": "Acknowledges a setback while recognizing ongoing creativity; the flood and positive outlook are compatible.",
+   "q3": "conflict",
+   "q3turn": "D5:10",
+   "p2note": "The full-history scan finds Calvin saying he is stuck with music and his creativity is frozen, followed by taking a break in D5:12. This directly qualifies the claim that creativity kept flowing during the step back; later renewed creativity is also recorded."
+  },
+  "conv-49:v1b15": {
+   "q1": "consistent",
+   "q1note": "Enjoyment of the mountains supports the sentiment; hiking is not explicitly identified but is not contradicted.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned hiking, trails, enjoyment, injury, and cessation. D9:12 and D14:8 support enjoyment. Temporary limitations do not contradict loving hiking or hoping for a future outing."
+  },
+  "conv-43:v1b17": {
+   "q1": "consistent",
+   "q1note": "D28:12 explicitly reports a successful game and charitable fundraising.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned benefit games, charity, fundraising, and failure/cancellation. D28:10-12 explicitly reports holding a successful fundraising basketball game."
+  },
+  "conv-43:v1d4": {
+   "q1": "consistent",
+   "q1note": "A game located in Seattle does not imply changing teams; the only named team is Minnesota Wolves.",
+   "q2": "no",
+   "q2quote": "no",
+   "p2note": "Seattle is the location of a game, not an explicitly stated new team. The selected game-location quote cannot establish leaving Minnesota Wolves."
+  },
+  "conv-49:v1b22": {
+   "q1": "consistent",
+   "q1note": "Asks whether the established soda-reduction effort continues.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned soda, candy, diet, reduction, and relapses. D4:7 supports reduction; D10:4 and D13:2 show struggles, but the draft asks whether he has stuck to the change."
+  },
+  "conv-49:v1b19": {
+   "q1": "consistent",
+   "q1note": "D19:1 explicitly says his partner is pregnant and they are excited.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned pregnancy, partner, baby, and family changes. D19:1 explicitly confirms the pregnancy and shared excitement; no conflicting update found."
+  },
+  "conv-48:v1b28": {
+   "q1": "consistent",
+   "q1note": "Asks whether the proposed STEM volunteering happened or plans changed.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned STEM, volunteering, teaching, and workshop plans. D5:7-9 describe proposed volunteering; the draft asks whether it happened or changed."
+  },
+  "conv-44:v1d7": {
+   "q1": "cannot-tell",
+   "q1note": "The recorded adoption already happened; a forthcoming adoption conflicts if it is that event, but 'another dog' could mean a further adoption. Event identity is ambiguous.",
+   "q2": "yes",
+   "q2quote": "yes",
+   "p2note": "Adopting another dog the other day is explicit and faithfully quoted, including the source typo. Whether the draft refers to that adoption or an additional future one is ambiguous."
+  },
+  "conv-42:v1b22": {
+   "q1": "consistent",
+   "q1note": "Acknowledges a setback and offers general encouragement; rejection does not contradict perseverance.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned rejection, setbacks, and quitting. D24:12 records rejection, while D26:1-5 and D28:8-10 establish continuing pursuit."
+  },
+  "conv-50:v1b14": {
+   "q1": "consistent",
+   "q1note": "The album release, positive reception, and renewed motivation are explicit.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned album progress, release, reception, and setbacks. D18:1-5 explicitly supports an empowering successful release. D27:11 mentions an almost-finished album without establishing it is the same release, so does not negate the success."
+  },
+  "conv-50:v1d9": {
+   "q1": "contradicts",
+   "q1note": "The insurance process was a hassle and is now sorted, conflicting with 'still going smoothly'.",
+   "q2": "yes",
+   "q2quote": "yes",
+   "p2note": "The insurance process being troublesome and now resolved is explicit and accurately quoted."
+  },
+  "conv-49:v1b13": {
+   "q1": "consistent",
+   "q1note": "D25:10 says he enjoyed kayaking; seeing pictures is unsupported but not contradicted.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned kayaking, trip reports, and adverse experiences. D25:10 explicitly describes an enjoyable past kayak outing; no conflict found."
+  },
+  "conv-43:v1b20": {
+   "q1": "consistent",
+   "q1note": "D27:5 explicitly says German learning is tough but fun.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned German, language learning, and stopping. D27:5-13 explicitly supports enjoyment and continued lessons."
+  },
+  "conv-49:v1b25": {
+   "q1": "consistent",
+   "q1note": "Acknowledges the knee setback; difficulty staying active does not establish that fitness efforts have ceased.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned knee injury, fitness restrictions, and continuing activity. D9:6, D11:4, and D14:2 confirm adapted activity and pursuit of fitness."
+  },
+  "conv-44:v1d9": {
+   "q1": "consistent",
+   "q1note": "A planned beach trip does not exclude an additional ski trip; skiing is unmentioned, not denied.",
+   "q2": "no",
+   "q2quote": "yes",
+   "p2note": "The beach-trip quote is accurate, but no explicit statement excludes another upcoming ski trip."
+  },
+  "conv-44:v1b20": {
+   "q1": "consistent",
+   "q1note": "D20:14 explicitly describes wanting to birdwatch and appreciating nature.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned birdwatching, guides, nature, and loss of interest. D20:14-18 affirm plans and enthusiasm."
+  },
+  "conv-44:v1b21": {
+   "q1": "consistent",
+   "q1note": "The housing-search excerpt does not say hiking stopped; continued hiking is unsupported but not contradicted.",
+   "q3": "conflict",
+   "q3turn": "D10:12",
+   "p2note": "D10:12 explicitly says 'I can't hike' and describes replacing it with cooking. D18:1 also says outdoor activities took a backseat. These qualify the draft's claim of having kept up hiking, although later occasional hikes are reported."
+  },
+  "conv-42:v1b15": {
+   "q1": "cannot-tell",
+   "q1note": "'Debut' could mean Joanna's first movie, which conflicts with 'third time', or the premiere of this particular movie, which does not.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned film releases, debuts, and prior work. D25:2 says this movie was shown for the first time, resolving 'debut' as the movie's premiere. It is her third such experience, not her personal first film."
+  },
+  "conv-50:v1b17": {
+   "q1": "consistent",
+   "q1note": "The collaboration deal and successful performance support the congratulatory message.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned collaborations, contracts, concerts, and cancellations. D10:12-14, D15:2-4, D21:1, and D29:1 support the successful collaborations."
+  },
+  "conv-43:v1b28": {
+   "q1": "consistent",
+   "q1note": "The excerpt explicitly reports overcoming a writing block through persistence.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned writing, plot difficulties, and abandonment. D16:1 explicitly records renewed ideas; D19:3's later setback does not negate that recovery, and D19:9 affirms motivation."
+  },
+  "conv-43:v1b24": {
+   "q1": "consistent",
+   "q1note": "Persistence in writing is explicit; the fantasy genre is unmentioned but not contradicted.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned fantasy writing, plot blocks, and quitting. D15:3-9 and D19:9 support commitment despite setbacks."
+  },
+  "conv-50:v1b4": {
+   "q1": "contradicts",
+   "q1note": "Japan for a few months before Boston is the current itinerary, conflicting with already being back and settling in the US.",
+   "q2": "yes",
+   "q2quote": "yes",
+   "p2note": "The Japan-then-Boston itinerary is explicit and accurately quoted; it places the US destination after the planned months in Japan."
+  },
+  "conv-41:v1b24": {
+   "q1": "consistent",
+   "q1note": "D26:1 reports recent shelter support and increased motivation.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned shelter involvement, burnout, and breaks. Work can be overwhelming (D12:20), but D26:1, D29:1, and D32:14 show continued commitment."
+  },
+  "conv-48:v1b22": {
+   "q1": "consistent",
+   "q1note": "A video-game plan supplies no contradiction about surfing or a busy schedule; those details are unsupported.",
+   "q3": "conflict",
+   "q3turn": "D10:20",
+   "p2note": "D10:18 says she is wondering when she will learn to surf; D10:20 says she still needs a first lesson. The draft treats surfing as an established practice that slowed, rather than a not-yet-started activity."
+  },
+  "conv-30:v1c3": {
+   "q1": "consistent",
+   "q1note": "Opening a clothes store does not establish that she did not also open a dance studio; the studio is unmentioned.",
+   "q2": "no",
+   "q2quote": "yes",
+   "p2note": "The quote faithfully reports a clothes-store opening but does not explicitly deny a dance studio or establish that she operates only one business."
+  },
+  "conv-50:v1b16": {
+   "q1": "consistent",
+   "q1note": "The producer's advice motivated Calvin to pursue a personal, distinctive musical direction.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned musical identity, authenticity, advice, and abandonment. D16:24 and D29:7 explicitly affirm staying true to himself."
+  },
+  "conv-43:v1b13": {
+   "q1": "consistent",
+   "q1note": "D23:3 explicitly reports the recent career-high in assists.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned assists, recent games, injury, and performance. D23:3-5 directly confirms the career-high; injuries at other times do not negate this reported achievement."
+  },
+  "conv-41:v1b1": {
+   "q1": "contradicts",
+   "q1note": "D3:11 explicitly says he failed the military aptitude test.",
+   "q2": "yes",
+   "q2quote": "yes",
+   "p2note": "Failure of the military aptitude test is explicit and accurately quoted."
+  },
+  "conv-50:v1d5": {
+   "q1": "contradicts",
+   "q1note": "D24:1 reports active touring and performing with Frank Ocean, conflicting with a current break from music.",
+   "q2": "yes",
+   "q2quote": "yes",
+   "p2note": "Active touring and stage performance are explicit and accurately quoted."
+  },
+  "conv-30:v1c7": {
+   "q1": "cannot-tell",
+   "q1note": "An exciting new fashion position suggests continued involvement, but does not explicitly rule out privately considering leaving; the excerpt does not settle the asserted intention.",
+   "q2": "no",
+   "q2quote": "no",
+   "p2note": "Excitement about a new fashion position does not explicitly rule out considering a future departure. The selected quote omits the fashion role and supplies only nonspecific emotions."
+  },
+  "conv-50:v1b28": {
+   "q1": "consistent",
+   "q1note": "Acknowledges the flood while affirming creative involvement; saved equipment and optimism are compatible.",
+   "q3": "conflict",
+   "q3turn": "D6:7",
+   "p2note": "Immediately after the flood, Calvin says he cannot wait to get back to making music, indicating an interruption rather than the draft's current involvement. Later D8:1-3 records resumed projects; this is a conflict at the supplied flood-context date, not a permanent cessation."
+  },
+  "conv-49:v1b18": {
+   "q1": "consistent",
+   "q1note": "The draft is misaddressed to Sam although the card names Evan, but the encouragement and reference to Evan's skiing stories do not contradict the excerpt.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned skiing, winter sports, injuries, and travel. D8:28-30 supports Evan's skiing experience. The draft addresses Sam despite recipient Evan; flag this recipient mismatch separately, since no Evan turn contradicts the encouragement."
+  },
+  "conv-49:v1b21": {
+   "q1": "consistent",
+   "q1note": "Acknowledges the injury; finding activity tough does not mean his entire routine stopped.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned knee setbacks and routine. D11:4 explicitly says easy exercises continue despite inability to do intense workouts, supporting not falling completely out of routine."
+  },
+  "conv-49:v1b27": {
+   "q1": "consistent",
+   "q1note": "Some activity is compatible with difficulty staying active after injury.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned injury and activity. D9:6 states swimming to stay active and D11:4 states easy exercises, directly supporting some continued activity."
+  },
+  "conv-44:v1b26": {
+   "q1": "consistent",
+   "q1note": "The behaviorist appointment supports attending to the dogs; Audrey's own injury is unmentioned, not contradicted.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned injury, recovery, dog care, and outlook. D22:1 confirms the knee injury and resumed walks; D26:1-9 supports continued hopeful care."
+  },
+  "conv-47:v1c1": {
+   "q1": "consistent",
+   "q1note": "Having visited Turkey before does not exclude being there currently; current whereabouts are not supplied.",
+   "q2": "no",
+   "q2quote": "yes",
+   "p2note": "The quote accurately lists past travel, but no current location or statement that he is not now in Turkey is explicit."
+  },
+  "conv-48:v1d1": {
+   "q1": "consistent",
+   "q1note": "An internship can be a job, and enjoying its opportunities can coexist with workload and balance difficulties; no explicit denial of enjoyment or settling is given.",
+   "q2": "no",
+   "q2quote": "no",
+   "p2note": "Work-life balance difficulties do not explicitly deny enjoyment or being settled. The selected balance quote does not establish the claimed employment-status conflict."
+  },
+  "conv-30:v1b20": {
+   "q1": "consistent",
+   "q1note": "D8:10 describes positive reception to her designs and growing the clothing business.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned clothing, designs, creativity, sales, and stopping. D5:5-7, D8:8-12, and D13:4 support creative clothing work."
+  },
+  "conv-47:v1c5": {
+   "q1": "consistent",
+   "q1note": "Rope jumping does not exclude a separate skydive or aviation interest; neither is expressly denied.",
+   "q2": "no",
+   "q2quote": "yes",
+   "p2note": "The rope-jumping report is accurately quoted; it does not explicitly exclude skydiving or aviation interest."
+  },
+  "conv-26:v1b21": {
+   "q1": "consistent",
+   "q1note": "Adoption progress and recent artistic engagement are compatible with the acknowledged balancing challenge.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned adoption preparation, art activity, workload, and pauses. D17:1-7 and D17:13-21 show both adoption preparation and continued creative engagement."
+  },
+  "conv-43:v1b21": {
+   "q1": "cannot-tell",
+   "q1note": "Injury and missed games are explicit, but the latest excerpt uses past tense and does not establish whether recovery is now complete or ongoing.",
+   "q3": "conflict",
+   "q3turn": "D24:12",
+   "p2note": "D24:12 says recovery is still tough and he is doing daily physical therapy after the missed games in D24:10. The draft's congratulation on an accomplished recovery overstates the ongoing rehab; D19:6 describes a separate earlier recovered ankle injury."
+  },
+  "conv-42:v1b0": {
+   "q1": "contradicts",
+   "q1note": "Joanna says she has always stayed away from triggering animals and is allergic to fur; acquiring a pet dog conflicts with that stated avoidance in the latest record.",
+   "q2": "no",
+   "q2quote": "yes",
+   "p2note": "Allergies and avoidance are explicit and the quote is accurate, but dog ownership being absent is inferred rather than directly stated; 'most' also leaves exceptions."
+  },
+  "conv-43:v1b0": {
+   "q1": "cannot-tell",
+   "q1note": "Never having been on a sports team and preferring books make the coaching claim doubtful, but the excerpt does not explicitly rule out coaching or distinguish playing from coaching.",
+   "q2": "no",
+   "q2quote": "yes",
+   "p2note": "Never having been on a sports team is faithfully quoted, but lack of a coaching job or interest is not explicitly stated; the role distinction is unresolved."
+  },
+  "conv-50:v1b25": {
+   "q1": "consistent",
+   "q1note": "Acknowledges the pressures of fame; dedication and support are compatible with difficulty balancing demands.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned fame, demands, balance, support, and quitting. D25:2-6 acknowledges difficulty while confirming continued effort and support; praise for dedication does not deny those difficulties."
+  },
+  "conv-26:v1b18": {
+   "q1": "consistent",
+   "q1note": "Painting to keep busy supports artistic involvement; no excerpt contradicts its value for expression and peace.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned art, painting, pottery, injuries, and stopping. D1:16, D12:6-8, D16:8, and D17:10-16 support art's continuing therapeutic role despite pausing pottery."
+  },
+  "conv-44:v1b28": {
+   "q1": "consistent",
+   "q1note": "Asks about expanding jewelry sales into a fuller business; existing sales do not preclude expansion.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned jewelry, selling, profits, and business changes. D22:7 establishes existing sales, but asking about expansion into a fuller business does not deny those sales."
+  },
+  "conv-49:v1b12": {
+   "q1": "contradicts",
+   "q1note": "D11:8 reports recent painting and enjoyment, directly conflicting with keeping it out of his life.",
+   "q2": "yes",
+   "q2quote": "yes",
+   "p2note": "Painting's current positive role and a recent work are explicit; the quote correctly captures its current presence in his life."
+  },
+  "conv-44:v1b14": {
+   "q1": "consistent",
+   "q1note": "Her desire to give each dog proper attention supports affection and commitment.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned dog attachment, care, and setbacks. D13:4, D15:1-3, and D23:18 consistently affirm affection; temporary walking limitations do not negate it."
+  },
+  "conv-41:v1b31": {
+   "q1": "consistent",
+   "q1note": "Meeting shelter children is compatible with helping again; downtime and full pace are unsupported but not explicitly contradicted.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned shelter work, downtime, pace, interruptions, and inability to help. The accident in D21:5 left everyone okay, and later volunteering continues; no explicit ongoing reduced pace found. Full pace remains unverified."
+  },
+  "conv-26:v1b25": {
+   "q1": "consistent",
+   "q1note": "D14:33 explicitly combines organizing an LGBTQ art show with showing her paintings.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned art-show plans, paintings, and cancellation. D9:12-16 and D14:33-35 support showing her paintings and organizing an LGBTQ show; no cancellation found."
+  },
+  "conv-44:v1b23": {
+   "q1": "consistent",
+   "q1note": "Continued work despite challenges is compatible with the encouragement; the excerpt alone does not identify the housing task.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned pet-friendly housing, renting, landlords, and abandoning the search. D5:5-7, D7:8, D10:2, and D18:21 support persistence; no explicit abandonment found."
+  },
+  "conv-44:v1b16": {
+   "q1": "consistent",
+   "q1note": "The excerpts explicitly describe implementing behaviorist advice and commitment to the dogs' wellbeing.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned behaviorist visits, treatment, routine changes, and abandonment. D26:1-11 explicitly supports sustained efforts and commitment."
+  },
+  "conv-26:v1c12": {
+   "q1": "contradicts",
+   "q1note": "D13:4 explicitly says the household got another cat named Bailey.",
+   "q2": "yes",
+   "q2quote": "yes",
+   "p2note": "The excerpt explicitly says Melanie's household got another cat named Bailey, and the quote faithfully includes that fact."
+  },
+  "conv-47:v1b23": {
+   "q1": "consistent",
+   "q1note": "The discussion of chess study, advice, and resources supports continued engagement.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned chess, strategy, opening study, and abandonment. D17:1-9 and D30:4-12 support continuing commitment and a tournament win."
+  },
+  "conv-47:v1b1": {
+   "q1": "consistent",
+   "q1note": "The future mentor role is explicit; next month and non-profit are unestablished but not contradicted.",
+   "q2": "no",
+   "q2quote": "yes",
+   "p2note": "The quote accurately supports the future mentoring role rather than contradicting it. The excerpt supplies neither a conflicting employer nor start date."
+  },
+  "conv-47:v1b25": {
+   "q1": "consistent",
+   "q1note": "Having three dogs does not conflict with balancing other responsibilities and interests; the other activities are unmentioned.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned family, dogs, fitness, gaming, and balance. D16:5 and D25:20 acknowledge balancing challenges, while the activities continue."
+  },
+  "conv-48:v1c0": {
+   "q1": "contradicts",
+   "q1note": "D7:7 explicitly says they are not married and the ring is decorative.",
+   "q2": "yes",
+   "q2quote": "yes",
+   "p2note": "'We're not married yet' directly and accurately establishes the relevant marital status."
+  },
+  "conv-44:v1b19": {
+   "q1": "consistent",
+   "q1note": "D24:8 explicitly describes enjoying walks together with Buddy.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned Buddy, walks, adoption, and distress. D24:4-10 supports enjoyable walks with the new dog; earlier pre-adoption statements describe a different time."
+  },
+  "conv-42:v1d3": {
+   "q1": "consistent",
+   "q1note": "Filming a script does not rule out an earlier rejection by a production company; the draft does not say it remains unproduced or abandoned.",
+   "q2": "no",
+   "q2quote": "yes",
+   "p2note": "Filming the road-trip script is explicitly and accurately quoted, but that does not rule out an earlier rejection; no denial of rejection appears."
+  },
+  "conv-42:v1c0": {
+   "q1": "cannot-tell",
+   "q1note": "The excerpts indicate avoidance and reluctance to acquire pets, but do not explicitly state pet ownership status or exclude all suitable alternative pets.",
+   "q2": "no",
+   "q2quote": "yes",
+   "p2note": "Avoiding certain animals is accurately quoted, but the excerpt does not explicitly deny all pet ownership or identify what 'any' refers to."
+  },
+  "conv-49:v1b26": {
+   "q1": "consistent",
+   "q1note": "Asks for an update on the explicitly reported cravings.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned cravings, sweet snacks, diet, and lapses. D10:4-6 and D13:2 establish the struggle; an update question is compatible with either success or relapse."
+  },
+  "conv-44:v1b24": {
+   "q1": "consistent",
+   "q1note": "Acknowledges the dogs' behavior problems and accurately reflects hopeful ongoing work.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned behavioral problems and outlook. D26:1-11 explicitly reports ongoing problems and hope; later happy park outings do not establish complete resolution."
+  },
+  "conv-44:v1c9": {
+   "q1": "cannot-tell",
+   "q1note": "Getting a new place does not necessarily mean the move is complete; the excerpt does not settle whether moving is still planned.",
+   "q2": "no",
+   "q2quote": "yes",
+   "p2note": "Getting a new place is accurately quoted; actually having completed a move is not explicit and cannot be inferred automatically from acquiring it."
+  },
+  "conv-47:v1b19": {
+   "q1": "consistent",
+   "q1note": "Affection for three dogs and declining more do not contradict balancing family and interests; effortless is praise, not an established factual conflict.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned family, passions, and balance difficulties. 'Make it look effortless' is subjective praise, not a denial of the effort described in D16:5 and D25:20."
+  },
+  "conv-26:v1b26": {
+   "q1": "consistent",
+   "q1note": "Explicitly acknowledges the injury and asks whether passion changed.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned pottery, injury, passion, and alternative art. D17:8 confirms the break; the draft asks whether her passion changed and does not assert continued practice."
+  },
+  "conv-30:v1b10": {
+   "q1": "contradicts",
+   "q1note": "Jon explicitly plans to pursue the dance business full-time and remains determined to make the studio work.",
+   "q2": "yes",
+   "q2quote": "yes",
+   "p2note": "Dance practice and determination to continue the business/studio are explicit. The quote faithfully captures commitment to pursuing the business full-time."
+  },
+  "conv-41:v1b14": {
+   "q1": "consistent",
+   "q1note": "Concern about unequal resources is compatible with community-focused encouragement; completed outcomes are unverified.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned community projects, events, and setbacks. D3:5, D15:13, and D29:4 provide concrete positive work; job loss and reduced volunteering do not negate past contributions."
+  },
+  "conv-48:v1b19": {
+   "q1": "consistent",
+   "q1note": "Studying and seeking experience do not exclude mindfulness; the excerpt simply does not mention it.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned mindfulness, meditation, yoga, stress, and self-care. Repeated current practices and retreat participation support making time despite workload."
+  },
+  "conv-26:v1b7": {
+   "q1": "consistent",
+   "q1note": "'Is it still on?' asks whether the art-show plan changed.",
+   "q2": "yes",
+   "q2quote": "yes",
+   "p2note": "The planned art show and paintings are explicit and accurately quoted. The gold type is nevertheless flawed because the draft asks whether the plan remains on."
+  },
+  "conv-26:v1b15": {
+   "q1": "consistent",
+   "q1note": "Describes an ongoing adoption journey, supported by interview progress and the stated wish to provide a loving home.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned adoption stages and completion. The draft describes an ongoing journey, not an already completed adoption; D19:1-3 supports it."
+  },
+  "conv-43:v1b15": {
+   "q1": "consistent",
+   "q1note": "D20:4 explicitly credits yoga with improving strength, flexibility, focus, and balance.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned yoga, workouts, restrictions, and cessation. D20:2-4 explicitly confirms yoga's benefits; injury/rehab does not negate using yoga."
+  },
+  "conv-47:v1b24": {
+   "q1": "consistent",
+   "q1note": "Asks about further adventures; the surfing excerpt does not contradict the update request.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned extreme sports, surfing, and later activity changes. The question about a new adventure contains no incompatible factual claim."
+  },
+  "conv-50:v1b19": {
+   "q1": "consistent",
+   "q1note": "Both excerpts explicitly describe an enjoyable Boston visit.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned Boston travel, cancellations, and reactions. D26:1-3 and D30:2-4 explicitly support rewarding visits; earlier future plans precede those trips."
+  },
+  "conv-48:v1b18": {
+   "q1": "consistent",
+   "q1note": "Walks, mindfulness, and inner peace support the sentiment.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned nature, walks, peace, mindfulness, and meditation. Repeated appreciation in D4:32-34, D15:29-33, and D21:3 supports the draft."
+  },
+  "conv-30:v1b2": {
+   "q1": "contradicts",
+   "q1note": "D6:4 explicitly states she lost the Door Dash job and has had a tough time since.",
+   "q2": "yes",
+   "q2quote": "yes",
+   "p2note": "Loss of the Door Dash job and subsequent difficulty are explicit and accurately quoted."
+  },
+  "conv-30:v1b28": {
+   "q1": "consistent",
+   "q1note": "Acknowledges stress while accurately reflecting continued rehearsal and business planning.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned rehearsal, business trials, and quitting. D18:2 and D19:1 explicitly combine stress with continued dance work."
+  },
+  "conv-30:v1b4": {
+   "q1": "contradicts",
+   "q1note": "The latest excerpts say he lost the banking job and is pursuing a dance business instead.",
+   "q2": "yes",
+   "q2quote": "yes",
+   "p2note": "Loss of the banking job and the later move toward a dance business are explicit; the selected words are accurate."
+  },
+  "conv-47:v1d3": {
+   "q1": "consistent",
+   "q1note": "A cooking class does not exclude a painting class next week; painting is unmentioned.",
+   "q2": "no",
+   "q2quote": "yes",
+   "p2note": "The quote accurately names a cooking class, but no explicit statement excludes also taking a painting class."
+  },
+  "conv-42:v1b18": {
+   "q1": "consistent",
+   "q1note": "Dairy-free and sugar-free are different properties but can coexist; the excerpt does not say she avoids sugar-free baking.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned sugar, dairy, lactose intolerance, and dessert recipes. Dairy-free is supported; sugar-free is not. No explicit statement excludes sugar-free options, so the dietary conflation is unsupported rather than a demonstrated contradiction."
+  },
+  "conv-47:v1b17": {
+   "q1": "consistent",
+   "q1note": "The mutually chosen apartment near McGee's and enjoyment of it are explicit.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned Samantha, apartment, McGee's, and relationship changes. D29:8-12 confirm their mutually chosen apartment near the bar."
+  },
+  "conv-49:v1b8": {
+   "q1": "contradicts",
+   "q1note": "D9:12 describes current hiking 'like I do' and suggests a future shared hike.",
+   "q2": "yes",
+   "q2quote": "yes",
+   "p2note": "Current hikes 'like I do' are explicit and accurately quoted."
+  },
+  "conv-26:v1b13": {
+   "q1": "consistent",
+   "q1note": "Adoption progress and the intention to provide children a loving home are explicit.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned adoption pursuit, loving-home goals, and withdrawal. D2:8-14 and D19:1-3 consistently support those intentions and progress."
+  },
+  "conv-47:v1b20": {
+   "q1": "consistent",
+   "q1note": "Acknowledges the reported chaotic week and expresses a hope for downtime.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned workload, busy/chaotic periods, and downtime. D7:11, D25:21, and D26:1 support being busy; a hope for rest makes no conflicting assertion."
+  },
+  "conv-30:v1b13": {
+   "q1": "consistent",
+   "q1note": "The excerpt does not establish a thriving studio, but an anticipated special night does not contradict one either.",
+   "q3": "conflict",
+   "q3turn": "D18:2",
+   "p2note": "D18:2 says the studio is on tenuous grounds and Jon needs a temporary job to cover expenses while seeking investors, contradicting 'thriving'. D19:7 also still anticipates welcoming dancers."
+  },
+  "conv-30:v1b19": {
+   "q1": "consistent",
+   "q1note": "D8:13 explicitly describes workshops, classes, and a planned competition for local talent.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned hosting, workshops, competitions, and cancellations. D8:13-17 explicitly describe school outreach and a studio competition; no cancellation found."
+  },
+  "conv-41:v1b8": {
+   "q1": "consistent",
+   "q1note": "The tag question asks whether sponsor difficulty continues; under the change-question convention, checking status is not itself a contradiction.",
+   "q2": "yes",
+   "q2quote": "yes",
+   "p2note": "Successful sponsor recruitment is explicit and accurately quoted. The draft's tag question checks whether difficulties continue, making the contradicting label questionable under the question convention."
+  },
+  "conv-47:v1b18": {
+   "q1": "consistent",
+   "q1note": "Learners' progress and enjoyment support praise for teaching; the excerpt does not contradict coding instruction.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned teaching, siblings' progress, and seminars. D22:10-14 and D28:6-8 support successful coding instruction and pride."
+  },
+  "conv-43:v1b22": {
+   "q1": "consistent",
+   "q1note": "Acknowledges the writing block and accurately praises continued effort.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned writing persistence and cessation. D16:1 and D19:9 support continuing to write after difficulty."
+  },
+  "conv-26:v1b23": {
+   "q1": "consistent",
+   "q1note": "Asks for an update and is compatible with activism and artistic participation.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned activism, art participation, and changes of focus. D10:3-5 and D17:13-21 establish both; the draft asks for updates."
+  },
+  "conv-48:v1b10": {
+   "q1": "cannot-tell",
+   "q1note": "The excerpt suggests a recent start but gives no exact start date or duration; a one-year anniversary cannot be verified or decisively excluded.",
+   "q2": "no",
+   "q2quote": "no",
+   "p2note": "No exact yoga teaching start date or duration is explicit. The selected feeling quote is genuine wording but irrelevant to the anniversary's timing."
+  },
+  "conv-41:v1b21": {
+   "q1": "consistent",
+   "q1note": "D12:5 explicitly describes community advocacy on education and infrastructure.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned political campaigns, education advocacy, volunteering, and quitting. Electoral setbacks and temporary reduced volunteering do not negate sustained dedication; D31:1 and D32:1 show renewed involvement."
+  },
+  "conv-44:v1d4": {
+   "q1": "contradicts",
+   "q1note": "Audrey already has the new place and has installed a play area the dogs are using; the draft treats that move as next month's event.",
+   "q2": "no",
+   "q2quote": "yes",
+   "p2note": "Acquiring the place and the dogs using its yard strongly suggest occupancy, but completion of the move is not explicitly stated. The acquisition quote is accurate."
+  },
+  "conv-26:v1b14": {
+   "q1": "consistent",
+   "q1note": "Both excerpts explicitly describe family as important support after the accident.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned family support, children, accident, and estrangement. D3:14, D8:30-32, and D18:5-13 consistently support family closeness during hardship."
+  },
+  "conv-42:v1b17": {
+   "q1": "consistent",
+   "q1note": "The group is explicitly supportive; asking about reactions to a script introduces no conflicting assertion.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned writers-group membership and feedback. D9:1-3 and D19:6-8 establish support and favorable reactions; production-company rejection is a different source."
+  },
+  "conv-30:v1d4": {
+   "q1": "contradicts",
+   "q1note": "The question presupposes a current Door Dash job, but both excerpts say it was lost; it does not ask whether she returned.",
+   "q2": "yes",
+   "q2quote": "yes",
+   "p2note": "Job loss at Door Dash is explicit in both excerpts and accurately quoted."
+  },
+  "conv-43:v1b1": {
+   "q1": "consistent",
+   "q1note": "Basketball and branding goals do not exclude university study; enrollment is unmentioned, not contradicted.",
+   "q2": "no",
+   "q2quote": "no",
+   "p2note": "Endorsements and brand-building do not exclude university enrollment. The selected quote supplies no evidence of non-enrollment."
+  },
+  "conv-26:v1b22": {
+   "q1": "cannot-tell",
+   "q1note": "The injury paused pottery, while the later 'one I did last week' lacks an art-medium antecedent. It could establish resumed pottery or another form of art.",
+   "q3": "conflict",
+   "q3turn": "D17:8",
+   "p2note": "D17:8 explicitly reports an injury-related break from pottery. The full history resolves the ambiguous later art piece: D17:10 and D17:14 identify painting, not resumed pottery. No subsequent pottery resumption is stated."
+  },
+  "conv-41:v1b19": {
+   "q1": "consistent",
+   "q1note": "Attending family boot camps does not exclude hosting community events; hosting is unsupported.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned hosting, events, sponsors, and community programs. D3:5, D15:13, and D29:4-8 explicitly establish event organization."
+  },
+  "conv-41:v1b4": {
+   "q1": "cannot-tell",
+   "q1note": "Joining a firefighting brigade shows community involvement, but the excerpt does not establish volunteer versus paid status or whether other volunteer work ceased.",
+   "q2": "no",
+   "q2quote": "yes",
+   "p2note": "Brigade membership is accurately quoted, but unpaid/volunteer status and continuation of other volunteer work are not explicit."
+  },
+  "conv-30:v1b16": {
+   "q1": "consistent",
+   "q1note": "D8:8 explicitly describes combining dance and fashion in the store.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned dance/fashion connections and business direction. D6:8 and D8:6-8 explicitly describe combining both passions."
+  },
+  "conv-30:v1b24": {
+   "q1": "consistent",
+   "q1note": "Acknowledges the studio's financial difficulties and praises the explicitly continuing effort.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned financial hurdles, dancing, and abandonment. D18:2-20 and D19:1-11 show ongoing dedication with the difficulties acknowledged in the draft."
+  },
+  "conv-41:v1d12": {
+   "q1": "contradicts",
+   "q1note": "D31:1 explicitly reports current school mentoring and its rewards.",
+   "q2": "yes",
+   "q2quote": "yes",
+   "p2note": "Current volunteering as a school mentor is explicit and accurately quoted."
+  },
+  "conv-50:v1b13": {
+   "q1": "consistent",
+   "q1note": "Both excerpts explicitly describe his Japanese mansion and its attractive views.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned Japanese mansion, photos, flooding, renovation, and residence. D10:6-8 supports luxury and beauty; earlier flood damage and later studio conversion do not deny its existence or attractive photos."
+  },
+  "conv-30:v1b25": {
+   "q1": "consistent",
+   "q1note": "Acknowledges losing the banking job and asks about the stated transition to business.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned banking departure, job loss, and the business transition. D1:2, D5:10, and D17:4 support the stated transition and effort; the draft asks about its progress."
+  },
+  "conv-48:v1b26": {
+   "q1": "consistent",
+   "q1note": "Study-related neglect of self-care is compatible with slowing yoga; exam timing is unsupported but not contradicted.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned yoga, exam workload, self-care, and pauses. D8:2, D8:14-16 support study pressure and reduced self-care. Continued occasional yoga is compatible with slowing down rather than stopping."
+  },
+  "conv-44:v1b25": {
+   "q1": "consistent",
+   "q1note": "An anticipated hike fits an upcoming restorative trip; work stress is unmentioned but not contradicted.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned upcoming hikes/trips, work stress, and cancellations. D12:5 and D20:1-7 support the restorative trip; no cancellation found."
+  },
+  "conv-26:v1b27": {
+   "q1": "consistent",
+   "q1note": "Adoption intentions and recent artistic participation are compatible with the message.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned adoption planning, painting, poetry, and lack of time. D17:1-7 and D17:13-21 show the two pursuits continuing together; no cessation of art found."
+  },
+  "conv-42:v1b14": {
+   "q1": "consistent",
+   "q1note": "Positive script meetings and producer interest support the encouragement.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned producers, pitches, meetings, and rejection. D26:1-3 and D28:8 support progress after earlier rejections; those rejections do not negate later interest."
+  },
+  "conv-47:v1d6": {
+   "q1": "consistent",
+   "q1note": "Rope jumping does not exclude also taking rock-climbing lessons; lessons are simply unmentioned.",
+   "q2": "no",
+   "q2quote": "yes",
+   "p2note": "Rope jumping is accurately quoted but does not explicitly exclude rock-climbing lessons."
+  },
+  "conv-47:v1b26": {
+   "q1": "consistent",
+   "q1note": "Asks whether board-game interests changed; the specific title is unverified but not denied.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned Dungeons of the Dragon, board games, and changes of interest. D24:1-3 supplies the game's name; asking whether interests changed is compatible with all found turns."
+  },
+  "conv-26:v1b16": {
+   "q1": "consistent",
+   "q1note": "The excerpts describe family support and resilient children following the accident.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned children, resilience, accident, and support. D18:7-11 explicitly calls them tough and resilient and says they give her strength."
+  },
+  "conv-50:v1b24": {
+   "q1": "consistent",
+   "q1note": "Explicitly asks whether the travel-duration plan changed.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned Tokyo/Japan duration, Boston travel, and itinerary changes. The draft explicitly asks whether duration plans changed; later trips are compatible with the question."
+  },
+  "conv-30:v1b22": {
+   "q1": "consistent",
+   "q1note": "Asks about a career transition; a prospective new role is compatible with ongoing broader changes.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned job loss, fashion internship, store growth, and career changes. D11:14 and D12:1-5 establish the transition; the draft asks how it is going."
+  },
+  "conv-26:v1b24": {
+   "q1": "consistent",
+   "q1note": "Acknowledges an injury pause and a recent calming art piece; canvas work does not assert pottery has resumed.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned injury, painting, canvas, pottery, and recovery. D17:8-16 describes a pottery pause but continued calming painting, supporting returning to canvas without claiming pottery resumed."
+  },
+  "conv-50:v1b23": {
+   "q1": "consistent",
+   "q1note": "Accurately acknowledges the flood and the explicitly positive response.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned flood, music interruption, positivity, and giving up. D6:3-11 shows hope and future performance plans, and later work resumes. 'Pushing forward' can describe persistence during the acknowledged setback."
+  },
+  "conv-30:v1c1": {
+   "q1": "consistent",
+   "q1note": "A clothing-store business does not exclude an additional dance studio; the studio and classes are unsupported, not denied.",
+   "q2": "no",
+   "q2quote": "yes",
+   "p2note": "The clothing-store advertising is accurately quoted, but owning only that business or not having a dance studio is not explicit."
+  },
+  "conv-43:v1c1": {
+   "q1": "contradicts",
+   "q1note": "The stated upcoming stay is in Galway, with its Irish setting, conflicting with describing that planned destination as Canada.",
+   "q2": "yes",
+   "q2quote": "yes",
+   "p2note": "The intended stay in Galway is explicit and accurately quoted; the excerpt gives an Irish setting rather than Canada."
+  },
+  "conv-42:v1b28": {
+   "q1": "consistent",
+   "q1note": "The message agrees with the explicitly stated value of breaks for creativity and wellbeing.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned breaks, solitary rest, inspiration, and writing. D19:10-12 supports restorative pauses; continued writing is compatible."
+  },
+  "conv-49:v1d9": {
+   "q1": "consistent",
+   "q1note": "A knee injury in August does not contradict enjoying the preceding winter's skiing season.",
+   "q2": "no",
+   "q2quote": "yes",
+   "p2note": "The knee injury is accurately quoted, but it occurred in August and does not explicitly rule out an enjoyable earlier winter skiing season."
+  },
+  "conv-43:v1b27": {
+   "q1": "consistent",
+   "q1note": "Acknowledges injury-related challenges and praises determination without asserting completed recovery.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned basketball injury, rehab, determination, and quitting. D18:2-4 and D24:12 show positivity and effort; the draft acknowledges challenges without claiming recovery is complete."
+  },
+  "conv-41:v1b9": {
+   "q1": "contradicts",
+   "q1note": "D28:1 says the company failed and he unexpectedly lost his job, not that he voluntarily quit to join the military.",
+   "q2": "yes",
+   "q2quote": "yes",
+   "p2note": "Losing the job after the company failed is explicit; the quote accurately records job loss, and the surrounding sentence supplies the involuntary cause."
+  },
+  "conv-41:v1b11": {
+   "q1": "contradicts",
+   "q1note": "D14:1 states previous attempts were unsuccessful and he has only just decided to run again; the draft asserts success.",
+   "q2": "yes",
+   "q2quote": "yes",
+   "p2note": "Prior lack of electoral success is explicit and accurately quoted; the new run has just been decided upon."
+  },
+  "conv-48:v1b11": {
+   "q1": "contradicts",
+   "q1note": "D13:5 explicitly identifies Jolene as an intern, not the company's lead engineer.",
+   "q2": "yes",
+   "q2quote": "yes",
+   "p2note": "Intern status at an engineering firm is explicit and accurately quoted."
+  },
+  "conv-26:v1b11": {
+   "q1": "contradicts",
+   "q1note": "D10:3 reports recently joining an activist group and ongoing participation, conflicting with a long break.",
+   "q2": "yes",
+   "q2quote": "yes",
+   "p2note": "Recent activist-group membership and current participation are explicit and accurately quoted."
+  },
+  "conv-44:v1c1": {
+   "q1": "contradicts",
+   "q1note": "D27:2 says she joined a dog owners group to learn pet care, conflicting with having nobody to discuss it with.",
+   "q2": "yes",
+   "q2quote": "yes",
+   "p2note": "Joining a dog owners group to learn care is explicit and accurately quoted; the animal referent is supplied within the same excerpt."
+  },
+  "conv-42:v1b26": {
+   "q1": "consistent",
+   "q1note": "A recent production rejection does not rule out revisiting projects; resumption is unverified but not contradicted.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned delayed/lost work, rejection, revisiting, and abandonment. D21:1 and D24:12 give setbacks followed by further work; no statement rules out returning to delayed projects, although this specific return is unverified."
+  },
+  "conv-26:v1b5": {
+   "q1": "contradicts",
+   "q1note": "The opening asserts prolonged noninvolvement despite explicitly current activism; the question about missing it does not ask whether that asserted status changed.",
+   "q2": "yes",
+   "q2quote": "yes",
+   "p2note": "Recent and ongoing LGBTQ activism is explicit and accurately quoted."
+  },
+  "conv-49:v1d1": {
+   "q1": "contradicts",
+   "q1note": "D18:1 explicitly says the new Prius broke down.",
+   "q2": "yes",
+   "q2quote": "yes",
+   "p2note": "The Prius breakdown is explicit; the quote preserves the words with initial capitalization and sentence-boundary punctuation adjusted."
+  },
+  "conv-44:v1d3": {
+   "q1": "cannot-tell",
+   "q1note": "Reduced hiking and difficulty finding nature suggest less activity, but neither excerpt states how many weekends he hiked last month.",
+   "q2": "no",
+   "q2quote": "yes",
+   "p2note": "The quote accurately describes harder access to hiking, but no number of recent hikes or missed weekends is explicit."
+  },
+  "conv-49:v1d5": {
+   "q1": "cannot-tell",
+   "q1note": "The painful knee setback casts doubt on marathon readiness, but no marathon plan, medical restriction, or precise readiness status is given.",
+   "q2": "no",
+   "q2quote": "yes",
+   "p2note": "The quote accurately captures the injury, but a marathon prohibition, cancellation, or lack of readiness is not explicitly stated; the conflict requires inference."
+  },
+  "conv-43:v1b14": {
+   "q1": "consistent",
+   "q1note": "D22:3 explicitly reports enjoying the event while wearing a Gryffindor scarf.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned Harry Potter events, clothing, and Gryffindor. D22:1-3 confirms the party, scarf, and enjoyment."
+  },
+  "conv-50:v1b8": {
+   "q1": "contradicts",
+   "q1note": "The excerpts describe living in the Japanese mansion and routinely enjoying its views, conflicting with it not yet being livable.",
+   "q2": "yes",
+   "q2quote": "yes",
+   "p2note": "Living in the Japanese mansion is explicit and accurately quoted; the second excerpt reinforces routine use of its views."
+  },
+  "conv-43:v1b16": {
+   "q1": "consistent",
+   "q1note": "D21:1 explicitly reports joining a travel club and interest in cultures and countries.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned travel club, cultures, joining, and cancellation. D21:1 and D21:9 confirm membership and cultural interest."
+  },
+  "conv-49:v1c8": {
+   "q1": "contradicts",
+   "q1note": "D23:15 explicitly describes eating lasagna as well as a limit of two ginger snaps; all meals exclusively ginger snaps conflicts with the lasagna.",
+   "q2": "yes",
+   "q2quote": "no",
+   "p2note": "Eating homemade lasagna explicitly conflicts with ginger-snaps-only meals. The selected two-cookie-limit quote is authentic but does not establish other meals; the lasagna sentence is the required evidence span."
+  },
+  "conv-50:v1b21": {
+   "q1": "consistent",
+   "q1note": "Accurately acknowledges challenges while reflecting continued energy, enjoyment, and persistence.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned stage energy, fame difficulties, support, and withdrawal. D24:1-5 and D25:2-6 explicitly support determined performances despite challenges."
+  },
+  "conv-47:v1b13": {
+   "q1": "consistent",
+   "q1note": "The excerpts explicitly say the Unity strategy game is finished and express pride.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned game development, Unity, strategy, completion, and abandonment. D22:1 confirms completion and D27:2 release; earlier development obstacles precede completion and are not contradictions."
+  },
+  "conv-41:v1b15": {
+   "q1": "consistent",
+   "q1note": "Support for veterans is explicit; the stage of the community project is unspecified but not contradicted.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned veterans, petitions, projects, and event outcomes. D15:1-15, D21:22, and D29:4-6 support helping veterans; no withdrawal found."
+  },
+  "conv-42:v1b19": {
+   "q1": "consistent",
+   "q1note": "The card names Nate but the draft addresses Joanna. Nate's turtle remark does not contradict Joanna's screenplay; recipient mismatch is a separate item-quality issue.",
+   "q3": "conflict",
+   "q3turn": "D21:4",
+   "p2note": "Recipient metadata says Nate, while the draft addresses Joanna and attributes a screenplay to 'you'. Nate explicitly says 'I'm no writer like you' in D21:4 and repeatedly treats the scripts as Joanna's. This is a recipient/author mismatch; the compliment could be appropriate if actually sent to Joanna."
+  },
+  "conv-44:v1b17": {
+   "q1": "consistent",
+   "q1note": "The named new pup Scout and planned outing with all three dogs support the message.",
+   "q3": "clean",
+   "q3turn": "",
+   "p2note": "Scanned Scout, Buddy, Toby, adoptions, and care difficulties. D28:8-14 confirms Scout's adoption and outings with all three; no incompatible care claim found."
+  },
+  "conv-47:v1b6": {
+   "q1": "contradicts",
+   "q1note": "D18:1 explicitly says John left the IT job and is happy in a new job.",
+   "q2": "yes",
+   "q2quote": "yes",
+   "p2note": "Leaving the IT job and enjoying the replacement job are explicit; the quote accurately records the departure."
+  }
+ }
+}

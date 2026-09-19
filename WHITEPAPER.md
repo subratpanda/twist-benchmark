@@ -351,7 +351,7 @@ benchmark has failed its purpose and v1 does not ship.
   baselines + judge decoy set. *Estimated effort: 2–3 weeks part-time.*
   *Status 2026-07-08: Track B shipped in preliminary form — 153 verified
   items, generator + harness + flat-RAG baseline in-repo, first results in
-  [`TWIST_TRACK_B_RESULTS.md`](TWIST_TRACK_B_RESULTS.md). Both §9
+  [`TRACK_B_RESULTS.md`](TRACK_B_RESULTS.md). Both §9
   predictions about flat RAG confirmed; the item set also surfaced real
   product gaps (vetting recall at scale), which is the intended function.*
 - **v1.0:** all four tracks on both corpora, double annotation complete,

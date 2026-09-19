@@ -1,0 +1,63 @@
+{
+ "kappa_q1_all_items": 0.565,
+ "kappa_q1_kept_items": 0.851,
+ "n_generated": 200,
+ "n_kept": 161,
+ "n_dropped": 39,
+ "dropped_ids": [
+  "conv-26:v1b7",
+  "conv-30:v1b13",
+  "conv-41:v1b4",
+  "conv-41:v1b8",
+  "conv-43:v1b0",
+  "conv-43:v1b1",
+  "conv-43:v1b21",
+  "conv-47:v1b1",
+  "conv-48:v1b10",
+  "conv-48:v1b22",
+  "conv-26:v1c0",
+  "conv-26:v1c8",
+  "conv-30:v1c1",
+  "conv-30:v1c2",
+  "conv-30:v1c3",
+  "conv-30:v1c5",
+  "conv-30:v1c7",
+  "conv-42:v1c0",
+  "conv-44:v1c9",
+  "conv-47:v1c1",
+  "conv-47:v1c5",
+  "conv-47:v1c10",
+  "conv-49:v1c5",
+  "conv-50:v1c5",
+  "conv-50:v1c10",
+  "conv-41:v1d6",
+  "conv-42:v1d3",
+  "conv-43:v1d4",
+  "conv-44:v1d0",
+  "conv-44:v1d3",
+  "conv-44:v1d4",
+  "conv-44:v1d7",
+  "conv-44:v1d9",
+  "conv-47:v1d3",
+  "conv-47:v1d6",
+  "conv-48:v1d1",
+  "conv-49:v1d5",
+  "conv-49:v1d9",
+  "conv-50:v1d0"
+ ],
+ "kept_by_type": {
+  "contradicting": 38,
+  "aligned": 61,
+  "hard_negative": 62
+ },
+ "dropped_by_type": {
+  "contradicting": 36,
+  "aligned": 1,
+  "hard_negative": 2
+ },
+ "kept_gold_agreement_A": 156,
+ "kept_gold_agreement_B": 157,
+ "adjudication_notes": {
+  "conv-26:v1b7": "Thi is a pure and clear contradiction "
+ }
+}

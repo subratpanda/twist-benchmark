@@ -23,53 +23,55 @@ not a valid TWIST citation.
 
 Release post: https://mindtwin.me/blog/twist-benchmark
 
-## Status: v0 — Track B live, preliminary
+## Status: v1.0 — Track B human-validated and frozen (2026-09-20)
 
 | | |
 |---|---|
 | Spec (all four tracks) | [`WHITEPAPER.md`](WHITEPAPER.md) |
-| Scenario catalog (26 families + hard negatives) | [`SCENARIOS.md`](SCENARIOS.md) |
-| Track B item set — 153 verified items | [`data/track_b_items_v0.jsonl`](data/track_b_items_v0.jsonl) |
-| Track B first results + a negative result | [`TRACK_B_RESULTS.md`](TRACK_B_RESULTS.md) |
-| Raw per-item outputs (both systems, both runs) | [`results/`](results/) |
+| Scenario catalog + item-quality rules | [`SCENARIOS.md`](SCENARIOS.md) |
+| **Track B v1.0 key — 161 validated items** | [`data/track_b_items_v1.0.jsonl`](data/track_b_items_v1.0.jsonl) |
+| The 200 pre-annotation candidates + generation rejects | [`data/`](data/) |
+| Full annotation trail (workbooks, both answer files, adjudication, stats) | [`annotation/`](annotation/) |
+| LLM-council pre-screen (3 models, disclosed triage) | [`annotation/council/`](annotation/council/) |
+| v1.0 per-item results — 4 system configurations | [`results/track_b_results_v1.0.json`](results/track_b_results_v1.0.json) |
+| Generator, harness, annotation tooling | [`reference/`](reference/) |
 
-v0 items are LLM-generated and LLM-verified but **not yet human-annotated**
-(the whitepaper's §6.1 protocol); the hard-negative subset is small (n=19).
-Treat all numbers as preliminary — they are published for methodology
-transparency, not leaderboard claims.
+**The key is versioned: scores must cite `TWIST-v1.0`.** The 161 items
+(38 contradicting / 61 aligned / 62 hard-negative) survived the whitepaper's
+§6.1 protocol: two blind human annotators (raw verdict κ = 0.565), an
+LLM-council pre-screen as *disclosed triage* (GPT-4o / Claude / Gemini;
+independent-pair κ ≈ 0.55 — models alone are insufficient), and adjudication
+that dropped 39 items. Post-adjudication inter-annotator agreement:
+**κ = 0.851**, above the pre-registered 0.8 bar. Notably, both annotators
+independently localized most defective items to the same two generation
+batches — and every system's detection score *rose* on the frozen key,
+corroborating that annotation removed genuine defects.
 
-### v1 in progress (July 2026)
+### v1.0 results (161 items; paired metrics — no column is citable alone)
 
-A regenerated Track B set — **200 items: 74 contradicting / 62 aligned /
-64 hard-negative** (hard negatives >3× v0) — has been built under the
-self-containment item-quality rules that v0's failures taught us
-(`SCENARIOS.md`), with structural gates on evidence quality
-(recipient-spoken, verbatim-quote-bearing, dated verification-as-seen).
+| Metric | MindTwin | flat-RAG GPT-4o | flat-RAG Claude | flat-RAG Gemini |
+|---|---|---|---|---|
+| Contradicting accuracy | 0.316 | **0.947** | 0.895 | 0.842 |
+| Aligned accuracy | **0.984** | 0.754 | 0.918 | 0.967 |
+| Hard-negative accuracy | **0.984** | 0.468 | 0.774 | 0.871 |
+| Balanced accuracy | 0.650 | 0.851 | **0.906** | 0.905 |
+| Attribution accuracy | **0.583** | 0.556 | 0.529 | 0.438 |
 
-Status: **human double-annotation with adjudication is underway** (§6.1).
-An LLM-council pre-screen over all 200 items (GPT-4o / Claude / Gemini)
-was run as *disclosed triage* to focus adjudication — it is not a
-substitute for human annotation; independent-pair agreement (κ ≈ 0.55)
-confirms models alone are insufficient.
+No configuration passes Track B. Flat RAG detects contradictions well but
+over-flags surface-matched safe drafts (13–53% depending on backend, worse
+with longer histories); the coherence-oriented system never over-flags and
+attributes best, but catches only a third of true contradictions (worse
+with longer histories). The over-flagging failure is model-specific; the
+attribution failure is universal. That profile — not any single number —
+is the result.
 
-The v1 items are deliberately **not published until annotation completes**,
-to protect held-set integrity. v1.0 ships with the annotated key, per-item
-outputs for the reference systems, and the multi-provider harness results.
+### v0 (July 2026, superseded — kept for the diagnostic history)
 
-### First results (Track B, 153 items)
-
-| Metric (paired) | MindTwin | flat-RAG baseline |
-|---|---|---|
-| Caught true contradictions (n=93) | 0.14 | **1.00** |
-| Didn't flag aligned drafts (n=41) | **0.98** | 0.78 |
-| Didn't flag hard negatives (n=19) | **1.00** | 0.37 |
-
-Neither system passes; they fail in opposite directions (miss vs cry-wolf) —
-which is the benchmark's discriminative claim working. Both of the
-whitepaper's pre-registered §9 predictions about flat RAG were confirmed on
-the first run. The results doc also reports a **negative result** (a
-mechanism we shipped that didn't move recall) and the item-quality defect the
-investigation surfaced — the standard this benchmark commits to.
+153 preliminary items ([`data/track_b_items_v0.jsonl`](data/track_b_items_v0.jsonl),
+not human-annotated, hard negatives n=19) and first results incl. a negative
+result: [`TRACK_B_RESULTS.md`](TRACK_B_RESULTS.md). v0 surfaced the
+role-flip and self-containment defects that became the v1 item-quality
+rules.
 
 ## Data format (Track B)
 
@@ -77,15 +79,23 @@ One JSON object per line:
 
 ```json
 {
-  "id": "conv-26:b3",
+  "id": "conv-26:v1b1",
   "conv": "conv-26",
   "speaker": "Caroline",
   "type": "contradicting | aligned | hard_negative",
-  "draft": "Hi Caroline, I heard you're not interested in volunteering ... anymore. Is that true?",
-  "evidence": ["D15:9", "D19:7"],
-  "rationale": "one-sentence gold rationale"
+  "family": "B2 negated-commitment",
+  "draft": "Hey Caroline, hope you're enjoying your break from adoption plans for a while. ...",
+  "evidence": ["D19:1"],
+  "contradicted_quote": "Woohoo Melanie! I passed the adoption agency interviews last Friday!",
+  "rationale": "one-sentence gold rationale",
+  "history_turns": 419
 }
 ```
+
+v1.0 adds `family` (scenario family, SCENARIOS.md), `contradicted_quote`
+(verbatim words from a cited turn that the draft is incompatible with;
+empty for non-contradicting items), and `history_turns` (conversation
+length, for stratified reporting). v0 items keep the shorter schema.
 
 `evidence` ids reference turns (`dia_id`) in LoCoMo's public corpus
 (`data/locomo10.json` in [snap-research/locomo](https://github.com/snap-research/locomo)),
@@ -104,19 +114,27 @@ Score: verdict accuracy per item type (gold: `contradicting → aligned=false`,
 everything else `aligned=true`) + attribution (a cited evidence id ∈ gold
 evidence, on correctly flagged items). Report all paired metrics.
 
-[`reference/`](reference/) contains the item generator and the harness we
-used (including the flat-RAG baseline). They currently run inside the
-MindTwin codebase (imports noted at top of each file) and are published as
-reference implementations of the generation → independent-verification gate
-and the scoring.
+[`reference/`](reference/) contains the item generator, the harness we
+used (including the flat-RAG baseline; `--systems flatrag:<provider>` runs
+any of the three backends), and `twist_annotation.py` — the complete
+annotation stack: blind two-phase human workbooks, Cohen's-κ scoring with
+adjudication queue, the LLM-council pre-screen, and the v1.0 freeze step.
+They currently run inside the MindTwin codebase (imports noted at top of
+each file) and are published as reference implementations.
 
 ## Roadmap (whitepaper §10)
 
-- **v1:** regenerate Track B under the self-containment rules (SCENARIOS.md,
-  "item-quality rules"), grow hard negatives to ≥60, human double-annotation
-  with adjudication, Tracks A/C/D injection pipelines, judge decoy set.
-- **Ship criterion (pre-registered):** if reference baselines and
-  contradiction-capable systems don't separate, v1 does not ship.
+- **v1.0 (shipped 2026-09-20):** Track B regenerated under the
+  self-containment rules, hard negatives ≥60, human double-annotation with
+  adjudication (κ = 0.851 on the frozen key), multi-backend reference
+  results. The pre-registered separation claim held on the governance and
+  attribution columns (and was refuted on raw detection recall — reported
+  as such).
+- **v2:** Tracks A (tension detection) and C (supersession) injection
+  pipelines + judge decoy calibration set; Track D safety corpus
+  (opt-in); TWIST-CS multi-channel workspace corpus; external systems
+  (Mem0, Zep) run by their own authors — the condition for dropping
+  "proposed" from the benchmark's name.
 
 ## Disputes and errata
 
