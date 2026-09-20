@@ -3,8 +3,11 @@
 # TWIST — a benchmark for what memory benchmarks can't see
 
 **T**racking **W**ithin-speaker **I**nconsistencies, **S**tance-reversals, and
-**T**ensions. A proposed benchmark suite for conversational memory systems,
-extending [LoCoMo](https://github.com/snap-research/locomo).
+**T**ensions. A proposed benchmark for **intervention quality** in
+conversational memory — whether a memory system acts when the record
+requires action, cites the evidence, and stays silent on deliberately
+similar cases where intervening would be wrong. Extends
+[LoCoMo](https://github.com/snap-research/locomo).
 
 Recall benchmarks measure whether a memory system can *retrieve what was
 said*. No benchmark exercises the **memory system itself** — through its

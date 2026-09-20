@@ -5,6 +5,20 @@
 
 ---
 
+
+> **Update (September 2026).** This document is the original v0.1 task
+> specification and remains the spec of record for Tracks A–D. The
+> project's framing has since sharpened — TWIST is now presented as a
+> *proposed benchmark for intervention quality in conversational memory*
+> (act at change points; refrain on matched controls) — and Track B has
+> shipped as a human-validated v1.0 key (161 items, retained-set
+> κ = 0.851) with a 10-configuration baseline ladder. See
+> [`README.md`](README.md) for current status, data, and results; the
+> paper draft supersedes this document's positioning claims (notably:
+> supersession-style QA now has other benchmarks — StateMemBench,
+> Memora, LifecycleBench — while unprompted detection and action-time
+> draft vetting remain unique to TWIST).
+
 ## Abstract
 
 Long-conversation memory benchmarks such as LoCoMo measure whether a memory
