@@ -1,0 +1,956 @@
+{
+ "per_system": {
+  "mindtwin": {
+   "contradiction_recall": {
+    "point": 0.421,
+    "n": 38,
+    "k": 16,
+    "wilson95": [
+     0.279,
+     0.578
+    ],
+    "cluster_bootstrap95": [
+     0.28,
+     0.526
+    ]
+   },
+   "aligned_specificity": {
+    "point": 1.0,
+    "n": 61,
+    "k": 61,
+    "wilson95": [
+     0.941,
+     1.0
+    ],
+    "cluster_bootstrap95": [
+     1.0,
+     1.0
+    ]
+   },
+   "hard_negative_specificity": {
+    "point": 0.984,
+    "n": 62,
+    "k": 61,
+    "wilson95": [
+     0.914,
+     0.997
+    ],
+    "cluster_bootstrap95": [
+     0.949,
+     1.0
+    ]
+   },
+   "attribution_accuracy": {
+    "point": 0.438,
+    "n": 16,
+    "k": 7,
+    "wilson95": [
+     0.231,
+     0.668
+    ]
+   }
+  },
+  "flatrag:openai": {
+   "contradiction_recall": {
+    "point": 0.974,
+    "n": 38,
+    "k": 37,
+    "wilson95": [
+     0.865,
+     0.995
+    ],
+    "cluster_bootstrap95": [
+     0.914,
+     1.0
+    ]
+   },
+   "aligned_specificity": {
+    "point": 0.77,
+    "n": 61,
+    "k": 47,
+    "wilson95": [
+     0.651,
+     0.858
+    ],
+    "cluster_bootstrap95": [
+     0.661,
+     0.881
+    ]
+   },
+   "hard_negative_specificity": {
+    "point": 0.565,
+    "n": 62,
+    "k": 35,
+    "wilson95": [
+     0.441,
+     0.681
+    ],
+    "cluster_bootstrap95": [
+     0.433,
+     0.71
+    ]
+   },
+   "attribution_accuracy": {
+    "point": 0.568,
+    "n": 37,
+    "k": 21,
+    "wilson95": [
+     0.409,
+     0.713
+    ]
+   }
+  },
+  "flatrag:anthropic": {
+   "contradiction_recall": {
+    "point": 0.921,
+    "n": 38,
+    "k": 35,
+    "wilson95": [
+     0.792,
+     0.973
+    ],
+    "cluster_bootstrap95": [
+     0.825,
+     1.0
+    ]
+   },
+   "aligned_specificity": {
+    "point": 0.902,
+    "n": 61,
+    "k": 55,
+    "wilson95": [
+     0.802,
+     0.954
+    ],
+    "cluster_bootstrap95": [
+     0.794,
+     1.0
+    ]
+   },
+   "hard_negative_specificity": {
+    "point": 0.742,
+    "n": 62,
+    "k": 46,
+    "wilson95": [
+     0.621,
+     0.834
+    ],
+    "cluster_bootstrap95": [
+     0.603,
+     0.87
+    ]
+   },
+   "attribution_accuracy": {
+    "point": 0.543,
+    "n": 35,
+    "k": 19,
+    "wilson95": [
+     0.382,
+     0.695
+    ]
+   }
+  },
+  "flatrag:gemini": {
+   "contradiction_recall": {
+    "point": 0.763,
+    "n": 38,
+    "k": 29,
+    "wilson95": [
+     0.608,
+     0.87
+    ],
+    "cluster_bootstrap95": [
+     0.583,
+     0.889
+    ]
+   },
+   "aligned_specificity": {
+    "point": 0.967,
+    "n": 61,
+    "k": 59,
+    "wilson95": [
+     0.888,
+     0.991
+    ],
+    "cluster_bootstrap95": [
+     0.924,
+     1.0
+    ]
+   },
+   "hard_negative_specificity": {
+    "point": 0.839,
+    "n": 62,
+    "k": 52,
+    "wilson95": [
+     0.728,
+     0.91
+    ],
+    "cluster_bootstrap95": [
+     0.734,
+     0.935
+    ]
+   },
+   "attribution_accuracy": {
+    "point": 0.586,
+    "n": 29,
+    "k": 17,
+    "wilson95": [
+     0.407,
+     0.745
+    ]
+   }
+  },
+  "fullcontext:openai": {
+   "contradiction_recall": {
+    "point": 0.947,
+    "n": 38,
+    "k": 36,
+    "wilson95": [
+     0.827,
+     0.985
+    ],
+    "cluster_bootstrap95": [
+     0.887,
+     1.0
+    ]
+   },
+   "aligned_specificity": {
+    "point": 0.738,
+    "n": 61,
+    "k": 45,
+    "wilson95": [
+     0.616,
+     0.832
+    ],
+    "cluster_bootstrap95": [
+     0.579,
+     0.881
+    ]
+   },
+   "hard_negative_specificity": {
+    "point": 0.371,
+    "n": 62,
+    "k": 23,
+    "wilson95": [
+     0.262,
+     0.495
+    ],
+    "cluster_bootstrap95": [
+     0.239,
+     0.552
+    ]
+   },
+   "attribution_accuracy": {
+    "point": 0.694,
+    "n": 36,
+    "k": 25,
+    "wilson95": [
+     0.531,
+     0.82
+    ]
+   }
+  },
+  "fullcontext:anthropic": {
+   "contradiction_recall": {
+    "point": 0.947,
+    "n": 38,
+    "k": 36,
+    "wilson95": [
+     0.827,
+     0.985
+    ],
+    "cluster_bootstrap95": [
+     0.818,
+     1.0
+    ]
+   },
+   "aligned_specificity": {
+    "point": 0.951,
+    "n": 61,
+    "k": 58,
+    "wilson95": [
+     0.865,
+     0.983
+    ],
+    "cluster_bootstrap95": [
+     0.9,
+     1.0
+    ]
+   },
+   "hard_negative_specificity": {
+    "point": 0.919,
+    "n": 62,
+    "k": 57,
+    "wilson95": [
+     0.825,
+     0.965
+    ],
+    "cluster_bootstrap95": [
+     0.825,
+     1.0
+    ]
+   },
+   "attribution_accuracy": {
+    "point": 0.889,
+    "n": 36,
+    "k": 32,
+    "wilson95": [
+     0.747,
+     0.956
+    ]
+   }
+  },
+  "fullcontext:gemini": {
+   "contradiction_recall": {
+    "point": 0.921,
+    "n": 38,
+    "k": 35,
+    "wilson95": [
+     0.792,
+     0.973
+    ],
+    "cluster_bootstrap95": [
+     0.833,
+     1.0
+    ]
+   },
+   "aligned_specificity": {
+    "point": 0.967,
+    "n": 61,
+    "k": 59,
+    "wilson95": [
+     0.888,
+     0.991
+    ],
+    "cluster_bootstrap95": [
+     0.898,
+     1.0
+    ]
+   },
+   "hard_negative_specificity": {
+    "point": 0.903,
+    "n": 62,
+    "k": 56,
+    "wilson95": [
+     0.805,
+     0.955
+    ],
+    "cluster_bootstrap95": [
+     0.85,
+     0.953
+    ]
+   },
+   "attribution_accuracy": {
+    "point": 0.686,
+    "n": 35,
+    "k": 24,
+    "wilson95": [
+     0.52,
+     0.814
+    ]
+   }
+  },
+  "oracle:openai": {
+   "contradiction_recall": {
+    "point": 1.0,
+    "n": 38,
+    "k": 38,
+    "wilson95": [
+     0.908,
+     1.0
+    ],
+    "cluster_bootstrap95": [
+     1.0,
+     1.0
+    ]
+   },
+   "aligned_specificity": {
+    "point": 0.754,
+    "n": 61,
+    "k": 46,
+    "wilson95": [
+     0.633,
+     0.845
+    ],
+    "cluster_bootstrap95": [
+     0.644,
+     0.867
+    ]
+   },
+   "hard_negative_specificity": {
+    "point": 0.419,
+    "n": 62,
+    "k": 26,
+    "wilson95": [
+     0.305,
+     0.543
+    ],
+    "cluster_bootstrap95": [
+     0.339,
+     0.5
+    ]
+   },
+   "attribution_accuracy": {
+    "point": 0.974,
+    "n": 38,
+    "k": 37,
+    "wilson95": [
+     0.865,
+     0.995
+    ]
+   }
+  },
+  "oracle:anthropic": {
+   "contradiction_recall": {
+    "point": 1.0,
+    "n": 38,
+    "k": 38,
+    "wilson95": [
+     0.908,
+     1.0
+    ],
+    "cluster_bootstrap95": [
+     1.0,
+     1.0
+    ]
+   },
+   "aligned_specificity": {
+    "point": 0.82,
+    "n": 61,
+    "k": 50,
+    "wilson95": [
+     0.705,
+     0.896
+    ],
+    "cluster_bootstrap95": [
+     0.714,
+     0.914
+    ]
+   },
+   "hard_negative_specificity": {
+    "point": 0.5,
+    "n": 62,
+    "k": 31,
+    "wilson95": [
+     0.379,
+     0.621
+    ],
+    "cluster_bootstrap95": [
+     0.368,
+     0.645
+    ]
+   },
+   "attribution_accuracy": {
+    "point": 1.0,
+    "n": 38,
+    "k": 38,
+    "wilson95": [
+     0.908,
+     1.0
+    ]
+   }
+  },
+  "oracle:gemini": {
+   "contradiction_recall": {
+    "point": 1.0,
+    "n": 38,
+    "k": 38,
+    "wilson95": [
+     0.908,
+     1.0
+    ],
+    "cluster_bootstrap95": [
+     1.0,
+     1.0
+    ]
+   },
+   "aligned_specificity": {
+    "point": 0.934,
+    "n": 61,
+    "k": 57,
+    "wilson95": [
+     0.843,
+     0.974
+    ],
+    "cluster_bootstrap95": [
+     0.823,
+     1.0
+    ]
+   },
+   "hard_negative_specificity": {
+    "point": 0.871,
+    "n": 62,
+    "k": 54,
+    "wilson95": [
+     0.766,
+     0.933
+    ],
+    "cluster_bootstrap95": [
+     0.772,
+     0.955
+    ]
+   },
+   "attribution_accuracy": {
+    "point": 1.0,
+    "n": 38,
+    "k": 38,
+    "wilson95": [
+     0.908,
+     1.0
+    ]
+   }
+  }
+ },
+ "pairwise_mcnemar": {
+  "contradicting:mindtwin vs flatrag:openai": {
+   "b": 0,
+   "c": 21,
+   "p": 0.0
+  },
+  "contradicting:mindtwin vs flatrag:anthropic": {
+   "b": 0,
+   "c": 19,
+   "p": 0.0
+  },
+  "contradicting:mindtwin vs flatrag:gemini": {
+   "b": 2,
+   "c": 15,
+   "p": 0.0023
+  },
+  "contradicting:mindtwin vs fullcontext:openai": {
+   "b": 0,
+   "c": 20,
+   "p": 0.0
+  },
+  "contradicting:mindtwin vs fullcontext:anthropic": {
+   "b": 1,
+   "c": 21,
+   "p": 0.0
+  },
+  "contradicting:mindtwin vs fullcontext:gemini": {
+   "b": 0,
+   "c": 19,
+   "p": 0.0
+  },
+  "contradicting:mindtwin vs oracle:openai": {
+   "b": 0,
+   "c": 22,
+   "p": 0.0
+  },
+  "contradicting:mindtwin vs oracle:anthropic": {
+   "b": 0,
+   "c": 22,
+   "p": 0.0
+  },
+  "contradicting:mindtwin vs oracle:gemini": {
+   "b": 0,
+   "c": 22,
+   "p": 0.0
+  },
+  "contradicting:flatrag:openai vs flatrag:anthropic": {
+   "b": 2,
+   "c": 0,
+   "p": 0.5
+  },
+  "contradicting:flatrag:openai vs flatrag:gemini": {
+   "b": 8,
+   "c": 0,
+   "p": 0.0078
+  },
+  "contradicting:flatrag:openai vs fullcontext:openai": {
+   "b": 1,
+   "c": 0,
+   "p": 1.0
+  },
+  "contradicting:flatrag:openai vs fullcontext:anthropic": {
+   "b": 2,
+   "c": 1,
+   "p": 1.0
+  },
+  "contradicting:flatrag:openai vs fullcontext:gemini": {
+   "b": 2,
+   "c": 0,
+   "p": 0.5
+  },
+  "contradicting:flatrag:openai vs oracle:openai": {
+   "b": 0,
+   "c": 1,
+   "p": 1.0
+  },
+  "contradicting:flatrag:openai vs oracle:anthropic": {
+   "b": 0,
+   "c": 1,
+   "p": 1.0
+  },
+  "contradicting:flatrag:openai vs oracle:gemini": {
+   "b": 0,
+   "c": 1,
+   "p": 1.0
+  },
+  "contradicting:flatrag:anthropic vs flatrag:gemini": {
+   "b": 6,
+   "c": 0,
+   "p": 0.0312
+  },
+  "contradicting:flatrag:anthropic vs fullcontext:openai": {
+   "b": 1,
+   "c": 2,
+   "p": 1.0
+  },
+  "contradicting:flatrag:anthropic vs fullcontext:anthropic": {
+   "b": 2,
+   "c": 3,
+   "p": 1.0
+  },
+  "contradicting:flatrag:anthropic vs fullcontext:gemini": {
+   "b": 2,
+   "c": 2,
+   "p": 1.0
+  },
+  "contradicting:flatrag:anthropic vs oracle:openai": {
+   "b": 0,
+   "c": 3,
+   "p": 0.25
+  },
+  "contradicting:flatrag:anthropic vs oracle:anthropic": {
+   "b": 0,
+   "c": 3,
+   "p": 0.25
+  },
+  "contradicting:flatrag:anthropic vs oracle:gemini": {
+   "b": 0,
+   "c": 3,
+   "p": 0.25
+  },
+  "contradicting:flatrag:gemini vs fullcontext:openai": {
+   "b": 0,
+   "c": 7,
+   "p": 0.0156
+  },
+  "contradicting:flatrag:gemini vs fullcontext:anthropic": {
+   "b": 0,
+   "c": 7,
+   "p": 0.0156
+  },
+  "contradicting:flatrag:gemini vs fullcontext:gemini": {
+   "b": 1,
+   "c": 7,
+   "p": 0.0703
+  },
+  "contradicting:flatrag:gemini vs oracle:openai": {
+   "b": 0,
+   "c": 9,
+   "p": 0.0039
+  },
+  "contradicting:flatrag:gemini vs oracle:anthropic": {
+   "b": 0,
+   "c": 9,
+   "p": 0.0039
+  },
+  "contradicting:flatrag:gemini vs oracle:gemini": {
+   "b": 0,
+   "c": 9,
+   "p": 0.0039
+  },
+  "contradicting:fullcontext:openai vs fullcontext:anthropic": {
+   "b": 2,
+   "c": 2,
+   "p": 1.0
+  },
+  "contradicting:fullcontext:openai vs fullcontext:gemini": {
+   "b": 1,
+   "c": 0,
+   "p": 1.0
+  },
+  "contradicting:fullcontext:openai vs oracle:openai": {
+   "b": 0,
+   "c": 2,
+   "p": 0.5
+  },
+  "contradicting:fullcontext:openai vs oracle:anthropic": {
+   "b": 0,
+   "c": 2,
+   "p": 0.5
+  },
+  "contradicting:fullcontext:openai vs oracle:gemini": {
+   "b": 0,
+   "c": 2,
+   "p": 0.5
+  },
+  "contradicting:fullcontext:anthropic vs fullcontext:gemini": {
+   "b": 3,
+   "c": 2,
+   "p": 1.0
+  },
+  "contradicting:fullcontext:anthropic vs oracle:openai": {
+   "b": 0,
+   "c": 2,
+   "p": 0.5
+  },
+  "contradicting:fullcontext:anthropic vs oracle:anthropic": {
+   "b": 0,
+   "c": 2,
+   "p": 0.5
+  },
+  "contradicting:fullcontext:anthropic vs oracle:gemini": {
+   "b": 0,
+   "c": 2,
+   "p": 0.5
+  },
+  "contradicting:fullcontext:gemini vs oracle:openai": {
+   "b": 0,
+   "c": 3,
+   "p": 0.25
+  },
+  "contradicting:fullcontext:gemini vs oracle:anthropic": {
+   "b": 0,
+   "c": 3,
+   "p": 0.25
+  },
+  "contradicting:fullcontext:gemini vs oracle:gemini": {
+   "b": 0,
+   "c": 3,
+   "p": 0.25
+  },
+  "contradicting:oracle:openai vs oracle:anthropic": {
+   "b": 0,
+   "c": 0,
+   "p": 1.0
+  },
+  "contradicting:oracle:openai vs oracle:gemini": {
+   "b": 0,
+   "c": 0,
+   "p": 1.0
+  },
+  "contradicting:oracle:anthropic vs oracle:gemini": {
+   "b": 0,
+   "c": 0,
+   "p": 1.0
+  },
+  "hard_negative:mindtwin vs flatrag:openai": {
+   "b": 27,
+   "c": 1,
+   "p": 0.0
+  },
+  "hard_negative:mindtwin vs flatrag:anthropic": {
+   "b": 16,
+   "c": 1,
+   "p": 0.0003
+  },
+  "hard_negative:mindtwin vs flatrag:gemini": {
+   "b": 10,
+   "c": 1,
+   "p": 0.0117
+  },
+  "hard_negative:mindtwin vs fullcontext:openai": {
+   "b": 39,
+   "c": 1,
+   "p": 0.0
+  },
+  "hard_negative:mindtwin vs fullcontext:anthropic": {
+   "b": 5,
+   "c": 1,
+   "p": 0.2188
+  },
+  "hard_negative:mindtwin vs fullcontext:gemini": {
+   "b": 6,
+   "c": 1,
+   "p": 0.125
+  },
+  "hard_negative:mindtwin vs oracle:openai": {
+   "b": 35,
+   "c": 0,
+   "p": 0.0
+  },
+  "hard_negative:mindtwin vs oracle:anthropic": {
+   "b": 30,
+   "c": 0,
+   "p": 0.0
+  },
+  "hard_negative:mindtwin vs oracle:gemini": {
+   "b": 8,
+   "c": 1,
+   "p": 0.0391
+  },
+  "hard_negative:flatrag:openai vs flatrag:anthropic": {
+   "b": 3,
+   "c": 14,
+   "p": 0.0127
+  },
+  "hard_negative:flatrag:openai vs flatrag:gemini": {
+   "b": 3,
+   "c": 20,
+   "p": 0.0005
+  },
+  "hard_negative:flatrag:openai vs fullcontext:openai": {
+   "b": 16,
+   "c": 4,
+   "p": 0.0118
+  },
+  "hard_negative:flatrag:openai vs fullcontext:anthropic": {
+   "b": 1,
+   "c": 23,
+   "p": 0.0
+  },
+  "hard_negative:flatrag:openai vs fullcontext:gemini": {
+   "b": 1,
+   "c": 22,
+   "p": 0.0
+  },
+  "hard_negative:flatrag:openai vs oracle:openai": {
+   "b": 16,
+   "c": 7,
+   "p": 0.0931
+  },
+  "hard_negative:flatrag:openai vs oracle:anthropic": {
+   "b": 12,
+   "c": 8,
+   "p": 0.5034
+  },
+  "hard_negative:flatrag:openai vs oracle:gemini": {
+   "b": 3,
+   "c": 22,
+   "p": 0.0002
+  },
+  "hard_negative:flatrag:anthropic vs flatrag:gemini": {
+   "b": 6,
+   "c": 12,
+   "p": 0.2379
+  },
+  "hard_negative:flatrag:anthropic vs fullcontext:openai": {
+   "b": 26,
+   "c": 3,
+   "p": 0.0
+  },
+  "hard_negative:flatrag:anthropic vs fullcontext:anthropic": {
+   "b": 0,
+   "c": 11,
+   "p": 0.001
+  },
+  "hard_negative:flatrag:anthropic vs fullcontext:gemini": {
+   "b": 1,
+   "c": 11,
+   "p": 0.0063
+  },
+  "hard_negative:flatrag:anthropic vs oracle:openai": {
+   "b": 26,
+   "c": 6,
+   "p": 0.0005
+  },
+  "hard_negative:flatrag:anthropic vs oracle:anthropic": {
+   "b": 21,
+   "c": 6,
+   "p": 0.0059
+  },
+  "hard_negative:flatrag:anthropic vs oracle:gemini": {
+   "b": 6,
+   "c": 14,
+   "p": 0.1153
+  },
+  "hard_negative:flatrag:gemini vs fullcontext:openai": {
+   "b": 32,
+   "c": 3,
+   "p": 0.0
+  },
+  "hard_negative:flatrag:gemini vs fullcontext:anthropic": {
+   "b": 3,
+   "c": 8,
+   "p": 0.2266
+  },
+  "hard_negative:flatrag:gemini vs fullcontext:gemini": {
+   "b": 2,
+   "c": 6,
+   "p": 0.2891
+  },
+  "hard_negative:flatrag:gemini vs oracle:openai": {
+   "b": 29,
+   "c": 3,
+   "p": 0.0
+  },
+  "hard_negative:flatrag:gemini vs oracle:anthropic": {
+   "b": 25,
+   "c": 4,
+   "p": 0.0001
+  },
+  "hard_negative:flatrag:gemini vs oracle:gemini": {
+   "b": 6,
+   "c": 8,
+   "p": 0.7905
+  },
+  "hard_negative:fullcontext:openai vs fullcontext:anthropic": {
+   "b": 1,
+   "c": 35,
+   "p": 0.0
+  },
+  "hard_negative:fullcontext:openai vs fullcontext:gemini": {
+   "b": 1,
+   "c": 34,
+   "p": 0.0
+  },
+  "hard_negative:fullcontext:openai vs oracle:openai": {
+   "b": 13,
+   "c": 16,
+   "p": 0.7111
+  },
+  "hard_negative:fullcontext:openai vs oracle:anthropic": {
+   "b": 6,
+   "c": 14,
+   "p": 0.1153
+  },
+  "hard_negative:fullcontext:openai vs oracle:gemini": {
+   "b": 1,
+   "c": 32,
+   "p": 0.0
+  },
+  "hard_negative:fullcontext:anthropic vs fullcontext:gemini": {
+   "b": 5,
+   "c": 4,
+   "p": 1.0
+  },
+  "hard_negative:fullcontext:anthropic vs oracle:openai": {
+   "b": 32,
+   "c": 1,
+   "p": 0.0
+  },
+  "hard_negative:fullcontext:anthropic vs oracle:anthropic": {
+   "b": 27,
+   "c": 1,
+   "p": 0.0
+  },
+  "hard_negative:fullcontext:anthropic vs oracle:gemini": {
+   "b": 7,
+   "c": 4,
+   "p": 0.5488
+  },
+  "hard_negative:fullcontext:gemini vs oracle:openai": {
+   "b": 31,
+   "c": 1,
+   "p": 0.0
+  },
+  "hard_negative:fullcontext:gemini vs oracle:anthropic": {
+   "b": 27,
+   "c": 2,
+   "p": 0.0
+  },
+  "hard_negative:fullcontext:gemini vs oracle:gemini": {
+   "b": 6,
+   "c": 4,
+   "p": 0.7539
+  },
+  "hard_negative:oracle:openai vs oracle:anthropic": {
+   "b": 7,
+   "c": 12,
+   "p": 0.3593
+  },
+  "hard_negative:oracle:openai vs oracle:gemini": {
+   "b": 0,
+   "c": 28,
+   "p": 0.0
+  },
+  "hard_negative:oracle:anthropic vs oracle:gemini": {
+   "b": 0,
+   "c": 23,
+   "p": 0.0
+  }
+ }
+}

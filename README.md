@@ -53,21 +53,40 @@ corroborating that annotation removed genuine defects.
 
 ### v1.0 results (161 items; paired metrics — no column is citable alone)
 
-| Metric | MindTwin | flat-RAG GPT-4o | flat-RAG Claude | flat-RAG Gemini |
-|---|---|---|---|---|
-| Contradicting accuracy | 0.316 | **0.947** | 0.895 | 0.842 |
-| Aligned accuracy | **0.984** | 0.754 | 0.918 | 0.967 |
-| Hard-negative accuracy | **0.984** | 0.468 | 0.774 | 0.871 |
-| Balanced accuracy | 0.650 | 0.851 | **0.906** | 0.905 |
-| Attribution accuracy | **0.583** | 0.556 | 0.529 | 0.438 |
+CR = contradiction recall (n=38) · AS = aligned specificity (n=61) ·
+HNS = hard-negative specificity (n=62) · Attr = attribution over a top-3
+evidence budget. Wilson 95% CIs, conversation-clustered bootstrap CIs and
+exact McNemar tests: [`results/track_b_stats_v1.0.json`](results/track_b_stats_v1.0.json).
 
-No configuration passes Track B. Flat RAG detects contradictions well but
-over-flags surface-matched safe drafts (13–53% depending on backend, worse
-with longer histories); the coherence-oriented system never over-flags and
-attributes best, but catches only a third of true contradictions (worse
-with longer histories). The over-flagging failure is model-specific; the
-attribution failure is universal. That profile — not any single number —
-is the result.
+| System | Backend | CR | AS | HNS | Attr |
+|---|---|---|---|---|---|
+| Deployed (MindTwin) | GPT-4o | 0.42 | **1.00** | **0.98** | 0.44 |
+| Flat RAG | GPT-4o | **0.97** | 0.77 | 0.57 | 0.57 |
+| Flat RAG | Claude | 0.92 | 0.90 | 0.74 | 0.54 |
+| Flat RAG | Gemini | 0.76 | 0.97 | 0.84 | 0.59 |
+| Full context | GPT-4o | 0.95 | 0.74 | 0.37 | 0.69 |
+| Full context | Claude | 0.95 | 0.95 | **0.92** | **0.89** |
+| Full context | Gemini | 0.92 | **0.97** | 0.90 | 0.69 |
+| Oracle (gold evidence) | GPT-4o | 1.00 | 0.75 | 0.42 | 0.97 |
+| Oracle (gold evidence) | Claude | 1.00 | 0.82 | 0.50 | 1.00 |
+| Oracle (gold evidence) | Gemini | 1.00 | 0.93 | 0.87 | 1.00 |
+
+What the baseline ladder shows: **oracle recall is 1.000 for all three
+models** (every kept item is solvable from its own evidence — the
+pre-registered ≥0.95 oracle target passes); **calibrated models nearly
+solve the track given the full transcript** (Claude 0.95/0.95/0.92, attr
+0.89), so flat-RAG deficits are mostly retrieval failures; **GPT-4o's
+over-flagging is model-intrinsic** (0.57 → 0.37 → 0.42 hard-negative
+specificity across retrieval / full-context / oracle); and **sparse
+evidence invites over-flagging in every model** — the oracle condition is
+each backend's worst specificity, which is *why* retrieval baselines cry
+wolf. No tested configuration simultaneously achieves high recall, high
+hard-negative specificity, and high attribution. A draft-only shortcut
+audit (`reference/twist_shortcut_audit.py`) finds the labels are not
+predictable from draft style (balanced 0.65, recall 0.34 vs systems'
+0.76–0.97). Vault-based rows vary across re-ingestions (deployed-system
+recall ranged 0.24–0.42 over three ingests) — cite intervals, not point
+deltas.
 
 ### v0 (July 2026, superseded — kept for the diagnostic history)
 

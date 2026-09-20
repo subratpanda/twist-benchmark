@@ -41,7 +41,7 @@ from mindtwin.engine.llm import build_llm_client
 from mindtwin.ingestion.service import ingest_events
 from mindtwin.models import Team
 from mindtwin.scripts.locomo_bench import conversation_events
-from mindtwin.scripts.twist_generate_b import strip_fence
+from mindtwin.scripts.twist_generate_b import conv_transcript, strip_fence
 
 _BASELINE_SYSTEM = (
     "You review a proposed outgoing message against excerpts from a "
@@ -51,6 +51,66 @@ _BASELINE_SYSTEM = (
     "[\"<turn id>\", ...]} — evidence lists the turn ids the draft "
     "contradicts (empty if aligned)."
 )
+
+# Full-context baseline: isolates contradiction *reasoning* from retrieval —
+# the model sees the entire dated transcript, so any miss is a reasoning
+# failure, not a coverage failure.
+_FULLCTX_SYSTEM = (
+    "You review a proposed outgoing message against the FULL transcript of "
+    "a long conversation. Each turn is prefixed with its turn id. Decide "
+    "whether SENDING the draft would contradict what the recipient "
+    "previously said. Output ONLY JSON: {\"aligned\": true|false, "
+    "\"evidence\": [\"<turn id>\", ...]} — evidence lists the turn ids the "
+    "draft contradicts (empty if aligned)."
+)
+
+# Oracle: the model sees exactly the gold evidence turns — the reasoning
+# upper bound of the separability audit (whitepaper §6.3).
+_ORACLE_SYSTEM = _BASELINE_SYSTEM
+
+
+def _complete_retry(llm, system: str, user: str, max_tokens: int,
+                    tries: int = 5) -> str:
+    """Retry rate-limited calls with backoff — full-context prompts are
+    ~15-30k tokens each, so TPM limits are routinely hit at concurrency."""
+    for attempt in range(tries - 1):
+        try:
+            return llm.complete(system, user, max_tokens=max_tokens)
+        except Exception as e:
+            msg = str(e).lower()
+            if "rate" not in msg and "429" not in msg:
+                raise
+            time.sleep(min(5 * 2 ** attempt, 60))
+    return llm.complete(system, user, max_tokens=max_tokens)
+
+
+def _parse_verdict(raw: str) -> tuple[bool, list[str]]:
+    try:
+        parsed = json.loads(strip_fence(raw))
+        aligned = bool(parsed.get("aligned", True))
+        evidence = [e for e in (parsed.get("evidence") or [])
+                    if isinstance(e, str)]
+    except Exception:
+        aligned, evidence = True, []
+    return aligned, evidence
+
+
+def run_fullcontext(transcript: str, llm, item: dict) -> tuple[bool, list[str], bool]:
+    user = (f"TRANSCRIPT:\n{transcript}\n\nDRAFT to send to "
+            f"{item['speaker']}:\n\"{item['draft']}\"\n\nJSON:")
+    aligned, evidence = _parse_verdict(
+        _complete_retry(llm, _FULLCTX_SYSTEM, user, max_tokens=200))
+    return aligned, evidence, False
+
+
+def run_oracle(text_by_id: dict[str, str], llm, item: dict) -> tuple[bool, list[str], bool]:
+    excerpts = "\n".join(f"{e}: {text_by_id[e]}" for e in item["evidence"]
+                         if e in text_by_id)
+    user = (f"EXCERPTS:\n{excerpts}\n\nDRAFT to send to "
+            f"{item['speaker']}:\n\"{item['draft']}\"\n\nJSON:")
+    aligned, evidence = _parse_verdict(
+        _complete_retry(llm, _ORACLE_SYSTEM, user, max_tokens=200))
+    return aligned, evidence, False
 
 
 @dataclass
@@ -190,8 +250,22 @@ def main() -> None:  # noqa: PLR0915
     items = [i for i in items if i["conv"] in conv_ids]
     print(f"{len(items)} items across {len(conv_ids)} conversations")  # noqa: T201
 
-    teams = ingest_conversations(data)
-    engines = {c: CognitiveEngine(t) for c, t in teams.items()}
+    kinds = {s.partition(":")[0] for s in args.systems.split(",")}
+    unknown_kinds = kinds - {"mindtwin", "flatrag", "fullcontext", "oracle"}
+    if unknown_kinds:
+        raise SystemExit(f"unknown system kind(s): {sorted(unknown_kinds)}")
+
+    engines: dict[str, CognitiveEngine] = {}
+    if kinds & {"mindtwin", "flatrag"}:
+        teams = ingest_conversations(data)
+        engines = {c: CognitiveEngine(t) for c, t in teams.items()}
+    transcripts: dict[str, str] = {}
+    text_maps: dict[str, dict[str, str]] = {}
+    if kinds & {"fullcontext", "oracle"}:
+        for sample in data:
+            cid = str(sample.get("sample_id"))
+            tr, _, tm, _ = conv_transcript(sample["conversation"])
+            transcripts[cid], text_maps[cid] = tr, tm
     t0 = time.time()
     all_scores: dict[str, dict] = {}
     all_results: dict[str, list[dict]] = {}
@@ -206,20 +280,32 @@ def main() -> None:  # noqa: PLR0915
             print(f"{system}: baseline LLM {llm.provider.value}/{llm.model}")  # noqa: T201
 
         def run_item(item: dict, *, _kind=kind, _llm=llm) -> ItemResult:
-            eng = engines[item["conv"]]
             if _kind == "mindtwin":
-                aligned, turn_ids, fact_only = run_mindtwin(eng, item, ablations)
+                aligned, turn_ids, fact_only = run_mindtwin(
+                    engines[item["conv"]], item, ablations)
+            elif _kind == "flatrag":
+                aligned, turn_ids, fact_only = run_flatrag(
+                    engines[item["conv"]], _llm, item)
+            elif _kind == "fullcontext":
+                aligned, turn_ids, fact_only = run_fullcontext(
+                    transcripts[item["conv"]], _llm, item)
             else:
-                aligned, turn_ids, fact_only = run_flatrag(eng, _llm, item)
+                aligned, turn_ids, fact_only = run_oracle(
+                    text_maps[item["conv"]], _llm, item)
             gold_aligned = item["type"] != "contradicting"
             correct = aligned == gold_aligned
             attributed = None
             if item["type"] == "contradicting" and correct:
-                attributed = bool(set(turn_ids) & set(item["evidence"]))
+                # Evidence budget (paper §3.2): only the first 3 cited turns
+                # count toward attribution — citing everything cannot inflate
+                # the metric.
+                attributed = bool(set(turn_ids[:3]) & set(item["evidence"]))
             return ItemResult(item["id"], item["conv"], item["type"],
                               gold_aligned, aligned, correct, attributed, fact_only)
 
-        with ThreadPoolExecutor(max_workers=args.concurrency) as pool:
+        # full-context prompts are huge; throttle concurrency for that kind
+        workers = min(args.concurrency, 3) if kind == "fullcontext" else args.concurrency
+        with ThreadPoolExecutor(max_workers=workers) as pool:
             results = list(pool.map(run_item, items))
         all_scores[system] = score(results)
         all_results[system] = [asdict(r) for r in results]
@@ -227,11 +313,13 @@ def main() -> None:  # noqa: PLR0915
         print(f"\n=== {system} ===")  # noqa: T201
         for k2, v in s.items():
             print(f"  {k2:22s} {v}")  # noqa: T201
+        if args.out:  # incremental dump — a crash never loses finished systems
+            with open(args.out, "w") as f:
+                json.dump({"scores": all_scores, "results": all_results},
+                          f, indent=1)
 
     print(f"\nwall {time.time() - t0:.0f}s")  # noqa: T201
     if args.out:
-        with open(args.out, "w") as f:
-            json.dump({"scores": all_scores, "results": all_results}, f, indent=1)
         print(f"per-item results -> {args.out}")  # noqa: T201
 
 
