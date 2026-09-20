@@ -57,22 +57,33 @@ corroborating that annotation removed genuine defects.
 ### v1.0 results (161 items; paired metrics — no column is citable alone)
 
 CR = contradiction recall (n=38) · AS = aligned specificity (n=61) ·
-HNS = hard-negative specificity (n=62) · Attr = attribution over a top-3
-evidence budget. Wilson 95% CIs, conversation-clustered bootstrap CIs and
-exact McNemar tests: [`results/track_b_stats_v1.0.json`](results/track_b_stats_v1.0.json).
+HNS = hard-negative specificity (n=62) · **GCR = grounded contradiction
+recall** (correct flag with valid top-3 evidence, over all 38 — the
+intervene-*and*-know-why metric) · Attr = conditional attribution, top-3
+budget. Wilson 95% CIs, conversation-clustered bootstrap CIs, Holm-adjusted
+McNemar tests, and the multi-ingest analysis:
+[`results/track_b_stats_v1.0.json`](results/track_b_stats_v1.0.json).
 
-| System | Backend | CR | AS | HNS | Attr |
-|---|---|---|---|---|---|
-| Deployed (MindTwin) | GPT-4o | 0.42 | **1.00** | **0.98** | 0.44 |
-| Flat RAG | GPT-4o | **0.97** | 0.77 | 0.57 | 0.57 |
-| Flat RAG | Claude | 0.92 | 0.90 | 0.74 | 0.54 |
-| Flat RAG | Gemini | 0.76 | 0.97 | 0.84 | 0.59 |
-| Full context | GPT-4o | 0.95 | 0.74 | 0.37 | 0.69 |
-| Full context | Claude | 0.95 | 0.95 | **0.92** | **0.89** |
-| Full context | Gemini | 0.92 | **0.97** | 0.90 | 0.69 |
-| Oracle (gold evidence) | GPT-4o | 1.00 | 0.75 | 0.42 | 0.97 |
-| Oracle (gold evidence) | Claude | 1.00 | 0.82 | 0.50 | 1.00 |
-| Oracle (gold evidence) | Gemini | 1.00 | 0.93 | 0.87 | 1.00 |
+| System | Backend | CR | AS | HNS | GCR | Attr |
+|---|---|---|---|---|---|---|
+| Draft only (no record) | GPT-4o | 0.71 | 0.85 | 0.90 | 0.00 | — |
+| Draft only (no record) | Claude | 0.34 | 0.97 | 0.95 | 0.00 | — |
+| Draft only (no record) | Gemini | 0.03 | 1.00 | 1.00 | 0.00 | — |
+| Deployed (MindTwin) † | GPT-4o | 0.42 | **1.00** | **0.98** | 0.18 | 0.44 |
+| Flat RAG † | GPT-4o | **0.97** | 0.77 | 0.57 | 0.55 | 0.57 |
+| Flat RAG † | Claude | 0.92 | 0.90 | 0.74 | 0.50 | 0.54 |
+| Flat RAG † | Gemini | 0.76 | 0.97 | 0.84 | 0.45 | 0.59 |
+| Full context | GPT-4o | 0.95 | 0.74 | 0.37 | 0.66 | 0.69 |
+| Full context | Claude | 0.95 | 0.95 | **0.92** | **0.84** | **0.89** |
+| Full context | Gemini | 0.92 | **0.97** | 0.90 | 0.63 | 0.69 |
+| Gold evidence | GPT-4o | 1.00 | 0.75 | 0.42 | 0.97 | 0.97 |
+| Gold evidence | Claude | 1.00 | 0.82 | 0.50 | 1.00 | 1.00 |
+| Gold evidence | Gemini | 1.00 | 0.93 | 0.87 | 1.00 | 1.00 |
+
+† vault-based rows are stochastic across re-ingestions; primary
+uncertainty pools three independent ingests (two per-item, one
+score-level — all in `results/`): deployed CR 0.32/0.42/0.42 → mean 0.39,
+hierarchical 95% [0.19, 0.51]; GPT-4o flat-RAG HNS 0.42–0.57.
 
 What the baseline ladder shows: **oracle recall is 1.000 for all three
 models** (every kept item is solvable from its own evidence — the
@@ -84,12 +95,13 @@ specificity across retrieval / full-context / oracle); and **sparse
 evidence invites over-flagging in every model** — the oracle condition is
 each backend's worst specificity, which is *why* retrieval baselines cry
 wolf. No tested configuration simultaneously achieves high recall, high
-hard-negative specificity, and high attribution. A draft-only shortcut
-audit (`reference/twist_shortcut_audit.py`) finds the labels are not
-predictable from draft style (balanced 0.65, recall 0.34 vs systems'
-0.76–0.97). Vault-based rows vary across re-ingestions (deployed-system
-recall ranged 0.24–0.42 over three ingests) — cite intervals, not point
-deltas.
+hard-negative specificity, and high grounded recall. The draft-only floor
+is itself a finding: **style priors are model-dependent** — GPT-4o flags
+71% of contradicting drafts from the draft alone (Claude 0.34, Gemini
+0.03), so v1.1 will add style-matched aligned drafts; every
+record-grounded configuration beats its own draft-only floor
+(Holm-adjusted McNemar p<0.05), and draft-only grounding is zero by
+construction. Cite intervals, not point deltas.
 
 ### v0 (July 2026, superseded — kept for the diagnostic history)
 

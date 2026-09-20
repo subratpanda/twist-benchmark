@@ -1,0 +1,29 @@
+{
+ "note": "Score-level only: per-item outputs lost when the run crashed on an OpenAI TPM limit before incremental writes were added (task bxl2ffs7h, 2026-09-20). Verdict metrics (CR/AS/HNS) are cap-independent and comparable; attribution used the top-3 cap.",
+ "scores": {
+  "mindtwin": {
+   "contradicting_acc": 0.421,
+   "aligned_acc": 0.984,
+   "hard_negative_acc": 0.984,
+   "attribution_acc": 0.375
+  },
+  "flatrag:openai": {
+   "contradicting_acc": 0.974,
+   "aligned_acc": 0.705,
+   "hard_negative_acc": 0.419,
+   "attribution_acc": 0.541
+  },
+  "flatrag:anthropic": {
+   "contradicting_acc": 0.947,
+   "aligned_acc": 0.852,
+   "hard_negative_acc": 0.774,
+   "attribution_acc": 0.528
+  },
+  "flatrag:gemini": {
+   "contradicting_acc": 0.842,
+   "aligned_acc": 0.951,
+   "hard_negative_acc": 0.903,
+   "attribution_acc": 0.375
+  }
+ }
+}

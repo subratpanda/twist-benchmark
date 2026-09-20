@@ -68,6 +68,25 @@ _FULLCTX_SYSTEM = (
 # upper bound of the separability audit (whitepaper §6.3).
 _ORACLE_SYSTEM = _BASELINE_SYSTEM
 
+# Draft-only shortcut baseline: the model sees the draft and NOTHING else.
+# Any accuracy above the trivial predict-consistent policy quantifies
+# label leakage through draft style — the LLM version of the paper's
+# hypothesis-only audit.
+_DRAFTONLY_SYSTEM = (
+    "You review a proposed outgoing message. You have NO access to the "
+    "conversation record it will be sent into. From the draft text alone, "
+    "judge whether SENDING it would most likely contradict something the "
+    "recipient previously said. Output ONLY JSON: "
+    "{\"aligned\": true|false, \"evidence\": []}"
+)
+
+
+def run_draftonly(llm, item: dict) -> tuple[bool, list[str], bool]:
+    user = f"DRAFT:\n\"{item['draft']}\"\n\nJSON:"
+    aligned, _ = _parse_verdict(
+        _complete_retry(llm, _DRAFTONLY_SYSTEM, user, max_tokens=60))
+    return aligned, [], False
+
 
 def _complete_retry(llm, system: str, user: str, max_tokens: int,
                     tries: int = 5) -> str:
@@ -251,7 +270,8 @@ def main() -> None:  # noqa: PLR0915
     print(f"{len(items)} items across {len(conv_ids)} conversations")  # noqa: T201
 
     kinds = {s.partition(":")[0] for s in args.systems.split(",")}
-    unknown_kinds = kinds - {"mindtwin", "flatrag", "fullcontext", "oracle"}
+    unknown_kinds = kinds - {"mindtwin", "flatrag", "fullcontext", "oracle",
+                             "draftonly"}
     if unknown_kinds:
         raise SystemExit(f"unknown system kind(s): {sorted(unknown_kinds)}")
 
@@ -289,6 +309,8 @@ def main() -> None:  # noqa: PLR0915
             elif _kind == "fullcontext":
                 aligned, turn_ids, fact_only = run_fullcontext(
                     transcripts[item["conv"]], _llm, item)
+            elif _kind == "draftonly":
+                aligned, turn_ids, fact_only = run_draftonly(_llm, item)
             else:
                 aligned, turn_ids, fact_only = run_oracle(
                     text_maps[item["conv"]], _llm, item)

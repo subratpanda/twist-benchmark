@@ -48,6 +48,15 @@
      0.231,
      0.668
     ]
+   },
+   "grounded_contradiction_recall": {
+    "point": 0.184,
+    "n": 38,
+    "k": 7,
+    "wilson95": [
+     0.092,
+     0.334
+    ]
    }
   },
   "flatrag:openai": {
@@ -97,6 +106,15 @@
     "wilson95": [
      0.409,
      0.713
+    ]
+   },
+   "grounded_contradiction_recall": {
+    "point": 0.553,
+    "n": 38,
+    "k": 21,
+    "wilson95": [
+     0.397,
+     0.699
     ]
    }
   },
@@ -148,6 +166,15 @@
      0.382,
      0.695
     ]
+   },
+   "grounded_contradiction_recall": {
+    "point": 0.5,
+    "n": 38,
+    "k": 19,
+    "wilson95": [
+     0.348,
+     0.652
+    ]
    }
   },
   "flatrag:gemini": {
@@ -197,6 +224,15 @@
     "wilson95": [
      0.407,
      0.745
+    ]
+   },
+   "grounded_contradiction_recall": {
+    "point": 0.447,
+    "n": 38,
+    "k": 17,
+    "wilson95": [
+     0.301,
+     0.603
     ]
    }
   },
@@ -248,6 +284,15 @@
      0.531,
      0.82
     ]
+   },
+   "grounded_contradiction_recall": {
+    "point": 0.658,
+    "n": 38,
+    "k": 25,
+    "wilson95": [
+     0.499,
+     0.788
+    ]
    }
   },
   "fullcontext:anthropic": {
@@ -297,6 +342,15 @@
     "wilson95": [
      0.747,
      0.956
+    ]
+   },
+   "grounded_contradiction_recall": {
+    "point": 0.842,
+    "n": 38,
+    "k": 32,
+    "wilson95": [
+     0.696,
+     0.926
     ]
    }
   },
@@ -348,6 +402,15 @@
      0.52,
      0.814
     ]
+   },
+   "grounded_contradiction_recall": {
+    "point": 0.632,
+    "n": 38,
+    "k": 24,
+    "wilson95": [
+     0.473,
+     0.766
+    ]
    }
   },
   "oracle:openai": {
@@ -391,6 +454,15 @@
     ]
    },
    "attribution_accuracy": {
+    "point": 0.974,
+    "n": 38,
+    "k": 37,
+    "wilson95": [
+     0.865,
+     0.995
+    ]
+   },
+   "grounded_contradiction_recall": {
     "point": 0.974,
     "n": 38,
     "k": 37,
@@ -448,6 +520,15 @@
      0.908,
      1.0
     ]
+   },
+   "grounded_contradiction_recall": {
+    "point": 1.0,
+    "n": 38,
+    "k": 38,
+    "wilson95": [
+     0.908,
+     1.0
+    ]
    }
   },
   "oracle:gemini": {
@@ -498,6 +579,192 @@
      0.908,
      1.0
     ]
+   },
+   "grounded_contradiction_recall": {
+    "point": 1.0,
+    "n": 38,
+    "k": 38,
+    "wilson95": [
+     0.908,
+     1.0
+    ]
+   }
+  },
+  "draftonly:openai": {
+   "contradiction_recall": {
+    "point": 0.711,
+    "n": 38,
+    "k": 27,
+    "wilson95": [
+     0.552,
+     0.83
+    ],
+    "cluster_bootstrap95": [
+     0.579,
+     0.839
+    ]
+   },
+   "aligned_specificity": {
+    "point": 0.852,
+    "n": 61,
+    "k": 52,
+    "wilson95": [
+     0.743,
+     0.92
+    ],
+    "cluster_bootstrap95": [
+     0.783,
+     0.921
+    ]
+   },
+   "hard_negative_specificity": {
+    "point": 0.903,
+    "n": 62,
+    "k": 56,
+    "wilson95": [
+     0.805,
+     0.955
+    ],
+    "cluster_bootstrap95": [
+     0.821,
+     0.97
+    ]
+   },
+   "attribution_accuracy": {
+    "point": 0.0,
+    "n": 27,
+    "k": 0,
+    "wilson95": [
+     0.0,
+     0.125
+    ]
+   },
+   "grounded_contradiction_recall": {
+    "point": 0.0,
+    "n": 38,
+    "k": 0,
+    "wilson95": [
+     0.0,
+     0.092
+    ]
+   }
+  },
+  "draftonly:anthropic": {
+   "contradiction_recall": {
+    "point": 0.342,
+    "n": 38,
+    "k": 13,
+    "wilson95": [
+     0.212,
+     0.501
+    ],
+    "cluster_bootstrap95": [
+     0.186,
+     0.609
+    ]
+   },
+   "aligned_specificity": {
+    "point": 0.967,
+    "n": 61,
+    "k": 59,
+    "wilson95": [
+     0.888,
+     0.991
+    ],
+    "cluster_bootstrap95": [
+     0.919,
+     1.0
+    ]
+   },
+   "hard_negative_specificity": {
+    "point": 0.952,
+    "n": 62,
+    "k": 59,
+    "wilson95": [
+     0.867,
+     0.983
+    ],
+    "cluster_bootstrap95": [
+     0.902,
+     1.0
+    ]
+   },
+   "attribution_accuracy": {
+    "point": 0.0,
+    "n": 13,
+    "k": 0,
+    "wilson95": [
+     0.0,
+     0.228
+    ]
+   },
+   "grounded_contradiction_recall": {
+    "point": 0.0,
+    "n": 38,
+    "k": 0,
+    "wilson95": [
+     0.0,
+     0.092
+    ]
+   }
+  },
+  "draftonly:gemini": {
+   "contradiction_recall": {
+    "point": 0.026,
+    "n": 38,
+    "k": 1,
+    "wilson95": [
+     0.005,
+     0.135
+    ],
+    "cluster_bootstrap95": [
+     0.0,
+     0.065
+    ]
+   },
+   "aligned_specificity": {
+    "point": 1.0,
+    "n": 61,
+    "k": 61,
+    "wilson95": [
+     0.941,
+     1.0
+    ],
+    "cluster_bootstrap95": [
+     1.0,
+     1.0
+    ]
+   },
+   "hard_negative_specificity": {
+    "point": 1.0,
+    "n": 62,
+    "k": 62,
+    "wilson95": [
+     0.942,
+     1.0
+    ],
+    "cluster_bootstrap95": [
+     1.0,
+     1.0
+    ]
+   },
+   "attribution_accuracy": {
+    "point": 0.0,
+    "n": 1,
+    "k": 0,
+    "wilson95": [
+     0.0,
+     0.793
+    ]
+   },
+   "grounded_contradiction_recall": {
+    "point": 0.0,
+    "n": 38,
+    "k": 0,
+    "wilson95": [
+     0.0,
+     0.092
+    ]
    }
   }
  },
@@ -505,452 +772,1140 @@
   "contradicting:mindtwin vs flatrag:openai": {
    "b": 0,
    "c": 21,
-   "p": 0.0
+   "p": 0.0,
+   "p_holm": 0.0
   },
   "contradicting:mindtwin vs flatrag:anthropic": {
    "b": 0,
    "c": 19,
-   "p": 0.0
+   "p": 0.0,
+   "p_holm": 0.0
   },
   "contradicting:mindtwin vs flatrag:gemini": {
    "b": 2,
    "c": 15,
-   "p": 0.0023
+   "p": 0.0023,
+   "p_holm": 0.1955
   },
   "contradicting:mindtwin vs fullcontext:openai": {
    "b": 0,
    "c": 20,
-   "p": 0.0
+   "p": 0.0,
+   "p_holm": 0.0
   },
   "contradicting:mindtwin vs fullcontext:anthropic": {
    "b": 1,
    "c": 21,
-   "p": 0.0
+   "p": 0.0,
+   "p_holm": 0.0
   },
   "contradicting:mindtwin vs fullcontext:gemini": {
    "b": 0,
    "c": 19,
-   "p": 0.0
+   "p": 0.0,
+   "p_holm": 0.0
   },
   "contradicting:mindtwin vs oracle:openai": {
    "b": 0,
    "c": 22,
-   "p": 0.0
+   "p": 0.0,
+   "p_holm": 0.0
   },
   "contradicting:mindtwin vs oracle:anthropic": {
    "b": 0,
    "c": 22,
-   "p": 0.0
+   "p": 0.0,
+   "p_holm": 0.0
   },
   "contradicting:mindtwin vs oracle:gemini": {
    "b": 0,
    "c": 22,
-   "p": 0.0
+   "p": 0.0,
+   "p_holm": 0.0
+  },
+  "contradicting:mindtwin vs draftonly:openai": {
+   "b": 5,
+   "c": 16,
+   "p": 0.0266,
+   "p_holm": 1.0
+  },
+  "contradicting:mindtwin vs draftonly:anthropic": {
+   "b": 10,
+   "c": 7,
+   "p": 0.6291,
+   "p_holm": 1.0
+  },
+  "contradicting:mindtwin vs draftonly:gemini": {
+   "b": 15,
+   "c": 0,
+   "p": 0.0001,
+   "p_holm": 0.01
   },
   "contradicting:flatrag:openai vs flatrag:anthropic": {
    "b": 2,
    "c": 0,
-   "p": 0.5
+   "p": 0.5,
+   "p_holm": 1.0
   },
   "contradicting:flatrag:openai vs flatrag:gemini": {
    "b": 8,
    "c": 0,
-   "p": 0.0078
+   "p": 0.0078,
+   "p_holm": 0.6006
   },
   "contradicting:flatrag:openai vs fullcontext:openai": {
    "b": 1,
    "c": 0,
-   "p": 1.0
+   "p": 1.0,
+   "p_holm": 1.0
   },
   "contradicting:flatrag:openai vs fullcontext:anthropic": {
    "b": 2,
    "c": 1,
-   "p": 1.0
+   "p": 1.0,
+   "p_holm": 1.0
   },
   "contradicting:flatrag:openai vs fullcontext:gemini": {
    "b": 2,
    "c": 0,
-   "p": 0.5
+   "p": 0.5,
+   "p_holm": 1.0
   },
   "contradicting:flatrag:openai vs oracle:openai": {
    "b": 0,
    "c": 1,
-   "p": 1.0
+   "p": 1.0,
+   "p_holm": 1.0
   },
   "contradicting:flatrag:openai vs oracle:anthropic": {
    "b": 0,
    "c": 1,
-   "p": 1.0
+   "p": 1.0,
+   "p_holm": 1.0
   },
   "contradicting:flatrag:openai vs oracle:gemini": {
    "b": 0,
    "c": 1,
-   "p": 1.0
+   "p": 1.0,
+   "p_holm": 1.0
+  },
+  "contradicting:flatrag:openai vs draftonly:openai": {
+   "b": 11,
+   "c": 1,
+   "p": 0.0063,
+   "p_holm": 0.4977
+  },
+  "contradicting:flatrag:openai vs draftonly:anthropic": {
+   "b": 24,
+   "c": 0,
+   "p": 0.0,
+   "p_holm": 0.0
+  },
+  "contradicting:flatrag:openai vs draftonly:gemini": {
+   "b": 36,
+   "c": 0,
+   "p": 0.0,
+   "p_holm": 0.0
   },
   "contradicting:flatrag:anthropic vs flatrag:gemini": {
    "b": 6,
    "c": 0,
-   "p": 0.0312
+   "p": 0.0312,
+   "p_holm": 1.0
   },
   "contradicting:flatrag:anthropic vs fullcontext:openai": {
    "b": 1,
    "c": 2,
-   "p": 1.0
+   "p": 1.0,
+   "p_holm": 1.0
   },
   "contradicting:flatrag:anthropic vs fullcontext:anthropic": {
    "b": 2,
    "c": 3,
-   "p": 1.0
+   "p": 1.0,
+   "p_holm": 1.0
   },
   "contradicting:flatrag:anthropic vs fullcontext:gemini": {
    "b": 2,
    "c": 2,
-   "p": 1.0
+   "p": 1.0,
+   "p_holm": 1.0
   },
   "contradicting:flatrag:anthropic vs oracle:openai": {
    "b": 0,
    "c": 3,
-   "p": 0.25
+   "p": 0.25,
+   "p_holm": 1.0
   },
   "contradicting:flatrag:anthropic vs oracle:anthropic": {
    "b": 0,
    "c": 3,
-   "p": 0.25
+   "p": 0.25,
+   "p_holm": 1.0
   },
   "contradicting:flatrag:anthropic vs oracle:gemini": {
    "b": 0,
    "c": 3,
-   "p": 0.25
+   "p": 0.25,
+   "p_holm": 1.0
+  },
+  "contradicting:flatrag:anthropic vs draftonly:openai": {
+   "b": 10,
+   "c": 2,
+   "p": 0.0386,
+   "p_holm": 1.0
+  },
+  "contradicting:flatrag:anthropic vs draftonly:anthropic": {
+   "b": 22,
+   "c": 0,
+   "p": 0.0,
+   "p_holm": 0.0
+  },
+  "contradicting:flatrag:anthropic vs draftonly:gemini": {
+   "b": 34,
+   "c": 0,
+   "p": 0.0,
+   "p_holm": 0.0
   },
   "contradicting:flatrag:gemini vs fullcontext:openai": {
    "b": 0,
    "c": 7,
-   "p": 0.0156
+   "p": 0.0156,
+   "p_holm": 1.0
   },
   "contradicting:flatrag:gemini vs fullcontext:anthropic": {
    "b": 0,
    "c": 7,
-   "p": 0.0156
+   "p": 0.0156,
+   "p_holm": 1.0
   },
   "contradicting:flatrag:gemini vs fullcontext:gemini": {
    "b": 1,
    "c": 7,
-   "p": 0.0703
+   "p": 0.0703,
+   "p_holm": 1.0
   },
   "contradicting:flatrag:gemini vs oracle:openai": {
    "b": 0,
    "c": 9,
-   "p": 0.0039
+   "p": 0.0039,
+   "p_holm": 0.3237
   },
   "contradicting:flatrag:gemini vs oracle:anthropic": {
    "b": 0,
    "c": 9,
-   "p": 0.0039
+   "p": 0.0039,
+   "p_holm": 0.3237
   },
   "contradicting:flatrag:gemini vs oracle:gemini": {
    "b": 0,
    "c": 9,
-   "p": 0.0039
+   "p": 0.0039,
+   "p_holm": 0.3237
+  },
+  "contradicting:flatrag:gemini vs draftonly:openai": {
+   "b": 7,
+   "c": 5,
+   "p": 0.7744,
+   "p_holm": 1.0
+  },
+  "contradicting:flatrag:gemini vs draftonly:anthropic": {
+   "b": 18,
+   "c": 2,
+   "p": 0.0004,
+   "p_holm": 0.038
+  },
+  "contradicting:flatrag:gemini vs draftonly:gemini": {
+   "b": 28,
+   "c": 0,
+   "p": 0.0,
+   "p_holm": 0.0
   },
   "contradicting:fullcontext:openai vs fullcontext:anthropic": {
    "b": 2,
    "c": 2,
-   "p": 1.0
+   "p": 1.0,
+   "p_holm": 1.0
   },
   "contradicting:fullcontext:openai vs fullcontext:gemini": {
    "b": 1,
    "c": 0,
-   "p": 1.0
+   "p": 1.0,
+   "p_holm": 1.0
   },
   "contradicting:fullcontext:openai vs oracle:openai": {
    "b": 0,
    "c": 2,
-   "p": 0.5
+   "p": 0.5,
+   "p_holm": 1.0
   },
   "contradicting:fullcontext:openai vs oracle:anthropic": {
    "b": 0,
    "c": 2,
-   "p": 0.5
+   "p": 0.5,
+   "p_holm": 1.0
   },
   "contradicting:fullcontext:openai vs oracle:gemini": {
    "b": 0,
    "c": 2,
-   "p": 0.5
+   "p": 0.5,
+   "p_holm": 1.0
+  },
+  "contradicting:fullcontext:openai vs draftonly:openai": {
+   "b": 10,
+   "c": 1,
+   "p": 0.0117,
+   "p_holm": 0.8775
+  },
+  "contradicting:fullcontext:openai vs draftonly:anthropic": {
+   "b": 23,
+   "c": 0,
+   "p": 0.0,
+   "p_holm": 0.0
+  },
+  "contradicting:fullcontext:openai vs draftonly:gemini": {
+   "b": 35,
+   "c": 0,
+   "p": 0.0,
+   "p_holm": 0.0
   },
   "contradicting:fullcontext:anthropic vs fullcontext:gemini": {
    "b": 3,
    "c": 2,
-   "p": 1.0
+   "p": 1.0,
+   "p_holm": 1.0
   },
   "contradicting:fullcontext:anthropic vs oracle:openai": {
    "b": 0,
    "c": 2,
-   "p": 0.5
+   "p": 0.5,
+   "p_holm": 1.0
   },
   "contradicting:fullcontext:anthropic vs oracle:anthropic": {
    "b": 0,
    "c": 2,
-   "p": 0.5
+   "p": 0.5,
+   "p_holm": 1.0
   },
   "contradicting:fullcontext:anthropic vs oracle:gemini": {
    "b": 0,
    "c": 2,
-   "p": 0.5
+   "p": 0.5,
+   "p_holm": 1.0
+  },
+  "contradicting:fullcontext:anthropic vs draftonly:openai": {
+   "b": 10,
+   "c": 1,
+   "p": 0.0117,
+   "p_holm": 0.8775
+  },
+  "contradicting:fullcontext:anthropic vs draftonly:anthropic": {
+   "b": 23,
+   "c": 0,
+   "p": 0.0,
+   "p_holm": 0.0
+  },
+  "contradicting:fullcontext:anthropic vs draftonly:gemini": {
+   "b": 35,
+   "c": 0,
+   "p": 0.0,
+   "p_holm": 0.0
   },
   "contradicting:fullcontext:gemini vs oracle:openai": {
    "b": 0,
    "c": 3,
-   "p": 0.25
+   "p": 0.25,
+   "p_holm": 1.0
   },
   "contradicting:fullcontext:gemini vs oracle:anthropic": {
    "b": 0,
    "c": 3,
-   "p": 0.25
+   "p": 0.25,
+   "p_holm": 1.0
   },
   "contradicting:fullcontext:gemini vs oracle:gemini": {
    "b": 0,
    "c": 3,
-   "p": 0.25
+   "p": 0.25,
+   "p_holm": 1.0
+  },
+  "contradicting:fullcontext:gemini vs draftonly:openai": {
+   "b": 10,
+   "c": 2,
+   "p": 0.0386,
+   "p_holm": 1.0
+  },
+  "contradicting:fullcontext:gemini vs draftonly:anthropic": {
+   "b": 23,
+   "c": 1,
+   "p": 0.0,
+   "p_holm": 0.0
+  },
+  "contradicting:fullcontext:gemini vs draftonly:gemini": {
+   "b": 34,
+   "c": 0,
+   "p": 0.0,
+   "p_holm": 0.0
   },
   "contradicting:oracle:openai vs oracle:anthropic": {
    "b": 0,
    "c": 0,
-   "p": 1.0
+   "p": 1.0,
+   "p_holm": 1.0
   },
   "contradicting:oracle:openai vs oracle:gemini": {
    "b": 0,
    "c": 0,
-   "p": 1.0
+   "p": 1.0,
+   "p_holm": 1.0
+  },
+  "contradicting:oracle:openai vs draftonly:openai": {
+   "b": 11,
+   "c": 0,
+   "p": 0.001,
+   "p_holm": 0.092
+  },
+  "contradicting:oracle:openai vs draftonly:anthropic": {
+   "b": 25,
+   "c": 0,
+   "p": 0.0,
+   "p_holm": 0.0
+  },
+  "contradicting:oracle:openai vs draftonly:gemini": {
+   "b": 37,
+   "c": 0,
+   "p": 0.0,
+   "p_holm": 0.0
   },
   "contradicting:oracle:anthropic vs oracle:gemini": {
    "b": 0,
    "c": 0,
-   "p": 1.0
+   "p": 1.0,
+   "p_holm": 1.0
+  },
+  "contradicting:oracle:anthropic vs draftonly:openai": {
+   "b": 11,
+   "c": 0,
+   "p": 0.001,
+   "p_holm": 0.092
+  },
+  "contradicting:oracle:anthropic vs draftonly:anthropic": {
+   "b": 25,
+   "c": 0,
+   "p": 0.0,
+   "p_holm": 0.0
+  },
+  "contradicting:oracle:anthropic vs draftonly:gemini": {
+   "b": 37,
+   "c": 0,
+   "p": 0.0,
+   "p_holm": 0.0
+  },
+  "contradicting:oracle:gemini vs draftonly:openai": {
+   "b": 11,
+   "c": 0,
+   "p": 0.001,
+   "p_holm": 0.092
+  },
+  "contradicting:oracle:gemini vs draftonly:anthropic": {
+   "b": 25,
+   "c": 0,
+   "p": 0.0,
+   "p_holm": 0.0
+  },
+  "contradicting:oracle:gemini vs draftonly:gemini": {
+   "b": 37,
+   "c": 0,
+   "p": 0.0,
+   "p_holm": 0.0
+  },
+  "contradicting:draftonly:openai vs draftonly:anthropic": {
+   "b": 17,
+   "c": 3,
+   "p": 0.0026,
+   "p_holm": 0.2184
+  },
+  "contradicting:draftonly:openai vs draftonly:gemini": {
+   "b": 26,
+   "c": 0,
+   "p": 0.0,
+   "p_holm": 0.0
+  },
+  "contradicting:draftonly:anthropic vs draftonly:gemini": {
+   "b": 13,
+   "c": 1,
+   "p": 0.0018,
+   "p_holm": 0.1566
   },
   "hard_negative:mindtwin vs flatrag:openai": {
    "b": 27,
    "c": 1,
-   "p": 0.0
+   "p": 0.0,
+   "p_holm": 0.0
   },
   "hard_negative:mindtwin vs flatrag:anthropic": {
    "b": 16,
    "c": 1,
-   "p": 0.0003
+   "p": 0.0003,
+   "p_holm": 0.0288
   },
   "hard_negative:mindtwin vs flatrag:gemini": {
    "b": 10,
    "c": 1,
-   "p": 0.0117
+   "p": 0.0117,
+   "p_holm": 0.8775
   },
   "hard_negative:mindtwin vs fullcontext:openai": {
    "b": 39,
    "c": 1,
-   "p": 0.0
+   "p": 0.0,
+   "p_holm": 0.0
   },
   "hard_negative:mindtwin vs fullcontext:anthropic": {
    "b": 5,
    "c": 1,
-   "p": 0.2188
+   "p": 0.2188,
+   "p_holm": 1.0
   },
   "hard_negative:mindtwin vs fullcontext:gemini": {
    "b": 6,
    "c": 1,
-   "p": 0.125
+   "p": 0.125,
+   "p_holm": 1.0
   },
   "hard_negative:mindtwin vs oracle:openai": {
    "b": 35,
    "c": 0,
-   "p": 0.0
+   "p": 0.0,
+   "p_holm": 0.0
   },
   "hard_negative:mindtwin vs oracle:anthropic": {
    "b": 30,
    "c": 0,
-   "p": 0.0
+   "p": 0.0,
+   "p_holm": 0.0
   },
   "hard_negative:mindtwin vs oracle:gemini": {
    "b": 8,
    "c": 1,
-   "p": 0.0391
+   "p": 0.0391,
+   "p_holm": 1.0
+  },
+  "hard_negative:mindtwin vs draftonly:openai": {
+   "b": 5,
+   "c": 0,
+   "p": 0.0625,
+   "p_holm": 1.0
+  },
+  "hard_negative:mindtwin vs draftonly:anthropic": {
+   "b": 3,
+   "c": 1,
+   "p": 0.625,
+   "p_holm": 1.0
+  },
+  "hard_negative:mindtwin vs draftonly:gemini": {
+   "b": 0,
+   "c": 1,
+   "p": 1.0,
+   "p_holm": 1.0
   },
   "hard_negative:flatrag:openai vs flatrag:anthropic": {
    "b": 3,
    "c": 14,
-   "p": 0.0127
+   "p": 0.0127,
+   "p_holm": 0.9017
   },
   "hard_negative:flatrag:openai vs flatrag:gemini": {
    "b": 3,
    "c": 20,
-   "p": 0.0005
+   "p": 0.0005,
+   "p_holm": 0.047
   },
   "hard_negative:flatrag:openai vs fullcontext:openai": {
    "b": 16,
    "c": 4,
-   "p": 0.0118
+   "p": 0.0118,
+   "p_holm": 0.8775
   },
   "hard_negative:flatrag:openai vs fullcontext:anthropic": {
    "b": 1,
    "c": 23,
-   "p": 0.0
+   "p": 0.0,
+   "p_holm": 0.0
   },
   "hard_negative:flatrag:openai vs fullcontext:gemini": {
    "b": 1,
    "c": 22,
-   "p": 0.0
+   "p": 0.0,
+   "p_holm": 0.0
   },
   "hard_negative:flatrag:openai vs oracle:openai": {
    "b": 16,
    "c": 7,
-   "p": 0.0931
+   "p": 0.0931,
+   "p_holm": 1.0
   },
   "hard_negative:flatrag:openai vs oracle:anthropic": {
    "b": 12,
    "c": 8,
-   "p": 0.5034
+   "p": 0.5034,
+   "p_holm": 1.0
   },
   "hard_negative:flatrag:openai vs oracle:gemini": {
    "b": 3,
    "c": 22,
-   "p": 0.0002
+   "p": 0.0002,
+   "p_holm": 0.0194
+  },
+  "hard_negative:flatrag:openai vs draftonly:openai": {
+   "b": 4,
+   "c": 25,
+   "p": 0.0001,
+   "p_holm": 0.01
+  },
+  "hard_negative:flatrag:openai vs draftonly:anthropic": {
+   "b": 1,
+   "c": 25,
+   "p": 0.0,
+   "p_holm": 0.0
+  },
+  "hard_negative:flatrag:openai vs draftonly:gemini": {
+   "b": 0,
+   "c": 27,
+   "p": 0.0,
+   "p_holm": 0.0
   },
   "hard_negative:flatrag:anthropic vs flatrag:gemini": {
    "b": 6,
    "c": 12,
-   "p": 0.2379
+   "p": 0.2379,
+   "p_holm": 1.0
   },
   "hard_negative:flatrag:anthropic vs fullcontext:openai": {
    "b": 26,
    "c": 3,
-   "p": 0.0
+   "p": 0.0,
+   "p_holm": 0.0
   },
   "hard_negative:flatrag:anthropic vs fullcontext:anthropic": {
    "b": 0,
    "c": 11,
-   "p": 0.001
+   "p": 0.001,
+   "p_holm": 0.092
   },
   "hard_negative:flatrag:anthropic vs fullcontext:gemini": {
    "b": 1,
    "c": 11,
-   "p": 0.0063
+   "p": 0.0063,
+   "p_holm": 0.4977
   },
   "hard_negative:flatrag:anthropic vs oracle:openai": {
    "b": 26,
    "c": 6,
-   "p": 0.0005
+   "p": 0.0005,
+   "p_holm": 0.047
   },
   "hard_negative:flatrag:anthropic vs oracle:anthropic": {
    "b": 21,
    "c": 6,
-   "p": 0.0059
+   "p": 0.0059,
+   "p_holm": 0.472
   },
   "hard_negative:flatrag:anthropic vs oracle:gemini": {
    "b": 6,
    "c": 14,
-   "p": 0.1153
+   "p": 0.1153,
+   "p_holm": 1.0
+  },
+  "hard_negative:flatrag:anthropic vs draftonly:openai": {
+   "b": 3,
+   "c": 13,
+   "p": 0.0213,
+   "p_holm": 1.0
+  },
+  "hard_negative:flatrag:anthropic vs draftonly:anthropic": {
+   "b": 1,
+   "c": 14,
+   "p": 0.001,
+   "p_holm": 0.092
+  },
+  "hard_negative:flatrag:anthropic vs draftonly:gemini": {
+   "b": 0,
+   "c": 16,
+   "p": 0.0,
+   "p_holm": 0.0
   },
   "hard_negative:flatrag:gemini vs fullcontext:openai": {
    "b": 32,
    "c": 3,
-   "p": 0.0
+   "p": 0.0,
+   "p_holm": 0.0
   },
   "hard_negative:flatrag:gemini vs fullcontext:anthropic": {
    "b": 3,
    "c": 8,
-   "p": 0.2266
+   "p": 0.2266,
+   "p_holm": 1.0
   },
   "hard_negative:flatrag:gemini vs fullcontext:gemini": {
    "b": 2,
    "c": 6,
-   "p": 0.2891
+   "p": 0.2891,
+   "p_holm": 1.0
   },
   "hard_negative:flatrag:gemini vs oracle:openai": {
    "b": 29,
    "c": 3,
-   "p": 0.0
+   "p": 0.0,
+   "p_holm": 0.0
   },
   "hard_negative:flatrag:gemini vs oracle:anthropic": {
    "b": 25,
    "c": 4,
-   "p": 0.0001
+   "p": 0.0001,
+   "p_holm": 0.01
   },
   "hard_negative:flatrag:gemini vs oracle:gemini": {
    "b": 6,
    "c": 8,
-   "p": 0.7905
+   "p": 0.7905,
+   "p_holm": 1.0
+  },
+  "hard_negative:flatrag:gemini vs draftonly:openai": {
+   "b": 5,
+   "c": 9,
+   "p": 0.424,
+   "p_holm": 1.0
+  },
+  "hard_negative:flatrag:gemini vs draftonly:anthropic": {
+   "b": 2,
+   "c": 9,
+   "p": 0.0654,
+   "p_holm": 1.0
+  },
+  "hard_negative:flatrag:gemini vs draftonly:gemini": {
+   "b": 0,
+   "c": 10,
+   "p": 0.002,
+   "p_holm": 0.172
   },
   "hard_negative:fullcontext:openai vs fullcontext:anthropic": {
    "b": 1,
    "c": 35,
-   "p": 0.0
+   "p": 0.0,
+   "p_holm": 0.0
   },
   "hard_negative:fullcontext:openai vs fullcontext:gemini": {
    "b": 1,
    "c": 34,
-   "p": 0.0
+   "p": 0.0,
+   "p_holm": 0.0
   },
   "hard_negative:fullcontext:openai vs oracle:openai": {
    "b": 13,
    "c": 16,
-   "p": 0.7111
+   "p": 0.7111,
+   "p_holm": 1.0
   },
   "hard_negative:fullcontext:openai vs oracle:anthropic": {
    "b": 6,
    "c": 14,
-   "p": 0.1153
+   "p": 0.1153,
+   "p_holm": 1.0
   },
   "hard_negative:fullcontext:openai vs oracle:gemini": {
    "b": 1,
    "c": 32,
-   "p": 0.0
+   "p": 0.0,
+   "p_holm": 0.0
+  },
+  "hard_negative:fullcontext:openai vs draftonly:openai": {
+   "b": 3,
+   "c": 36,
+   "p": 0.0,
+   "p_holm": 0.0
+  },
+  "hard_negative:fullcontext:openai vs draftonly:anthropic": {
+   "b": 0,
+   "c": 36,
+   "p": 0.0,
+   "p_holm": 0.0
+  },
+  "hard_negative:fullcontext:openai vs draftonly:gemini": {
+   "b": 0,
+   "c": 39,
+   "p": 0.0,
+   "p_holm": 0.0
   },
   "hard_negative:fullcontext:anthropic vs fullcontext:gemini": {
    "b": 5,
    "c": 4,
-   "p": 1.0
+   "p": 1.0,
+   "p_holm": 1.0
   },
   "hard_negative:fullcontext:anthropic vs oracle:openai": {
    "b": 32,
    "c": 1,
-   "p": 0.0
+   "p": 0.0,
+   "p_holm": 0.0
   },
   "hard_negative:fullcontext:anthropic vs oracle:anthropic": {
    "b": 27,
    "c": 1,
-   "p": 0.0
+   "p": 0.0,
+   "p_holm": 0.0
   },
   "hard_negative:fullcontext:anthropic vs oracle:gemini": {
    "b": 7,
    "c": 4,
-   "p": 0.5488
+   "p": 0.5488,
+   "p_holm": 1.0
+  },
+  "hard_negative:fullcontext:anthropic vs draftonly:openai": {
+   "b": 5,
+   "c": 4,
+   "p": 1.0,
+   "p_holm": 1.0
+  },
+  "hard_negative:fullcontext:anthropic vs draftonly:anthropic": {
+   "b": 2,
+   "c": 4,
+   "p": 0.6875,
+   "p_holm": 1.0
+  },
+  "hard_negative:fullcontext:anthropic vs draftonly:gemini": {
+   "b": 0,
+   "c": 5,
+   "p": 0.0625,
+   "p_holm": 1.0
   },
   "hard_negative:fullcontext:gemini vs oracle:openai": {
    "b": 31,
    "c": 1,
-   "p": 0.0
+   "p": 0.0,
+   "p_holm": 0.0
   },
   "hard_negative:fullcontext:gemini vs oracle:anthropic": {
    "b": 27,
    "c": 2,
-   "p": 0.0
+   "p": 0.0,
+   "p_holm": 0.0
   },
   "hard_negative:fullcontext:gemini vs oracle:gemini": {
    "b": 6,
    "c": 4,
-   "p": 0.7539
+   "p": 0.7539,
+   "p_holm": 1.0
+  },
+  "hard_negative:fullcontext:gemini vs draftonly:openai": {
+   "b": 5,
+   "c": 5,
+   "p": 1.0,
+   "p_holm": 1.0
+  },
+  "hard_negative:fullcontext:gemini vs draftonly:anthropic": {
+   "b": 2,
+   "c": 5,
+   "p": 0.4531,
+   "p_holm": 1.0
+  },
+  "hard_negative:fullcontext:gemini vs draftonly:gemini": {
+   "b": 0,
+   "c": 6,
+   "p": 0.0312,
+   "p_holm": 1.0
   },
   "hard_negative:oracle:openai vs oracle:anthropic": {
    "b": 7,
    "c": 12,
-   "p": 0.3593
+   "p": 0.3593,
+   "p_holm": 1.0
   },
   "hard_negative:oracle:openai vs oracle:gemini": {
    "b": 0,
    "c": 28,
-   "p": 0.0
+   "p": 0.0,
+   "p_holm": 0.0
+  },
+  "hard_negative:oracle:openai vs draftonly:openai": {
+   "b": 2,
+   "c": 32,
+   "p": 0.0,
+   "p_holm": 0.0
+  },
+  "hard_negative:oracle:openai vs draftonly:anthropic": {
+   "b": 1,
+   "c": 34,
+   "p": 0.0,
+   "p_holm": 0.0
+  },
+  "hard_negative:oracle:openai vs draftonly:gemini": {
+   "b": 0,
+   "c": 36,
+   "p": 0.0,
+   "p_holm": 0.0
   },
   "hard_negative:oracle:anthropic vs oracle:gemini": {
    "b": 0,
    "c": 23,
-   "p": 0.0
+   "p": 0.0,
+   "p_holm": 0.0
+  },
+  "hard_negative:oracle:anthropic vs draftonly:openai": {
+   "b": 3,
+   "c": 28,
+   "p": 0.0,
+   "p_holm": 0.0
+  },
+  "hard_negative:oracle:anthropic vs draftonly:anthropic": {
+   "b": 1,
+   "c": 29,
+   "p": 0.0,
+   "p_holm": 0.0
+  },
+  "hard_negative:oracle:anthropic vs draftonly:gemini": {
+   "b": 0,
+   "c": 31,
+   "p": 0.0,
+   "p_holm": 0.0
+  },
+  "hard_negative:oracle:gemini vs draftonly:openai": {
+   "b": 5,
+   "c": 7,
+   "p": 0.7744,
+   "p_holm": 1.0
+  },
+  "hard_negative:oracle:gemini vs draftonly:anthropic": {
+   "b": 2,
+   "c": 7,
+   "p": 0.1797,
+   "p_holm": 1.0
+  },
+  "hard_negative:oracle:gemini vs draftonly:gemini": {
+   "b": 0,
+   "c": 8,
+   "p": 0.0078,
+   "p_holm": 0.6006
+  },
+  "hard_negative:draftonly:openai vs draftonly:anthropic": {
+   "b": 2,
+   "c": 5,
+   "p": 0.4531,
+   "p_holm": 1.0
+  },
+  "hard_negative:draftonly:openai vs draftonly:gemini": {
+   "b": 0,
+   "c": 6,
+   "p": 0.0312,
+   "p_holm": 1.0
+  },
+  "hard_negative:draftonly:anthropic vs draftonly:gemini": {
+   "b": 0,
+   "c": 3,
+   "p": 0.25,
+   "p_holm": 1.0
+  }
+ },
+ "vault_multi_ingest": {
+  "mindtwin": {
+   "contradiction_recall": {
+    "points_per_ingest": [
+     0.421,
+     0.316,
+     0.421
+    ],
+    "mean": 0.386,
+    "range": [
+     0.316,
+     0.421
+    ],
+    "hier_bootstrap95": [
+     0.194,
+     0.514
+    ]
+   },
+   "aligned_specificity": {
+    "points_per_ingest": [
+     1.0,
+     0.984,
+     0.984
+    ],
+    "mean": 0.989,
+    "range": [
+     0.984,
+     1.0
+    ],
+    "hier_bootstrap95": [
+     0.965,
+     1.0
+    ]
+   },
+   "hard_negative_specificity": {
+    "points_per_ingest": [
+     0.984,
+     0.984,
+     0.984
+    ],
+    "mean": 0.984,
+    "range": [
+     0.984,
+     0.984
+    ],
+    "hier_bootstrap95": [
+     0.95,
+     1.0
+    ]
+   }
+  },
+  "flatrag:openai": {
+   "contradiction_recall": {
+    "points_per_ingest": [
+     0.974,
+     0.947,
+     0.974
+    ],
+    "mean": 0.965,
+    "range": [
+     0.947,
+     0.974
+    ],
+    "hier_bootstrap95": [
+     0.862,
+     1.0
+    ]
+   },
+   "aligned_specificity": {
+    "points_per_ingest": [
+     0.77,
+     0.754,
+     0.705
+    ],
+    "mean": 0.743,
+    "range": [
+     0.705,
+     0.77
+    ],
+    "hier_bootstrap95": [
+     0.623,
+     0.883
+    ]
+   },
+   "hard_negative_specificity": {
+    "points_per_ingest": [
+     0.565,
+     0.468,
+     0.419
+    ],
+    "mean": 0.484,
+    "range": [
+     0.419,
+     0.565
+    ],
+    "hier_bootstrap95": [
+     0.371,
+     0.662
+    ]
+   }
+  },
+  "flatrag:anthropic": {
+   "contradiction_recall": {
+    "points_per_ingest": [
+     0.921,
+     0.895,
+     0.947
+    ],
+    "mean": 0.921,
+    "range": [
+     0.895,
+     0.947
+    ],
+    "hier_bootstrap95": [
+     0.806,
+     0.979
+    ]
+   },
+   "aligned_specificity": {
+    "points_per_ingest": [
+     0.902,
+     0.918,
+     0.852
+    ],
+    "mean": 0.891,
+    "range": [
+     0.852,
+     0.918
+    ],
+    "hier_bootstrap95": [
+     0.818,
+     0.983
+    ]
+   },
+   "hard_negative_specificity": {
+    "points_per_ingest": [
+     0.742,
+     0.774,
+     0.774
+    ],
+    "mean": 0.763,
+    "range": [
+     0.742,
+     0.774
+    ],
+    "hier_bootstrap95": [
+     0.632,
+     0.873
+    ]
+   }
+  },
+  "flatrag:gemini": {
+   "contradiction_recall": {
+    "points_per_ingest": [
+     0.763,
+     0.842,
+     0.842
+    ],
+    "mean": 0.816,
+    "range": [
+     0.763,
+     0.842
+    ],
+    "hier_bootstrap95": [
+     0.655,
+     0.914
+    ]
+   },
+   "aligned_specificity": {
+    "points_per_ingest": [
+     0.967,
+     0.967,
+     0.951
+    ],
+    "mean": 0.962,
+    "range": [
+     0.951,
+     0.967
+    ],
+    "hier_bootstrap95": [
+     0.925,
+     1.0
+    ]
+   },
+   "hard_negative_specificity": {
+    "points_per_ingest": [
+     0.839,
+     0.871,
+     0.903
+    ],
+    "mean": 0.871,
+    "range": [
+     0.839,
+     0.903
+    ],
+    "hier_bootstrap95": [
+     0.763,
+     0.937
+    ]
+   }
   }
  }
 }

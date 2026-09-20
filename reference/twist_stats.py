@@ -77,6 +77,14 @@ def main() -> None:
     ap.add_argument("--items", required=True)
     ap.add_argument("--out", default=None)
     ap.add_argument("--n-boot", type=int, default=10000)
+    ap.add_argument("--ingests", nargs="*", default=[],
+                    help="additional per-item results files from independent "
+                         "ingests (vault-based systems only); enables "
+                         "multi-ingest means and a conversation-x-ingest "
+                         "hierarchical bootstrap")
+    ap.add_argument("--ingest-scores", default=None,
+                    help="score-level-only observations from a further "
+                         "ingest (JSON with scores.<system>.<metric>)")
     args = ap.parse_args()
 
     with open(args.results) as f:
@@ -113,6 +121,18 @@ def main() -> None:
         }
         print(f"{system:22s} {'attribution_accuracy':28s} {p:6.3f}  "  # noqa: T201
               f"[{lo:.3f}, {hi:.3f}]  (n={len(flagged)} flagged)")
+        # grounded contradiction recall: correct flag WITH valid top-3
+        # evidence, over ALL contradicting items (unconditional — cannot be
+        # gamed by flagging only easy items)
+        contra = [r for r in rows if r["type"] == "contradicting"]
+        kg = sum(bool(r["attributed"]) for r in contra)
+        p, lo, hi = wilson(kg, len(contra))
+        report["per_system"][system]["grounded_contradiction_recall"] = {
+            "point": round(p, 3), "n": len(contra), "k": kg,
+            "wilson95": [round(lo, 3), round(hi, 3)],
+        }
+        print(f"{system:22s} {'grounded_contra_recall':28s} {p:6.3f}  "  # noqa: T201
+              f"[{lo:.3f}, {hi:.3f}]")
 
     systems = list(results)
     print("\npairwise exact McNemar (b = row-correct/col-wrong, c = reverse):")  # noqa: T201
@@ -132,6 +152,73 @@ def main() -> None:
                     "b": b, "c": c, "p": round(pv, 4)}
                 if pv < 0.1:
                     print(f"  {key:70s} b={b:2d} c={c:2d} p={pv:.4f}")  # noqa: T201
+
+    # Holm correction over the McNemar family
+    tests = sorted(report["pairwise_mcnemar"].items(), key=lambda kv: kv[1]["p"])
+    m = len(tests)
+    running_max = 0.0
+    for rank, (key, t) in enumerate(tests):
+        adj = min(1.0, (m - rank) * t["p"])
+        running_max = max(running_max, adj)
+        report["pairwise_mcnemar"][key]["p_holm"] = round(running_max, 4)
+    sig = sum(1 for _, t in tests if t["p_holm"] < 0.05)
+    print(f"\nHolm-adjusted McNemar: {sig}/{m} pairs significant at 0.05")  # noqa: T201
+
+    # multi-ingest analysis for vault-based systems
+    if args.ingests or args.ingest_scores:
+        ingest_results = [results]
+        for path in args.ingests:
+            with open(path) as f:
+                ingest_results.append(json.load(f)["results"])
+        score_only = None
+        if args.ingest_scores:
+            with open(args.ingest_scores) as f:
+                score_only = json.load(f)["scores"]
+        metric_key = {"contradicting": "contradicting_acc",
+                      "aligned": "aligned_acc",
+                      "hard_negative": "hard_negative_acc"}
+        vault = [s2 for s2 in results
+                 if all(s2 in ir for ir in ingest_results)]
+        report["vault_multi_ingest"] = {}
+        print("\nmulti-ingest (vault systems): per-metric points across "  # noqa: T201
+              "ingests -> mean [hierarchical bootstrap 95%]")
+        rng = random.Random(11)  # noqa: S311 — reproducible bootstrap
+        for s2 in vault:
+            report["vault_multi_ingest"][s2] = {}
+            for cls, name in CLASSES.items():
+                pts = []
+                for ir in ingest_results:
+                    sub = [r for r in ir[s2] if r["type"] == cls]
+                    pts.append(sum(r["verdict_correct"] for r in sub) / len(sub))
+                if score_only and s2 in score_only:
+                    pts.append(score_only[s2][metric_key[cls]])
+                # hierarchical bootstrap over per-item ingests x conversations
+                by_ing = []
+                for ir in ingest_results:
+                    by_conv = defaultdict(list)
+                    for r in ir[s2]:
+                        if r["type"] == cls:
+                            by_conv[r["conv"]].append(r["verdict_correct"])
+                    by_ing.append(by_conv)
+                convs = sorted(by_ing[0])
+                vals = []
+                for _ in range(args.n_boot):
+                    picks = []
+                    for _ in convs:
+                        ing = by_ing[rng.randrange(len(by_ing))]
+                        picks.extend(ing[rng.choice(convs)])
+                    if picks:
+                        vals.append(sum(picks) / len(picks))
+                vals.sort()
+                blo = vals[int(0.025 * len(vals))]
+                bhi = vals[int(0.975 * len(vals))]
+                entry = {"points_per_ingest": [round(x, 3) for x in pts],
+                         "mean": round(sum(pts) / len(pts), 3),
+                         "range": [round(min(pts), 3), round(max(pts), 3)],
+                         "hier_bootstrap95": [round(blo, 3), round(bhi, 3)]}
+                report["vault_multi_ingest"][s2][name] = entry
+                print(f"  {s2:20s} {name:28s} {entry['points_per_ingest']} "  # noqa: T201
+                      f"-> {entry['mean']:.3f} [{blo:.3f}, {bhi:.3f}]")
 
     if args.out:
         with open(args.out, "w") as f:
