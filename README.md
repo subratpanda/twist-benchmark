@@ -30,8 +30,9 @@ not a valid TWIST citation.
 
 **Paper:** *TWIST: A Proposed Benchmark for Intervention Quality in
 Conversational Memory, with a Human-Validated Draft-Alignment Track* —
+[arXiv:2609.28575](https://arxiv.org/abs/2609.28575) ·
 [SSRN](https://ssrn.com/abstract=7500098) ·
-[DOI](http://dx.doi.org/10.2139/ssrn.7500098) · arXiv pending.
+[DOI](http://dx.doi.org/10.2139/ssrn.7500098).
 Release post: https://mindtwin.me/blog/twist-benchmark
 
 ## Status: v1.0 — Track B human-validated and frozen (2026-09-20)
@@ -218,15 +219,17 @@ builds a memory product) are only credible under exactly this process.
 
 ```bibtex
 @article{panda2026twist,
-  title  = {TWIST: A Proposed Benchmark for Intervention Quality in
-            Conversational Memory, with a Human-Validated Draft-Alignment
-            Track},
-  author = {Panda, Subrat},
-  year   = {2026},
-  doi    = {10.2139/ssrn.7500098},
-  url    = {https://ssrn.com/abstract=7500098},
-  note   = {Benchmark: github.com/subratpanda/twist-benchmark. arXiv
-            version pending}
+  title         = {TWIST: A Proposed Benchmark for Intervention Quality in
+                   Conversational Memory, with a Human-Validated
+                   Draft-Alignment Track},
+  author        = {Panda, Subrat},
+  year          = {2026},
+  eprint        = {2609.28575},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.AI},
+  url           = {https://arxiv.org/abs/2609.28575},
+  note          = {Benchmark: github.com/subratpanda/twist-benchmark.
+                   Also at SSRN: 10.2139/ssrn.7500098}
 }
 ```
 

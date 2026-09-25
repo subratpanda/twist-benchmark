@@ -16,4 +16,7 @@ preferred-citation:
       given-names: Subrat
   year: 2026
   doi: "10.2139/ssrn.7500098"
-  url: "https://ssrn.com/abstract=7500098"
+  url: "https://arxiv.org/abs/2609.28575"
+  identifiers:
+    - type: other
+      value: "arXiv:2609.28575"
