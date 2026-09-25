@@ -28,6 +28,10 @@ the failure modes that actually cost money in deployed systems:
 aces detection and is unusable. Citing any TWIST metric without its pair is
 not a valid TWIST citation.
 
+**Paper:** *TWIST: A Proposed Benchmark for Intervention Quality in
+Conversational Memory, with a Human-Validated Draft-Alignment Track* —
+[SSRN](https://ssrn.com/abstract=7500098) ·
+[DOI](http://dx.doi.org/10.2139/ssrn.7500098) · arXiv pending.
 Release post: https://mindtwin.me/blog/twist-benchmark
 
 ## Status: v1.0 — Track B human-validated and frozen (2026-09-20)
@@ -148,9 +152,32 @@ ingest(conversation_events)            # full LoCoMo conversation, in order
 check_alignment(draft) -> {aligned: bool, conflicts: [{evidence_ids, rationale}]}
 ```
 
-Score: verdict accuracy per item type (gold: `contradicting → aligned=false`,
-everything else `aligned=true`) + attribution (a cited evidence id ∈ gold
-evidence, on correctly flagged items). Report all paired metrics.
+**To score your own system (standalone, no code from this repo needed
+beyond one file):**
+
+1. Fetch LoCoMo's `locomo10.json` from
+   [snap-research/locomo](https://github.com/snap-research/locomo) and
+   ingest the 10 conversations into your system.
+2. For each item in
+   [`data/track_b_items_v1.0.jsonl`](data/track_b_items_v1.0.jsonl), call
+   your vetting surface with **only the `draft` text** (never the gold
+   evidence) and record the verdict + cited turn ids, one JSON per line:
+   `{"item_id": "conv-26:v1b1", "aligned": false, "evidence": ["D19:1"]}`
+3. ```
+   python3 reference/score_track_b.py \
+       --items data/track_b_items_v1.0.jsonl \
+       --predictions my_system.jsonl --out my_results.json
+   ```
+   → CR / AS / HNS / GCR / attribution with Wilson 95% intervals — the
+   exact metrics of the paper's Table 3. `reference/score_track_b.py` and
+   `reference/twist_stats.py` are dependency-free (Python 3.9+ stdlib);
+   `twist_stats.py` then gives clustered bootstraps and McNemar tests
+   against the published per-item outputs in [`results/`](results/).
+
+Rules: every item must be answered; only the first 3 cited ids count
+(the evidence budget); the held key is frozen — no tuning against it;
+scores must cite the key version (**TWIST-v1.0**) and never a detection
+number without its specificity pair.
 
 [`reference/`](reference/) contains the item generator, the harness we
 used (including the flat-RAG baseline; `--systems flatrag:<provider>` runs
@@ -190,11 +217,16 @@ builds a memory product) are only credible under exactly this process.
 ## Citation
 
 ```bibtex
-@misc{twist2026,
-  title  = {TWIST: A Benchmark for Tensions, Alignment, and Safe Recall in Conversational Memory},
+@article{panda2026twist,
+  title  = {TWIST: A Proposed Benchmark for Intervention Quality in
+            Conversational Memory, with a Human-Validated Draft-Alignment
+            Track},
   author = {Panda, Subrat},
   year   = {2026},
-  url    = {https://github.com/subratpanda/twist-benchmark}
+  doi    = {10.2139/ssrn.7500098},
+  url    = {https://ssrn.com/abstract=7500098},
+  note   = {Benchmark: github.com/subratpanda/twist-benchmark. arXiv
+            version pending}
 }
 ```
 

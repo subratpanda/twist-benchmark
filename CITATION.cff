@@ -8,3 +8,12 @@ version: "1.0"
 date-released: "2026-09-20"
 year: 2026
 url: "https://github.com/subratpanda/twist-benchmark"
+preferred-citation:
+  type: article
+  title: "TWIST: A Proposed Benchmark for Intervention Quality in Conversational Memory, with a Human-Validated Draft-Alignment Track"
+  authors:
+    - family-names: Panda
+      given-names: Subrat
+  year: 2026
+  doi: "10.2139/ssrn.7500098"
+  url: "https://ssrn.com/abstract=7500098"
